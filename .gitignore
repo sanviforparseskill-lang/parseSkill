@@ -1,0 +1,33 @@
+# Dependencies
+**/node_modules/
+
+# Python
+backend/.venv/
+**/__pycache__/
+*.pyc
+
+# Prisma
+backend/prisma/generated/
+
+# Secrets
+.env
+.env.local
+backend/.env
+
+# Runtime storage
+backend/storage/
+
+# Raw dataset artifacts and local data dumps
+**/*.csv
+**/*.parquet
+**/*.tsv
+**/*.xlsx
+**/results.txt
+**/datasets/
+**/data/
+**/raw_data/
+**/job_skills.csv/
+
+# Trained model artifacts (regenerate with `python -m app.ml.train`)
+backend/app/ml/models/
+

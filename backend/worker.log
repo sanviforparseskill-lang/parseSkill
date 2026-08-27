@@ -1,0 +1,66 @@
+2026-08-05 22:43:47,787 worker INFO HTTP Request: GET http://localhost:61378/status "HTTP/1.1 200 OK"
+2026-08-05 22:43:48,919 worker INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-08-05 22:43:48,919 worker INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-08-05 22:43:48,920 worker INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-08-05 22:43:48,921 worker INFO Added job "reset_stale_locks" to job store "default"
+2026-08-05 22:43:48,921 worker INFO Added job "purge_expired" to job store "default"
+2026-08-05 22:43:48,922 worker INFO Added job "_build_scheduler.<locals>.<lambda>" to job store "default"
+2026-08-05 22:43:48,922 worker INFO Scheduler started
+2026-08-05 22:43:48,922 worker INFO Worker started, polling job_queue every 1.0s
+2026-08-05 22:43:48,996 worker INFO HTTP Request: POST http://localhost:61378/transaction/start "HTTP/1.1 200 OK"
+2026-08-05 22:43:49,179 worker INFO HTTP Request: POST http://localhost:61378/ "HTTP/1.1 200 OK"
+2026-08-05 22:43:49,268 worker INFO HTTP Request: POST http://localhost:61378/ "HTTP/1.1 200 OK"
+2026-08-05 22:43:49,341 worker INFO HTTP Request: POST http://localhost:61378/transaction/cmsgcj9to000098yyvpdxunf5/rollback "HTTP/1.1 200 OK"
+2026-08-05 22:43:49,343 worker INFO Scheduler has been shut down
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\test\backend\app\worker.py", line 100, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\hetso\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\hetso\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hetso\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "E:\test\backend\app\worker.py", line 91, in main
+    await _poll_loop()
+  File "E:\test\backend\app\worker.py", line 59, in _poll_loop
+    processed = await _process_one()
+                ^^^^^^^^^^^^^^^^^^^^
+  File "E:\test\backend\app\worker.py", line 39, in _process_one
+    job = await queue.claim_next_job()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\test\backend\app\db\queue.py", line 54, in claim_next_job
+    await tx.execute_raw(
+    ...<7 lines>...
+    )
+  File "E:\test\backend\.venv\Lib\site-packages\prisma\client.py", line 242, in execute_raw
+    resp = await self._execute(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "E:\test\backend\.venv\Lib\site-packages\prisma\_base_client.py", line 543, in _execute
+    return await self._engine.query(builder.build(), tx_id=self._tx_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\test\backend\.venv\Lib\site-packages\prisma\engine\_query.py", line 402, in query
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\test\backend\.venv\Lib\site-packages\prisma\engine\_http.py", line 233, in request
+    return self._process_response_data(data=data, response=response)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\test\backend\.venv\Lib\site-packages\prisma\engine\_http.py", line 87, in _process_response_data
+    return utils.handle_response_errors(response, errors_data)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\test\backend\.venv\Lib\site-packages\prisma\engine\utils.py", line 175, in handle_response_errors
+    raise exc(error)
+prisma.errors.RawQueryError: ERROR: operator does not exist: uuid = text
+HINT: No operator matches the given name and argument types. You might need to add explicit type casts.

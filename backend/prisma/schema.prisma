@@ -1,0 +1,642 @@
+// parseSkill backend data model.
+// One database (Neon Postgres). Node/edge tables implement the knowledge graph
+// (Section 7 of parseSkill_spec_v2); everything else (queue, cache, rate limits,
+// chat, portfolio) is Section 11. Graph traversals and PageRank/Louvain jobs run
+// as raw SQL/Python against this same schema — see app/db/raw.py.
+
+generator client {
+  provider                  = "prisma-client-py"
+  interface                 = "asyncio"
+  recursive_type_depth      = 5
+  previewFeatures           = ["multiSchema", "postgresqlExtensions"]
+  enable_experimental_decimal = true
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  directUrl  = env("DIRECT_URL")
+  extensions = [pgcrypto, pg_trgm, vector, btree_gin]
+  schemas    = ["public", "refdata"]
+}
+
+// ---------------------------------------------------------------------------
+// Node tables
+// ---------------------------------------------------------------------------
+
+model User {
+  id                   String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  /// Nullable: users who sign up via Neon Auth (see neonAuthUserId below)
+  /// have no GitHub identity until they connect one from Settings.
+  githubId             BigInt?  @unique @map("github_id")
+  githubHandle         String   @map("github_handle")
+  /// OAuth token used by the sync worker to call the GitHub API on this
+  /// user's behalf (Section 4). Encrypt at rest in production — plaintext
+  /// here is a scaffold shortcut, not a recommendation.
+  githubAccessToken    String?  @map("github_access_token")
+  /// Stack Auth user id for users who signed in via Neon Auth
+  /// (frontend/src/lib/stack.ts). Independent of the GitHub OAuth path.
+  neonAuthUserId       String?  @unique @map("neon_auth_user_id")
+  email                String?  @map("email")
+  leetcodeHandle       String?  @map("leetcode_handle")
+  codeforcesHandle     String?  @map("codeforces_handle")
+  kaggleHandle         String?  @map("kaggle_handle")
+  displayName          String?  @map("display_name")
+  avatarUrl            String?  @map("avatar_url")
+  bio                  String?
+  tagline              String?
+  location             String?
+  codingScore          Decimal? @map("coding_score") @db.Decimal(5, 2)
+  projectQualityScore  Decimal? @map("project_quality_score") @db.Decimal(5, 2)
+  consistencyScore     Decimal? @map("consistency_score") @db.Decimal(5, 2)
+  learningVelocity     Decimal? @map("learning_velocity") @db.Decimal(5, 2)
+  createdAt            DateTime @default(now()) @map("created_at")
+  lastSyncedAt         DateTime? @map("last_synced_at")
+
+  sessions        Session[]
+  projects        Project[]
+  ownedProjects   UserOwnsProject[]
+  skills          UserHasSkill[]
+  syncLogs        SyncLog[]
+  chatMessages    ChatMessage[]
+  portfolioConfig PortfolioConfig?
+  profileChunks   ProfileChunk[]
+  roadmapSkills   UserRoadmapSkill[]
+  techActivity    TechQuarterActivity[]
+  resumeParse     ResumeParse?
+
+  @@map("users")
+  @@schema("public")
+}
+
+model ResumeParse {
+  userId         String   @id @map("user_id") @db.Uuid
+  skillsClaimed  String[] @map("skills_claimed")
+  education      Json?
+  workExperience Json?    @map("work_experience")
+  projects       Json?
+  parsedAt       DateTime @default(now()) @map("parsed_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("resume_parses")
+  @@schema("public")
+}
+
+model Project {
+  id                  String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId              String    @map("user_id") @db.Uuid
+  repoFullName        String    @map("repo_full_name")
+  description         String?
+  primaryLanguage     String?   @map("primary_language")
+  stars               Int       @default(0)
+  forks               Int       @default(0)
+  isFork              Boolean   @default(false) @map("is_fork")
+  isTemplateDerived   Boolean   @default(false) @map("is_template_derived")
+  contributionWeight  Decimal?  @map("contribution_weight") @db.Decimal(3, 2)
+  complexityScore     Decimal?  @map("complexity_score") @db.Decimal(5, 2)
+  /// Per-factor breakdown of complexityScore (Section 5.3 Step 3), e.g.
+  /// {"lines": 12.1, "tech_breadth": 8.0, "architecture": 6.0, "tests": 15.0, ...}
+  complexityBreakdown Json?     @map("complexity_breakdown")
+  architecturePatterns String[] @map("architecture_patterns")
+  hasTests            Boolean   @default(false) @map("has_tests")
+  hasCiCd             Boolean   @default(false) @map("has_ci_cd")
+  hasDeploymentConfig Boolean   @default(false) @map("has_deployment_config")
+  readmeExcerpt       String?   @map("readme_excerpt")
+  createdAtGh         DateTime? @map("created_at_gh")
+  lastCommitAt        DateTime? @map("last_commit_at")
+  lastSyncedAt        DateTime? @map("last_synced_at")
+
+  user       User                        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  owners     UserOwnsProject[]
+  technologies ProjectUsesTechnology[]
+  concepts   ProjectDemonstratesConcept[]
+
+  @@unique([userId, repoFullName])
+  @@map("projects")
+  @@schema("public")
+}
+
+model Technology {
+  id        String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name      String  @unique
+  category  String? // backend, frontend, ml, devops, database, language...
+  ecosystem String? // npm, pypi, maven, cargo, etc
+
+  projects       ProjectUsesTechnology[]
+  skillMappings  TechnologyMapsToSkill[]
+  quarterActivity TechQuarterActivity[]
+
+  @@map("technologies")
+  @@schema("public")
+}
+
+model Skill {
+  id          String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name        String  @unique
+  category    String?
+  description String?
+  escoUri     String? @map("esco_uri")
+  pagerank    Decimal @default(0) @db.Decimal(6, 5) // recomputed nightly by SQL job
+
+  users              UserHasSkill[]
+  technologyMappings TechnologyMapsToSkill[]
+  conceptRequires    ConceptRequiresSkill[]
+  requiredByRoles    SkillRequiredByRole[]
+  prerequisiteOf     SkillPrerequisiteOfSkill[] @relation("prerequisite")
+  dependentOn        SkillPrerequisiteOfSkill[] @relation("dependent")
+  coOccursA          SkillCoOccursWithSkill[]   @relation("skillA")
+  coOccursB          SkillCoOccursWithSkill[]   @relation("skillB")
+  roadmapEntries     UserRoadmapSkill[]
+
+  @@map("skills")
+  @@schema("public")
+}
+
+model Role {
+  id                 String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name               String  @unique
+  description        String?
+  escoOccupationUri  String? @map("esco_occupation_uri")
+  seniority          String?
+
+  requiredSkills SkillRequiredByRole[]
+  relatedA       RoleRelatedToRole[] @relation("roleA")
+  relatedB       RoleRelatedToRole[] @relation("roleB")
+  roadmapEntries UserRoadmapSkill[]
+
+  @@map("roles")
+  @@schema("public")
+}
+
+model Concept {
+  id          String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name        String  @unique
+  description String?
+
+  projects        ProjectDemonstratesConcept[]
+  requiredSkills  ConceptRequiresSkill[]
+
+  @@map("concepts")
+  @@schema("public")
+}
+
+// ---------------------------------------------------------------------------
+// Edge tables
+// ---------------------------------------------------------------------------
+
+model UserOwnsProject {
+  userId           String  @map("user_id") @db.Uuid
+  projectId        String  @map("project_id") @db.Uuid
+  contributionPct  Decimal? @map("contribution_pct") @db.Decimal(4, 3)
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@id([userId, projectId])
+  @@map("user_owns_project")
+  @@schema("public")
+}
+
+model UserHasSkill {
+  userId            String    @map("user_id") @db.Uuid
+  skillId           String    @map("skill_id") @db.Uuid
+  confidence        Decimal   @db.Decimal(4, 3)
+  /// Section 5.2 Step 4's four weighted components, persisted alongside
+  /// confidence so GET /skills/{id}/evidence can display them without
+  /// recomputing (and so they stay consistent with the score that shipped).
+  breadth           Decimal   @default(0) @db.Decimal(4, 3)
+  depth             Decimal   @default(0) @db.Decimal(4, 3)
+  recency           Decimal   @default(0) @db.Decimal(4, 3)
+  diversity         Decimal   @default(0) @db.Decimal(4, 3)
+  firstEvidenceDate DateTime? @map("first_evidence_date") @db.Date
+  evidenceCount     Int       @default(0) @map("evidence_count")
+  updatedAt         DateTime  @default(now()) @map("updated_at")
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+  @@id([userId, skillId])
+  @@index([skillId])
+  @@index([userId, confidence(sort: Desc)])
+  @@map("user_has_skill")
+  @@schema("public")
+}
+
+model ProjectUsesTechnology {
+  projectId    String  @map("project_id") @db.Uuid
+  technologyId String  @map("technology_id") @db.Uuid
+  version      String?
+  weight       Decimal? @db.Decimal(4, 3)
+
+  project    Project    @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  technology Technology @relation(fields: [technologyId], references: [id], onDelete: Cascade)
+
+  @@id([projectId, technologyId])
+  @@index([technologyId])
+  @@map("project_uses_technology")
+  @@schema("public")
+}
+
+model ProjectDemonstratesConcept {
+  projectId String @map("project_id") @db.Uuid
+  conceptId String @map("concept_id") @db.Uuid
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  concept Concept @relation(fields: [conceptId], references: [id], onDelete: Cascade)
+
+  @@id([projectId, conceptId])
+  @@map("project_demonstrates_concept")
+  @@schema("public")
+}
+
+model TechnologyMapsToSkill {
+  technologyId String   @map("technology_id") @db.Uuid
+  skillId      String   @map("skill_id") @db.Uuid
+  weight       Decimal? @db.Decimal(4, 3)
+
+  technology Technology @relation(fields: [technologyId], references: [id], onDelete: Cascade)
+  skill      Skill      @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+  @@id([technologyId, skillId])
+  @@map("technology_maps_to_skill")
+  @@schema("public")
+}
+
+model ConceptRequiresSkill {
+  conceptId String @map("concept_id") @db.Uuid
+  skillId   String @map("skill_id") @db.Uuid
+
+  concept Concept @relation(fields: [conceptId], references: [id], onDelete: Cascade)
+  skill   Skill   @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+  @@id([conceptId, skillId])
+  @@map("concept_requires_skill")
+  @@schema("public")
+}
+
+model SkillRequiredByRole {
+  skillId    String   @map("skill_id") @db.Uuid
+  roleId     String   @map("role_id") @db.Uuid
+  importance Decimal? @db.Decimal(4, 3)
+
+  skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  role  Role  @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  @@id([skillId, roleId])
+  @@index([roleId, importance(sort: Desc)])
+  @@map("skill_required_by_role")
+  @@schema("public")
+}
+
+model SkillPrerequisiteOfSkill {
+  prerequisiteId String @map("prerequisite_id") @db.Uuid
+  dependentId    String @map("dependent_id") @db.Uuid
+
+  prerequisite Skill @relation("prerequisite", fields: [prerequisiteId], references: [id], onDelete: Cascade)
+  dependent    Skill @relation("dependent", fields: [dependentId], references: [id], onDelete: Cascade)
+
+  @@id([prerequisiteId, dependentId])
+  @@map("skill_prerequisite_of_skill")
+  @@schema("public")
+}
+
+model RoleRelatedToRole {
+  roleAId    String   @map("role_a_id") @db.Uuid
+  roleBId    String   @map("role_b_id") @db.Uuid
+  similarity Decimal? @db.Decimal(4, 3)
+
+  roleA Role @relation("roleA", fields: [roleAId], references: [id], onDelete: Cascade)
+  roleB Role @relation("roleB", fields: [roleBId], references: [id], onDelete: Cascade)
+
+  @@id([roleAId, roleBId])
+  @@map("role_related_to_role")
+  @@schema("public")
+}
+
+model SkillCoOccursWithSkill {
+  skillAId  String  @map("skill_a_id") @db.Uuid
+  skillBId  String  @map("skill_b_id") @db.Uuid
+  frequency Decimal @db.Decimal(6, 5)
+
+  skillA Skill @relation("skillA", fields: [skillAId], references: [id], onDelete: Cascade)
+  skillB Skill @relation("skillB", fields: [skillBId], references: [id], onDelete: Cascade)
+
+  @@id([skillAId, skillBId])
+  @@map("skill_co_occurs_with_skill")
+  @@schema("public")
+}
+
+// ---------------------------------------------------------------------------
+// Auth, sync, queue, cache, rate limits, chat, portfolio, RAG
+// ---------------------------------------------------------------------------
+
+model Session {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  tokenHash String   @map("token_hash")
+  expiresAt DateTime @map("expires_at")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("sessions")
+  @@schema("public")
+}
+
+model SyncLog {
+  id                    String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId                String    @map("user_id") @db.Uuid
+  jobId                 String?   @map("job_id") @db.Uuid
+  startedAt             DateTime  @map("started_at")
+  completedAt           DateTime? @map("completed_at")
+  status                String    // pending | running | success | failed
+  sourcesSynced         String[]  @map("sources_synced")
+  reposProcessed        Int       @default(0) @map("repos_processed")
+  newTechnologiesCount  Int       @default(0) @map("new_technologies_count")
+  newSkillsCount        Int       @default(0) @map("new_skills_count")
+  errorMessage          String?   @map("error_message")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, startedAt(sort: Desc)])
+  @@map("sync_logs")
+  @@schema("public")
+}
+
+/// Replaces Celery + Redis. Consumed via `SELECT ... FOR UPDATE SKIP LOCKED` — see app/db/queue.py.
+model JobQueue {
+  id           String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  jobType      String    @map("job_type") // sync_profile | assistant_reply | nightly_pagerank | ...
+  payload      Json
+  status       String    @default("pending") // pending | running | done | failed
+  priority     Int       @default(0)
+  runAfter     DateTime  @default(now()) @map("run_after")
+  lockedBy     String?   @map("locked_by")
+  lockedAt     DateTime? @map("locked_at")
+  attempts     Int       @default(0)
+  maxAttempts  Int       @default(3) @map("max_attempts")
+  lastError    String?   @map("last_error")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  completedAt  DateTime? @map("completed_at")
+
+  @@map("job_queue")
+  @@schema("public")
+}
+
+/// UNLOGGED in the migration for near-Redis write speed; durability doesn't matter for a cache.
+model CacheEntry {
+  key       String   @id
+  valueJson Json     @map("value_json")
+  expiresAt DateTime @map("expires_at")
+
+  @@index([expiresAt])
+  @@map("cache_entries")
+  @@schema("public")
+}
+
+model RateLimitCounter {
+  userId      String   @map("user_id") @db.Uuid
+  action      String   // chat_message | sync_trigger | ...
+  windowStart DateTime @map("window_start")
+  count       Int      @default(0)
+
+  @@id([userId, action, windowStart])
+  @@index([windowStart])
+  @@map("rate_limit_counters")
+  @@schema("public")
+}
+
+model ChatMessage {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  role      String   // user | assistant
+  content   String
+  citations Json?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt(sort: Desc)])
+  @@map("chat_messages")
+  @@schema("public")
+}
+
+model PortfolioConfig {
+  userId             String   @id @map("user_id") @db.Uuid
+  isPublic           Boolean  @default(false) @map("is_public")
+  slug               String?  @unique
+  theme              String   @default("minimal")
+  sections           Json?
+  featuredProjectIds String[] @map("featured_project_ids") @db.Uuid
+  updatedAt          DateTime @default(now()) @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("portfolio_configs")
+  @@schema("public")
+}
+
+/// RAG index. `embedding` is pgvector(384) (bge-small-en-v1.5) and `contentTsv` is a
+/// generated tsvector for the BM25 side of hybrid retrieval — both are Unsupported
+/// because Prisma has no native type for them; the migration SQL defines the real
+/// columns/indexes (ivfflat + GIN), see prisma/migrations.
+model ProfileChunk {
+  id          String                @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId      String                @map("user_id") @db.Uuid
+  chunkType   String?               @map("chunk_type") // skill | project | score | milestone
+  referenceId String?               @map("reference_id")
+  content     String
+  contentTsv  Unsupported("tsvector")? @map("content_tsv")
+  embedding   Unsupported("vector(384)")?
+  createdAt   DateTime              @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, chunkType])
+  @@map("profile_chunks")
+  @@schema("public")
+}
+
+/// User-set progress against a generated roadmap (Section 8.9). Roadmap steps
+/// themselves are computed on the fly from skill_prerequisite_of_skill via
+/// app/db/raw.learning_path_for_role — this table only stores the mutable
+/// per-(user, role, skill) status/ordering a user has actually set, since
+/// skills are otherwise only ever evidence-derived, never user-set.
+model UserRoadmapSkill {
+  userId     String   @map("user_id") @db.Uuid
+  roleId     String   @map("role_id") @db.Uuid
+  skillId    String   @map("skill_id") @db.Uuid
+  status     String   @default("not_started") // not_started | learning | done
+  orderIndex Int      @map("order_index")
+  updatedAt  DateTime @default(now()) @updatedAt @map("updated_at")
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role  Role  @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+  @@id([userId, roleId, skillId])
+  @@index([userId, roleId])
+  @@map("user_roadmap_skill")
+  @@schema("public")
+}
+
+/// Per-technology, per-quarter commit-count fact table (Section 5.4/6.2)
+/// powering the Skill Evolution Timeline. Populated during sync_profile by
+/// bucketing the user's authored commits per project into quarters and
+/// attributing them to every technology used in that project, weighted by
+/// contribution_weight — an approximation (true per-commit file diffing
+/// would attribute commits to only the files/technologies they touched, at
+/// a much higher GitHub API cost) but sufficient to answer "when did I start
+/// working with X" and "how active was I with X each quarter".
+model TechQuarterActivity {
+  userId       String   @map("user_id") @db.Uuid
+  technologyId String   @map("technology_id") @db.Uuid
+  quarter      String   // "2024-Q3"
+  commitCount  Decimal  @default(0) @map("commit_count") @db.Decimal(8, 2)
+  firstSeenAt  DateTime @map("first_seen_at")
+
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  technology Technology @relation(fields: [technologyId], references: [id], onDelete: Cascade)
+
+  @@id([userId, technologyId, quarter])
+  @@index([userId, quarter])
+  @@map("tech_quarter_activity")
+  @@schema("public")
+}
+
+/// Eval sink for the hallucination-rate metric (Section 13) — every
+/// assistant reply flagged with unverified numeric claims lands here so it
+/// can be aggregated/reviewed offline, independent of the chat_messages
+/// citations blob (which is for the end user, not the eval pipeline).
+model EvalLog {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  messageId String?  @map("message_id") @db.Uuid
+  kind      String   // hallucination_flag | ...
+  payload   Json
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([kind, createdAt(sort: Desc)])
+  @@map("eval_logs")
+  @@schema("public")
+}
+
+// ---------------------------------------------------------------------------
+// refdata schema — Tabiya ESCO + Kaggle LinkedIn Jobs + Stack Overflow Survey
+// (Section 15). Shapes here match ml_pipeline/clean/*.parquet exactly (see
+// ml_pipeline/README.md "Output" table) — loaded by app/refdata/load_all.py,
+// never queried directly by app routes (only by app/ml/train.py).
+//
+// Known gap carried over from ml_pipeline/scripts/clean_esco.py: the Tabiya
+// export on disk has no occupation-skill relations file, so there is no
+// esco_occupation_skill table here. Re-run clean_esco.py and add that table
+// once the relations file is available.
+// ---------------------------------------------------------------------------
+
+model EscoSkill {
+  skillUri      String   @id @map("skill_uri")
+  skillType     String?  @map("skill_type")
+  reuseLevel    String?  @map("reuse_level")
+  preferredLabel String? @map("preferred_label")
+  altLabels     String[] @map("alt_labels")
+  description   String?
+
+  @@map("esco_skills")
+  @@schema("refdata")
+}
+
+model EscoOccupation {
+  occupationUri  String   @id @map("occupation_uri")
+  iscoGroup      String?  @map("isco_group")
+  escoCode       String?  @map("esco_code")
+  preferredLabel String?  @map("preferred_label")
+  altLabels      String[] @map("alt_labels")
+  description    String?
+
+  @@map("esco_occupations")
+  @@schema("refdata")
+}
+
+/// Curated tech-relevant subset of esco_skills (Tabiya's digitalSkillsCollection),
+/// standing in for the spec's "~400 technologies mapped to ~80 skills" layer
+/// (Section 15.1) until a dedicated tech ontology is authored.
+model EscoTechSkill {
+  skillUri       String   @id @map("skill_uri")
+  skillType      String?  @map("skill_type")
+  reuseLevel     String?  @map("reuse_level")
+  preferredLabel String?  @map("preferred_label")
+  altLabels      String[] @map("alt_labels")
+  description    String?
+
+  @@map("esco_tech_skills")
+  @@schema("refdata")
+}
+
+/// Occupations under ISCO groups 25xx/351x/133 (ICT professionals/technicians/managers).
+model EscoTechOccupation {
+  occupationUri  String   @id @map("occupation_uri")
+  iscoGroup      String?  @map("isco_group")
+  escoCode       String?  @map("esco_code")
+  preferredLabel String?  @map("preferred_label")
+  altLabels      String[] @map("alt_labels")
+  description    String?
+
+  @@map("esco_tech_occupations")
+  @@schema("refdata")
+}
+
+/// One row per LinkedIn posting canonicalized to one of the 25 target roles
+/// (Section 15.2), with skill strings linked to ESCO/tech-skill URIs where
+/// possible. `jobLink` (the source URL) is the natural key — the raw dataset
+/// has no numeric job id.
+model LinkedinJobClean {
+  jobLink         String   @id @map("job_link")
+  jobTitle        String?  @map("job_title")
+  targetRole      String?  @map("target_role")
+  roleMatchMethod String?  @map("role_match_method") // regex | embedding
+  roleMatchScore  Float?   @map("role_match_score")
+  company         String?
+  jobLocation     String?  @map("job_location")
+  jobLevel        String?  @map("job_level")
+  jobType         String?  @map("job_type")
+  firstSeen       String?  @map("first_seen")
+  skillsLinked    String[] @map("skills_linked") // ESCO/tech-skill URIs
+  skillsUnlinked  String[] @map("skills_unlinked") // raw strings with no ESCO match
+  skillCount      Int      @map("skill_count")
+
+  @@index([targetRole])
+  @@map("linkedin_jobs_clean")
+  @@schema("refdata")
+}
+
+/// One row per active-developer survey respondent with a reported language
+/// (Section 15.3). Aggregate-only: no free-text columns, used only for
+/// grouped statistics, never surfaced per-respondent in the UI.
+model StackoverflowSurveyClean {
+  responseId               BigInt   @id @map("response_id")
+  mainBranch                String?  @map("main_branch")
+  age                       String?
+  edLevel                   String?  @map("ed_level")
+  employment                String[]
+  yearsCode                 Float?   @map("years_code")
+  workExp                   Float?   @map("work_exp")
+  devType                   String[] @map("dev_type")
+  orgSize                   String?  @map("org_size")
+  remoteWork                String?  @map("remote_work")
+  country                   String?
+  convertedCompYearly       Float?   @map("converted_comp_yearly")
+  languageHaveWorkedWith    String[] @map("language_have_worked_with")
+  databaseHaveWorkedWith    String[] @map("database_have_worked_with")
+  platformHaveWorkedWith    String[] @map("platform_have_worked_with")
+  webframeHaveWorkedWith    String[] @map("webframe_have_worked_with")
+  devEnvsHaveWorkedWith     String[] @map("dev_envs_have_worked_with")
+  aiModelsHaveWorkedWith    String[] @map("ai_models_have_worked_with")
+  jobSat                    String?  @map("job_sat")
+
+  @@index([devType])
+  @@map("stackoverflow_survey_clean")
+  @@schema("refdata")
+}

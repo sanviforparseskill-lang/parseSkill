@@ -1,0 +1,188 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* parseSkill(); design system
+ * Light: paper/surface/ink/ink-muted/line
+ * Dark:  void/surface/fog/fog-muted/line
+ * Shared meaning colors: proof (verified), gap (missing), signal (action)
+ */
+
+@theme inline {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+
+  --color-proof: var(--proof);
+  --color-proof-foreground: var(--proof-foreground);
+  --color-gap: var(--gap);
+  --color-gap-foreground: var(--gap-foreground);
+  --color-signal: var(--signal);
+  --color-signal-foreground: var(--signal-foreground);
+
+  --color-cat-backend: #6C8EF5;
+  --color-cat-frontend: #F2B84E;
+  --color-cat-ml: #B98CF0;
+  --color-cat-devops: #58C4B0;
+  --color-cat-database: #EE8FB0;
+  --color-cat-language: #9AA5B1;
+
+  /* shadcn compatibility maps */
+  --color-card: var(--surface);
+  --color-card-foreground: var(--ink);
+  --color-popover: var(--surface);
+  --color-popover-foreground: var(--ink);
+  --color-primary: var(--signal);
+  --color-primary-foreground: var(--signal-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--ink);
+  --color-muted: var(--secondary);
+  --color-muted-foreground: var(--ink-muted);
+  --color-accent: var(--secondary);
+  --color-accent-foreground: var(--ink);
+  --color-destructive: var(--gap);
+  --color-destructive-foreground: var(--gap-foreground);
+  --color-border: var(--line);
+  --color-input: var(--line);
+  --color-ring: var(--proof);
+
+  --color-sidebar: var(--surface);
+  --color-sidebar-foreground: var(--ink);
+  --color-sidebar-primary: var(--signal);
+  --color-sidebar-primary-foreground: var(--signal-foreground);
+  --color-sidebar-accent: var(--secondary);
+  --color-sidebar-accent-foreground: var(--ink);
+  --color-sidebar-border: var(--line);
+  --color-sidebar-ring: var(--signal);
+}
+
+:root {
+  --background: #F6F7F4;
+  --foreground: #14171B;
+  --surface: #FFFFFF;
+  --ink: #14171B;
+  --ink-muted: #565B61;
+  --line: #DEE2DC;
+  --secondary: #EEF0EC;
+
+  --proof: #17A673;
+  --proof-foreground: #FFFFFF;
+  --gap: #E8593A;
+  --gap-foreground: #FFFFFF;
+  --signal: #3B6CE0;
+  --signal-foreground: #FFFFFF;
+}
+
+.dark {
+  --background: #0B0D10;
+  --foreground: #E7EAE6;
+  --surface: #14171B;
+  --ink: #E7EAE6;
+  --ink-muted: #8A9099;
+  --line: #262B31;
+  --secondary: #1B1F24;
+
+  --proof: #1FBF87;
+  --proof-foreground: #06110C;
+  --gap: #F26A4B;
+  --gap-foreground: #1A0A05;
+  --signal: #5B87EA;
+  --signal-foreground: #06111F;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--signal) 30%, transparent);
+  }
+  *:focus-visible {
+    outline: 2px solid var(--proof);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+}
+
+/* Receipt perforated top edge — jagged mask */
+@utility receipt-edge {
+  --tooth: 8px;
+  --tooth-h: 6px;
+  -webkit-mask:
+    radial-gradient(circle var(--tooth-h) at var(--tooth) 0,
+      transparent calc(var(--tooth-h) - 0.5px), #000 var(--tooth-h))
+      50% 0 / calc(var(--tooth) * 2) 100% repeat-x,
+    linear-gradient(#000, #000) 0 var(--tooth-h) / 100% calc(100% - var(--tooth-h)) no-repeat;
+          mask:
+    radial-gradient(circle var(--tooth-h) at var(--tooth) 0,
+      transparent calc(var(--tooth-h) - 0.5px), #000 var(--tooth-h))
+      50% 0 / calc(var(--tooth) * 2) 100% repeat-x,
+    linear-gradient(#000, #000) 0 var(--tooth-h) / 100% calc(100% - var(--tooth-h)) no-repeat;
+}
+
+@utility receipt-unfurl {
+  transform-origin: top;
+  animation: receipt-unfurl 220ms ease-out;
+}
+
+@keyframes receipt-unfurl {
+  0%   { transform: scaleY(0.02); opacity: 0; }
+  60%  { opacity: 1; }
+  100% { transform: scaleY(1); opacity: 1; }
+}
+
+@keyframes cursor-blink {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@utility cursor-blink {
+  animation: cursor-blink 900ms steps(1, end) 6;
+}
+
+@utility cursor-blink-forever {
+  animation: cursor-blink 900ms steps(1, end) infinite;
+}
+
+@keyframes node-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+
+@utility node-pulse {
+  animation: node-pulse 700ms ease-in-out 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Terminal-style scrollbar for sync logs */
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
