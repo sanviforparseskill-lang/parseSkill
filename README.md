@@ -39,6 +39,12 @@ The production requirements intentionally exclude PyTorch, CUDA, and other large
 pip install -r requirements-ml.txt
 ```
 
+Test and lint tools are also excluded from the Render image. Install them locally with:
+
+```powershell
+pip install -r requirements-dev.txt
+```
+
 Set the backend values in `backend/.env`, then generate the Prisma client:
 
 ```powershell
@@ -156,7 +162,7 @@ Use these settings:
 
 ```text
 Root Directory: backend
-Build Command: pip install -r requirements.txt && python -m prisma py fetch && python -m prisma generate --schema prisma/schema.prisma
+Build Command: pip install --no-cache-dir -r requirements.txt && python -m prisma py fetch && python -m prisma generate --schema prisma/schema.prisma
 Start Command: python -m prisma py fetch && uvicorn app.main:app --host 0.0.0.0 --port $PORT
 Health Check Path: /healthz
 ```
