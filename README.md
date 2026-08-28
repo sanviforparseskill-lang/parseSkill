@@ -2,11 +2,10 @@
 
 parseSkill is a developer-intelligence platform that builds a profile from evidence such as GitHub repositories, coding activity, resumes, and connected developer platforms.
 
-The application is split into three runtime services:
+The application has two runtime parts:
 
 - **Frontend:** React, Vite, TanStack Router, and TanStack Start
-- **Backend API:** FastAPI serving REST and Server-Sent Events
-- **Worker:** long-running Python process that consumes jobs from PostgreSQL
+- **Backend:** FastAPI serving REST and Server-Sent Events, with the job loop running in the same process
 - **Database:** PostgreSQL, recommended through Neon
 
 ## Repository Layout
@@ -161,19 +160,13 @@ After deployment, this endpoint must return `{"status":"ok"}`:
 https://your-api-domain.onrender.com/healthz
 ```
 
-### 3. Deploy the worker to Render
+### 3. Run the worker on the same free Render service
 
-Create a second Render service using the same repository, but select **Background Worker**.
+Do not create a separate Render Background Worker. The backend starts the job loop inside FastAPI during application startup, so the free deployment uses only one Render Web Service.
 
-Use these settings:
+The existing `backend/Procfile` also keeps `python -m app.worker` available for a separate paid worker later, but it is not needed for this free setup.
 
-```text
-Root Directory: backend
-Build Command: pip install -r requirements.txt && python -m prisma generate --schema prisma/schema.prisma
-Start Command: python -m app.worker
-```
-
-Copy the same backend environment variables into the worker. The worker must stay running because it processes profile-sync and assistant jobs. Avoid a sleeping/free worker for production.
+The tradeoff is important: Render's free Web Service can sleep after inactivity. While it is sleeping, new jobs cannot be processed. The service wakes when a request arrives, and queued jobs remain in PostgreSQL until the worker loop runs again.
 
 ### 4. Deploy the frontend to Vercel
 

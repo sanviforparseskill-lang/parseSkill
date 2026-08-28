@@ -1,12 +1,12 @@
 """FastAPI web process (Section 2 / 3): `uvicorn app.main:app --reload`.
 
-Handles all HTTP + SSE traffic. Never runs sync/inference/ML work itself —
-it only enqueues jobs onto `job_queue` for the worker process (app/worker.py)
-to pick up. See Section 3's "Two Python processes, one database" diagram.
+Handles HTTP + SSE traffic and starts the PostgreSQL-backed job loop in the
+same process. This keeps the free-tier deployment to one Render web service.
 """
 
 from __future__ import annotations
 
+import asyncio
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -16,15 +16,19 @@ from app.api.v1.router import api_router
 from app.core.config import get_settings
 from app.db.client import connect_db, disconnect_db
 from app.db.pubsub import connect_pubsub, disconnect_pubsub
+from app import worker
 
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
     await connect_db()
     await connect_pubsub()
+    worker_task = asyncio.create_task(worker.run_worker())
     try:
         yield
     finally:
+        worker.stop_worker()
+        await worker_task
         await disconnect_pubsub()
         await disconnect_db()
 

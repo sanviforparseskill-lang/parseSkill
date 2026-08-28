@@ -1,4 +1,4 @@
-"""The worker process (Section 2 / 3): `python -m app.worker`.
+"""The worker loop (Section 2 / 3): `python -m app.worker`.
 
 Polls `job_queue` with `FOR UPDATE SKIP LOCKED`, dispatches to the handler
 for the job's `job_type`, and runs the APScheduler-based janitor (stale
@@ -33,6 +33,10 @@ _HANDLERS = {
 }
 
 _shutdown = asyncio.Event()
+
+
+def stop_worker() -> None:
+    _shutdown.set()
 
 
 async def _process_one() -> bool:
@@ -74,10 +78,23 @@ def _build_scheduler() -> AsyncIOScheduler:
 
 
 async def main() -> None:
-    await connect_db()
-    await pubsub.connect_pubsub()
     scheduler = _build_scheduler()
     scheduler.start()
+    logger.info("Worker started, polling job_queue every %.1fs", POLL_INTERVAL_SECONDS)
+    try:
+        await _poll_loop()
+    finally:
+        scheduler.shutdown(wait=False)
+
+
+async def run_worker() -> None:
+    """Run the worker inside an already-connected FastAPI process."""
+    await main()
+
+
+async def main_process() -> None:
+    await connect_db()
+    await pubsub.connect_pubsub()
 
     loop = asyncio.get_running_loop()
     for sig in (signal.SIGINT, signal.SIGTERM):
@@ -86,17 +103,15 @@ async def main() -> None:
         except NotImplementedError:
             pass  # Windows: signal handlers on the event loop aren't supported; Ctrl+C still raises KeyboardInterrupt.
 
-    logger.info("Worker started, polling job_queue every %.1fs", POLL_INTERVAL_SECONDS)
     try:
-        await _poll_loop()
+        await main()
     finally:
-        scheduler.shutdown(wait=False)
         await pubsub.disconnect_pubsub()
         await disconnect_db()
 
 
 if __name__ == "__main__":
     try:
-        asyncio.run(main())
+        asyncio.run(main_process())
     except KeyboardInterrupt:
         pass
