@@ -1,7 +1,7 @@
 //#region \0tanstack-start-manifest:v
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
-		filePath: "E:/parseSkill/frontend/src/routes/__root.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/__root.tsx",
 		children: [
 			"/",
 			"/_app",
@@ -26,7 +26,7 @@ var tsrStartManifest = () => ({ routes: {
 		} }]
 	},
 	"/": {
-		filePath: "E:/parseSkill/frontend/src/routes/index.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/index.tsx",
 		children: void 0,
 		preloads: [
 			"/assets/routes-DoG0CJ1X.js",
@@ -39,7 +39,7 @@ var tsrStartManifest = () => ({ routes: {
 		]
 	},
 	"/_app": {
-		filePath: "E:/parseSkill/frontend/src/routes/_app.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/_app.tsx",
 		children: [
 			"/_app/chat",
 			"/_app/dashboard",
@@ -64,12 +64,12 @@ var tsrStartManifest = () => ({ routes: {
 		]
 	},
 	"/about": {
-		filePath: "E:/parseSkill/frontend/src/routes/about.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/about.tsx",
 		children: void 0,
 		preloads: ["/assets/about-Dxt2YGhq.js", "/assets/Wordmark-Bv00GOj9.js"]
 	},
 	"/onboarding": {
-		filePath: "E:/parseSkill/frontend/src/routes/onboarding.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/onboarding.tsx",
 		children: void 0,
 		preloads: [
 			"/assets/onboarding-SPKLlNih.js",
@@ -79,12 +79,12 @@ var tsrStartManifest = () => ({ routes: {
 		]
 	},
 	"/_app/chat": {
-		filePath: "E:/parseSkill/frontend/src/routes/_app.chat.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/_app.chat.tsx",
 		children: void 0,
 		preloads: ["/assets/_app.chat-BUW8PaVZ.js"]
 	},
 	"/_app/dashboard": {
-		filePath: "E:/parseSkill/frontend/src/routes/_app.dashboard.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/_app.dashboard.tsx",
 		children: void 0,
 		preloads: [
 			"/assets/_app.dashboard-DJfc7Bob.js",
@@ -96,7 +96,7 @@ var tsrStartManifest = () => ({ routes: {
 		]
 	},
 	"/_app/graph": {
-		filePath: "E:/parseSkill/frontend/src/routes/_app.graph.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/_app.graph.tsx",
 		children: void 0,
 		preloads: [
 			"/assets/_app.graph-BOzb2ZP7.js",
@@ -106,7 +106,7 @@ var tsrStartManifest = () => ({ routes: {
 		]
 	},
 	"/_app/portfolio": {
-		filePath: "E:/parseSkill/frontend/src/routes/_app.portfolio.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/_app.portfolio.tsx",
 		children: void 0,
 		preloads: [
 			"/assets/_app.portfolio-B6O8IIqJ.js",
@@ -115,12 +115,12 @@ var tsrStartManifest = () => ({ routes: {
 		]
 	},
 	"/_app/projects": {
-		filePath: "E:/parseSkill/frontend/src/routes/_app.projects.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/_app.projects.tsx",
 		children: void 0,
 		preloads: ["/assets/_app.projects-CI3gG7eb.js", "/assets/Receipt-ip7F0ItC.js"]
 	},
 	"/_app/recommendations": {
-		filePath: "E:/parseSkill/frontend/src/routes/_app.recommendations.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/_app.recommendations.tsx",
 		children: void 0,
 		preloads: [
 			"/assets/_app.recommendations-DyRVpkcP.js",
@@ -130,7 +130,7 @@ var tsrStartManifest = () => ({ routes: {
 		]
 	},
 	"/_app/resume-audit": {
-		filePath: "E:/parseSkill/frontend/src/routes/_app.resume-audit.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/_app.resume-audit.tsx",
 		children: void 0,
 		preloads: [
 			"/assets/_app.resume-audit-D7MoB3pJ.js",
@@ -139,27 +139,27 @@ var tsrStartManifest = () => ({ routes: {
 		]
 	},
 	"/_app/roadmap": {
-		filePath: "E:/parseSkill/frontend/src/routes/_app.roadmap.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/_app.roadmap.tsx",
 		children: void 0,
 		preloads: ["/assets/_app.roadmap-BMHWj_Nh.js"]
 	},
 	"/_app/settings": {
-		filePath: "E:/parseSkill/frontend/src/routes/_app.settings.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/_app.settings.tsx",
 		children: void 0,
 		preloads: ["/assets/_app.settings-B2YlLATN.js"]
 	},
 	"/_app/timeline": {
-		filePath: "E:/parseSkill/frontend/src/routes/_app.timeline.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/_app.timeline.tsx",
 		children: void 0,
 		preloads: ["/assets/_app.timeline-lkU3kZtu.js", "/assets/category-colors-C527kDz-.js"]
 	},
 	"/auth/neon-callback": {
-		filePath: "E:/parseSkill/frontend/src/routes/auth.neon-callback.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/auth.neon-callback.tsx",
 		children: void 0,
 		preloads: ["/assets/auth.neon-callback-j_4wSGWl.js"]
 	},
 	"/auth/signin": {
-		filePath: "E:/parseSkill/frontend/src/routes/auth.signin.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/auth.signin.tsx",
 		children: void 0,
 		preloads: [
 			"/assets/auth.signin-B3WazWLy.js",
@@ -170,7 +170,7 @@ var tsrStartManifest = () => ({ routes: {
 		]
 	},
 	"/u/$username": {
-		filePath: "E:/parseSkill/frontend/src/routes/u.$username.tsx",
+		filePath: "D:/parseSkill/frontend/src/routes/u.$username.tsx",
 		children: void 0,
 		preloads: [
 			"/assets/u._username-BLCTyqaY.js",

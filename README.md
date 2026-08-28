@@ -1,176 +1,273 @@
-# parseSkill — Live Deployment Guide
+# parseSkill
 
-This repository is the deployment-ready version of the parseSkill app. It keeps the actual product code and removes the extra research/data artifacts that were only used during exploration and model setup.
+parseSkill is a developer-intelligence platform that builds a profile from evidence such as GitHub repositories, coding activity, resumes, and connected developer platforms.
 
-## What was kept
+The application is split into three runtime services:
 
-- Backend API: FastAPI app with worker queue processing
-- Frontend app: React + TanStack Start UI
-- Prisma schema and database layer
-- Auth, profile sync, portfolio, recommendations, and chat flows
-- Example environment files for local setup
+- **Frontend:** React, Vite, TanStack Router, and TanStack Start
+- **Backend API:** FastAPI serving REST and Server-Sent Events
+- **Worker:** long-running Python process that consumes jobs from PostgreSQL
+- **Database:** PostgreSQL, recommended through Neon
 
-## What was removed
-
-The following were removed because they were not part of the live product build:
-
-- data dumps and CSV datasets
-- ESCO research files
-- job-posting and job-skill CSV folders
-- ML pipeline experiment scripts
-- generated cache directories and editor temp files
-- old study/spec output files
-
-This keeps the repository focused on the real application rather than on raw research assets.
-
-## Project structure
+## Repository Layout
 
 ```text
 parseSkill/
-├─ backend/
-│  ├─ app/
-│  │  ├─ api/
-│  │  ├─ core/
-│  │  ├─ db/
-│  │  ├─ extractor/
-│  │  ├─ inference/
-│  │  ├─ intelligence/
-│  │  ├─ jobs/
-│  │  ├─ ml/
-│  │  ├─ rag/
-│  │  ├─ refdata/
-│  │  ├─ schemas/
-│  │  └─ services/
-│  ├─ prisma/
-│  ├─ .env.example
-│  ├─ requirements.txt
-│  ├─ Procfile
-│  └─ README.md
-├─ frontend/
-│  ├─ src/
-│  ├─ .env.example
-│  ├─ package.json
-│  ├─ vite.config.ts
-│  └─ ...
-├─ .gitignore
-├─ README.md
-└─ .env.example (if added later for root deployment)
+|-- backend/       FastAPI API, worker, Prisma schema, integrations
+|-- frontend/      React/TanStack Start application
+`-- README.md
 ```
 
-## Stack
+## Local Development
 
-- Frontend: React, Vite, TanStack Router, TanStack Start
-- Backend: FastAPI, Uvicorn
-- Worker: Python background job processor
-- Database: PostgreSQL + Prisma
-- Auth: GitHub OAuth + Neon Auth
-- AI: LLM-backed assistant and profile inference
+### Backend
 
-## Local development
+From PowerShell:
 
-### 1) Backend
-
-```bash
+```powershell
 cd backend
 python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+.\\.venv\\Scripts\\Activate.ps1
 pip install -r requirements.txt
-cp .env.example .env
+Copy-Item .env.example .env
+```
+
+Set the backend values in `backend/.env`, then generate the Prisma client:
+
+```powershell
+python -m prisma generate --schema prisma/schema.prisma
+```
+
+Run the worker in one terminal:
+
+```powershell
 python -m app.worker
 ```
 
-Run the API in another terminal:
+Run the API in a second terminal:
 
-```bash
-cd backend
-source .venv/bin/activate
+```powershell
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-### 2) Frontend
+### Frontend
 
-```bash
+In a separate terminal:
+
+```powershell
 cd frontend
 npm install
-cp .env.example .env
+Copy-Item .env.example .env
 npm run dev
 ```
 
-The frontend should point to the backend API, usually:
+The local frontend API URL is:
 
 ```env
 VITE_API_URL=http://localhost:8000/api/v1
 ```
 
-## Environment variables
+## Environment Variables
 
 ### Backend
 
-Use values from the backend `.env` file. Required items include:
+The backend reads variables from `backend/.env` through `backend/app/core/config.py`.
 
-- `DATABASE_URL`
-- `DIRECT_URL`
-- `JWT_SECRET`
-- `GITHUB_CLIENT_ID`
-- `GITHUB_CLIENT_SECRET`
-- `FRONTEND_URL`
-- `NEON_AUTH_ISSUER_URL`
-- `LLM_PROVIDER`
-- `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`
+Required for a working production deployment:
+
+```env
+ENVIRONMENT=production
+DATABASE_URL=your-neon-pooled-connection-string
+DIRECT_URL=your-neon-direct-connection-string
+JWT_SECRET=long-random-secret
+JWT_ALGORITHM=HS256
+SESSION_COOKIE_NAME=ps_session
+ACCESS_TOKEN_TTL_MINUTES=60
+REFRESH_TOKEN_TTL_DAYS=30
+FRONTEND_URL=https://your-frontend-domain
+GITHUB_CLIENT_ID=your-github-client-id
+GITHUB_CLIENT_SECRET=your-github-client-secret
+GITHUB_OAUTH_REDIRECT_URI=https://your-api-domain/api/v1/auth/callback/github
+GITHUB_OAUTH_SCOPES=read:user user:email public_repo
+LLM_PROVIDER=gemini
+GEMINI_API_KEY=your-gemini-api-key
+GEMINI_MODEL=gemini-flash-latest
+NEON_AUTH_ISSUER_URL=your-neon-auth-issuer-url
+STORAGE_DIR=./storage
+```
+
+Optional backend variables:
+
+```env
+LEETCODE_SESSION_TOKEN=
+KAGGLE_USERNAME=
+KAGGLE_KEY=
+SENTRY_DSN=
+POSTHOG_API_KEY=
+```
+
+`DATABASE_URL` should use Neon's pooled host. `DIRECT_URL` should use the direct host and is required for Prisma operations and PostgreSQL notifications.
+
+The current backend uses Gemini. Use `GEMINI_API_KEY`; the older Anthropic/OpenAI names in some example documentation are not used by `app/core/config.py`.
 
 ### Frontend
 
-Use values from the frontend `.env` file, including:
+The frontend reads Vite variables at build time:
 
-- `VITE_API_URL`
-- `VITE_NEON_AUTH_URL`
+```env
+VITE_API_URL=https://your-api-domain/api/v1
+VITE_NEON_AUTH_URL=your-neon-auth-issuer-url
+```
 
-## Deployment checklist
+Never put backend secrets or OAuth client secrets in the frontend. Any `VITE_*` value is visible in the browser.
 
-### Production database
+## Production Deployment
 
-- Use PostgreSQL (for example Neon)
-- Keep the pooled URL for backend web and worker traffic
-- Keep the direct URL for Prisma migrations if needed
+The recommended deployment is **Vercel + Render + Neon**.
 
-### Backend deployment
+### 1. Create the Neon database
 
-- Deploy the FastAPI app to a server or hosting platform
-- Start both the API and worker processes
-- Set production env vars securely
-- Keep the same `DATABASE_URL` and auth config used by the app
+1. Create a PostgreSQL project in Neon.
+2. Enable the extensions required by `backend/prisma/schema.prisma`: `pgcrypto`, `pg_trgm`, `vector`, and `btree_gin`.
+3. Copy the pooled connection string into `DATABASE_URL`.
+4. Copy the direct connection string into `DIRECT_URL`.
 
-### Frontend deployment
+If this is a new database and no Prisma migrations exist yet, initialize the schema from the backend directory:
 
-- Deploy the frontend to a static/SSR host
-- Set `VITE_API_URL` to the live backend URL
-- Allow backend CORS origin from the deployed frontend URL
+```bash
+python -m prisma generate --schema prisma/schema.prisma
+python -m prisma db push --schema prisma/schema.prisma
+```
 
-### Auth setup
+### 2. Deploy the API to Render
 
-- Configure GitHub OAuth callback URL
-- Configure Neon Auth issuer URL if using the alternate sign-in flow
-- Ensure the redirect URL matches the deployed app exactly
+Create a Render **Web Service** connected to this repository.
 
-## Live app launch summary
+Use these settings:
 
-This project is now organized as a minimal but production-ready app:
+```text
+Root Directory: backend
+Build Command: pip install -r requirements.txt && python -m prisma generate --schema prisma/schema.prisma
+Start Command: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+Health Check Path: /healthz
+```
 
-- app code stays in backend and frontend
-- unnecessary exploration data was removed
-- environment files remain for runtime configuration
-- backend and frontend can run independently
-- deployment steps are documented for a live environment
+Add all required backend environment variables from the section above. Set `FRONTEND_URL` to the final Vercel URL, with no trailing slash.
 
-## Useful verification commands
+After deployment, this endpoint must return `{"status":"ok"}`:
+
+```text
+https://your-api-domain.onrender.com/healthz
+```
+
+### 3. Deploy the worker to Render
+
+Create a second Render service using the same repository, but select **Background Worker**.
+
+Use these settings:
+
+```text
+Root Directory: backend
+Build Command: pip install -r requirements.txt && python -m prisma generate --schema prisma/schema.prisma
+Start Command: python -m app.worker
+```
+
+Copy the same backend environment variables into the worker. The worker must stay running because it processes profile-sync and assistant jobs. Avoid a sleeping/free worker for production.
+
+### 4. Deploy the frontend to Vercel
+
+Create a Vercel project connected to this repository.
+
+Use these settings:
+
+```text
+Root Directory: frontend
+Build Command: npm run build
+Install Command: npm install
+```
+
+Add these Vercel environment variables:
+
+```env
+VITE_API_URL=https://your-api-domain.onrender.com/api/v1
+VITE_NEON_AUTH_URL=your-neon-auth-issuer-url
+```
+
+Redeploy Vercel whenever a `VITE_*` value changes because these values are embedded during the frontend build.
+
+### 5. Configure GitHub OAuth
+
+In GitHub Developer Settings, set the OAuth application callback URL to the backend endpoint:
+
+```text
+https://your-api-domain.onrender.com/api/v1/auth/callback/github
+```
+
+Set the identical value in Render:
+
+```env
+GITHUB_OAUTH_REDIRECT_URI=https://your-api-domain.onrender.com/api/v1/auth/callback/github
+```
+
+The callback URL must match exactly.
+
+### 6. Configure Neon Auth
+
+Use the issuer URL from the Neon project Auth settings in both places:
+
+```env
+# Render API and worker
+NEON_AUTH_ISSUER_URL=your-neon-auth-issuer-url
+
+# Vercel frontend
+VITE_NEON_AUTH_URL=your-neon-auth-issuer-url
+```
+
+If Neon Auth is not being used, leave both values empty and use GitHub OAuth.
+
+## Important Cookie and Domain Setup
+
+The backend authenticates with HTTP-only cookies. For the most reliable production setup, use custom subdomains under the same domain:
+
+```text
+app.example.com  -> Vercel
+api.example.com  -> Render
+```
+
+Then use:
+
+```env
+FRONTEND_URL=https://app.example.com
+VITE_API_URL=https://api.example.com/api/v1
+GITHUB_OAUTH_REDIRECT_URI=https://api.example.com/api/v1/auth/callback/github
+```
+
+Using unrelated default domains such as `vercel.app` and `onrender.com` can cause browsers to reject or omit cross-site authentication cookies.
+
+## Verification
+
+Run these checks before deployment:
 
 ```bash
 cd frontend && npm run build
-cd backend && python -m compileall app
+cd ../backend && python -m compileall app
 ```
 
-If these pass, the app is in a good state for deployment preparation.
+After deployment:
 
-## Notes
+1. Open the Render `/healthz` endpoint.
+2. Open the Vercel frontend.
+3. Sign in with GitHub.
+4. Confirm the redirect reaches onboarding or dashboard.
+5. Trigger profile synchronization.
+6. Check Render worker logs for job processing.
+7. Test chat, SSE progress, sign-out, and a browser refresh.
 
-This is not a one-click deployment script; it is a cleaned and launch-ready codebase that is prepared for hosting using a standard backend + frontend + database setup.
+## Security Notes
+
+- Never commit `backend/.env` or real API keys.
+- Use a new strong `JWT_SECRET` in production.
+- Rotate any credential that has ever been committed to a public repository.
+- Do not expose backend secrets through `VITE_*` variables.
+- Render's local filesystem is ephemeral. Use a persistent disk or object storage if uploaded resumes must survive redeployments.
