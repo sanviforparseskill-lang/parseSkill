@@ -30,6 +30,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 .\\.venv\\Scripts\\Activate.ps1
 pip install -r requirements.txt
 Copy-Item .env.example .env
+python -m prisma py fetch
 ```
 
 Set the backend values in `backend/.env`, then generate the Prisma client:
@@ -147,7 +148,7 @@ Use these settings:
 
 ```text
 Root Directory: backend
-Build Command: pip install -r requirements.txt && python -m prisma generate --schema prisma/schema.prisma
+Build Command: pip install -r requirements.txt && python -m prisma py fetch && python -m prisma generate --schema prisma/schema.prisma
 Start Command: uvicorn app.main:app --host 0.0.0.0 --port $PORT
 Health Check Path: /healthz
 ```
