@@ -33,6 +33,12 @@ Copy-Item .env.example .env
 python -m prisma py fetch
 ```
 
+The production requirements intentionally exclude PyTorch, CUDA, and other large offline-training packages so the free Render service stays within its memory limit. Install the optional training stack only when working on the local ML/data scripts:
+
+```powershell
+pip install -r requirements-ml.txt
+```
+
 Set the backend values in `backend/.env`, then generate the Prisma client:
 
 ```powershell
@@ -111,6 +117,8 @@ POSTHOG_API_KEY=
 
 The current backend uses Gemini. Use `GEMINI_API_KEY`; the older Anthropic/OpenAI names in some example documentation are not used by `app/core/config.py`.
 
+Profile and chat retrieval use a lightweight deterministic local embedding that matches the database's 384-dimensional vector column. This avoids downloading PyTorch, CUDA, or a transformer model on Render's free instance. The tradeoff is lower semantic quality than a hosted or transformer embedding model.
+
 ### Frontend
 
 The frontend reads Vite variables at build time:
@@ -149,7 +157,7 @@ Use these settings:
 ```text
 Root Directory: backend
 Build Command: pip install -r requirements.txt && python -m prisma py fetch && python -m prisma generate --schema prisma/schema.prisma
-Start Command: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+Start Command: python -m prisma py fetch && uvicorn app.main:app --host 0.0.0.0 --port $PORT
 Health Check Path: /healthz
 ```
 
@@ -160,6 +168,8 @@ After deployment, this endpoint must return `{"status":"ok"}`:
 ```text
 https://your-api-domain.onrender.com/healthz
 ```
+
+The Prisma binary is fetched again at startup because Render may not preserve the Prisma build cache in the runtime container. This command must be present in the Render dashboard Start Command as well as in `backend/Procfile`.
 
 ### 3. Run the worker on the same free Render service
 

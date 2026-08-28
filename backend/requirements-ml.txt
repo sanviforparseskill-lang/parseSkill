@@ -1,0 +1,9 @@
+# Optional offline training and dataset tooling. Not required by the Render API.
+scikit-learn>=1.5
+xgboost>=2.1
+pandas>=2.2
+pyarrow>=17.0
+joblib>=1.4
+imbalanced-learn>=0.12
+numpy>=1.26
+sentence-transformers>=3.2
