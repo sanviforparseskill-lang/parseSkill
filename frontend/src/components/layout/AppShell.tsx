@@ -9,6 +9,7 @@ import { Wordmark } from "@/components/brand/Wordmark";
 import { cn } from "@/lib/utils";
 import { AssistantLauncher } from "./AssistantLauncher";
 import { useCurrentUser } from "@/lib/queries";
+import { DemoModeBanner } from "@/components/layout/DemoModeBanner";
 
 const nav = [
   { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
@@ -49,6 +50,7 @@ export function AppShell({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-background text-ink flex flex-col">
+      <DemoModeBanner />
       {/* Top bar */}
       <header className="sticky top-0 z-30 h-14 border-b border-line bg-surface/95 backdrop-blur flex items-center px-4 gap-4">
         <Link to="/dashboard" className="flex items-center">

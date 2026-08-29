@@ -1,13 +1,21 @@
-import { createFileRoute, Link, ClientOnly } from "@tanstack/react-router";
+import { createFileRoute, Link, ClientOnly, useNavigate } from "@tanstack/react-router";
 import { Github } from "lucide-react";
 import { Wordmark } from "@/components/brand/Wordmark";
 import { apiOrigin } from "@/lib/api";
 import { NeonAuthPanel } from "@/components/auth/NeonAuthPanel";
 import { isNeonAuthConfigured } from "@/lib/neonAuth";
+import { clearDemoMode, setDemoModeActive } from "@/lib/demo-mode";
 
 export const Route = createFileRoute("/auth/signin")({ component: SignIn });
 
 function SignIn() {
+  const navigate = useNavigate();
+
+  const signInDemo = () => {
+    setDemoModeActive(true);
+    navigate({ to: "/dashboard" });
+  };
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <header className="h-14 border-b border-line px-6 flex items-center bg-surface">
@@ -23,10 +31,26 @@ function SignIn() {
           </p>
           <a
             href={`${apiOrigin()}/auth/signin/github`}
+            onClick={() => clearDemoMode()}
             className="mt-6 w-full h-11 rounded-md bg-signal text-signal-foreground font-medium hover:opacity-90 inline-flex items-center justify-center gap-2"
           >
             <Github className="h-4 w-4" /> Continue with GitHub
           </a>
+
+          <div className="mt-4 rounded-md border border-amber-300 bg-amber-50 p-3">
+            <div className="font-mono text-[10.5px] uppercase tracking-widest text-amber-900">demo access</div>
+            <p className="mt-1 text-[12.5px] text-amber-900/90">
+              For interviews and frontend-only deployment. Uses sanitized local development data.
+            </p>
+            <button
+              type="button"
+              onClick={signInDemo}
+              className="mt-3 w-full h-10 rounded-md border border-amber-400 bg-amber-100 font-medium text-amber-950 hover:bg-amber-200"
+            >
+              Sign in as Demo (Sanvi)
+            </button>
+          </div>
+
           <div className="mt-6 border-t border-dashed border-line pt-4 font-mono text-[11px] text-ink-muted">
             scopes requested: <span className="text-ink">public_repo, read:user</span>
           </div>

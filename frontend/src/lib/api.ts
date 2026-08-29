@@ -1,3 +1,6 @@
+import { demoRequest } from "./demo-provider";
+import { isDemoModeActive } from "./demo-mode";
+
 const API_BASE = import.meta.env.VITE_API_URL ?? "http://localhost:8000/api/v1";
 
 export class ApiError extends Error {
@@ -9,6 +12,19 @@ export class ApiError extends Error {
 }
 
 async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
+  if (isDemoModeActive()) {
+    try {
+      return await demoRequest<T>(path, options);
+    } catch (err) {
+      if (err && typeof err === "object" && "status" in err) {
+        const status = Number((err as { status: unknown }).status);
+        const message = err instanceof Error ? err.message : "Demo request failed";
+        throw new ApiError(Number.isFinite(status) ? status : 500, message);
+      }
+      throw err;
+    }
+  }
+
   const res = await fetch(`${API_BASE}${path}`, {
     ...options,
     credentials: "include",
@@ -48,5 +64,8 @@ export function apiOrigin() {
 }
 
 export function sseUrl(path: string) {
+  if (isDemoModeActive()) {
+    return `demo://stream${path}`;
+  }
   return `${API_BASE}${path}`;
 }

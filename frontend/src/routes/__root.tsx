@@ -6,6 +6,7 @@ import {
 import { type ReactNode, useEffect, useRef } from "react";
 import { Toaster, toast } from "sonner";
 import { completeNeonAuthSignIn, isNeonAuthConfigured } from "@/lib/neonAuth";
+import { installDemoEventSourceBridge } from "@/lib/demo-provider";
 
 import appCss from "../styles.css?url";
 
@@ -125,6 +126,11 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    installDemoEventSourceBridge();
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <ClientOnly>
