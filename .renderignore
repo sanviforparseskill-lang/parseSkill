@@ -25,3 +25,4 @@
 **/raw_data/
 **/job_skills.csv/
 **/app/ml/models/
+frontend/**
