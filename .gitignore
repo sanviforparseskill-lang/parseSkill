@@ -1,7 +1,10 @@
 # Dependencies
 **/node_modules/
+**/dist/
+**/build/
 
-# Python
+# Python virtual environments and caches
+.venv/
 backend/.venv/
 **/__pycache__/
 *.pyc
@@ -9,13 +12,16 @@ backend/.venv/
 # Prisma
 backend/prisma/generated/
 
+# Local runtime data and generated assets
+frontend/dist/
+backend/storage/
+backend/app/ml/models/
+backend/.cache/
+
 # Secrets
 .env
 .env.local
 backend/.env
-
-# Runtime storage
-backend/storage/
 
 # Raw dataset artifacts and local data dumps
 **/*.csv
@@ -28,6 +34,8 @@ backend/storage/
 **/raw_data/
 **/job_skills.csv/
 
-# Trained model artifacts (regenerate with `python -m app.ml.train`)
-backend/app/ml/models/
+# Large local model or ML artifacts that should be regenerated in deployment
+**/*.pkl
+**/*.joblib
+**/*.bin
 

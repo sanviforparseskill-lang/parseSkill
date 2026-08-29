@@ -1,0 +1,17 @@
+# Keep the backend Deploy artifact small on free Render
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/storage/
+**/app/ml/models/
+**/*.pkl
+**/*.joblib
+**/*.bin
+**/*.csv
+**/*.parquet
+**/*.tsv
+**/*.xlsx

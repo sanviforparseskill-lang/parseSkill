@@ -193,9 +193,13 @@ Use these settings:
 
 ```text
 Root Directory: frontend
+Framework Preset: TanStack Start
 Build Command: npm run build
 Install Command: npm install
+Output Directory: leave empty
 ```
+
+Do not select `Vite`, `Other`, or a static output directory for this app. TanStack Start generates an SSR server in `dist/server`, so Vercel must deploy it as a TanStack Start application. If `TanStack Start` is not listed, update the Vercel project or choose the framework preset detected automatically after setting the root directory to `frontend`.
 
 Add these Vercel environment variables:
 

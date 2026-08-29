@@ -1,0 +1,27 @@
+# Ignore local environment and generated artifacts that blow past Render's 512 MB limit
+**/.venv/
+**/venv/
+**/node_modules/
+**/dist/
+**/build/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.cache/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/*.pkl
+**/*.joblib
+**/*.bin
+**/*.csv
+**/*.parquet
+**/*.tsv
+**/*.xlsx
+**/storage/
+**/datasets/
+**/data/
+**/raw_data/
+**/job_skills.csv/
+**/app/ml/models/
