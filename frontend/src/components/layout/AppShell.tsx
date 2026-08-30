@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import {
-  LayoutDashboard, Network, Boxes, LineChart, Sparkles, Route as RouteIcon,
+  LayoutDashboard, Network, Boxes, LineChart, Sparkles,
   Globe, Settings as SettingsIcon, Bell, Search, ChevronsLeft, ChevronsRight,
   FileCheck2,
 } from "lucide-react";
@@ -18,7 +18,6 @@ const nav = [
   { to: "/timeline", label: "Timeline", icon: LineChart },
   { to: "/recommendations", label: "Recommendations", icon: Sparkles },
   { to: "/resume-audit", label: "Resume Audit", icon: FileCheck2 },
-  { to: "/roadmap", label: "Roadmap", icon: RouteIcon },
   { to: "/portfolio", label: "Portfolio", icon: Globe },
   { to: "/settings", label: "Settings", icon: SettingsIcon },
 ] as const;
