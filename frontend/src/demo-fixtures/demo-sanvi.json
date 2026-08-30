@@ -1,0 +1,6408 @@
+{
+  "meta": {
+    "profile_label": "Sanvi",
+    "generated_at": "2026-08-29T08:15:23.297299Z",
+    "source": "local-dev-db",
+    "sanitized": true
+  },
+  "auth": {
+    "me": {
+      "id": "15884565-6fa4-4f5c-b787-7a5a52358d35",
+      "github_handle": "sanvi-s",
+      "display_name": "Sanvi Shanishchara",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193156283?v=4",
+      "onboarded": true
+    }
+  },
+  "profile": {
+    "id": "15884565-6fa4-4f5c-b787-7a5a52358d35",
+    "github_handle": "sanvi-s",
+    "leetcode_handle": null,
+    "codeforces_handle": null,
+    "kaggle_handle": null,
+    "display_name": "Sanvi Shanishchara",
+    "avatar_url": "https://avatars.githubusercontent.com/u/193156283?v=4",
+    "bio": "CSE undergrad at Maharaja Sayajirao University of Baroda. Software Development Intern at CollegeQuest, building AI-powered career platforms with React Native, FastAPI, and LLMs.",
+    "tagline": "Full-stack + AI engineer \u2014 React Native, FastAPI, LLMs",
+    "location": "Vadodara, Gujarat, India",
+    "coding_score": 82.5,
+    "project_quality_score": 49.85,
+    "consistency_score": 7.69,
+    "learning_velocity": 0.0,
+    "last_synced_at": "2026-08-06T04:25:19.739000+00:00"
+  },
+  "verification_token": {
+    "token": "demo-verify-token",
+    "instructions": {
+      "leetcode": "Demo mode: verification disabled.",
+      "codeforces": "Demo mode: verification disabled.",
+      "kaggle": "Demo mode: verification disabled."
+    }
+  },
+  "resume_parse": {
+    "education": [
+      {
+        "year": "2023 - 2027",
+        "field": "Computer Science and Engineering",
+        "degree": "Bachelor of Engineering",
+        "institution": "Maharaja Sayajirao University of Baroda"
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Software Development Intern",
+        "company": "CollegeQuest Pvt. Ltd.",
+        "end_date": "Present",
+        "start_date": "2026-01",
+        "description": "Architected and shipped a cross-platform AI education platform using React Native, Expo, TypeScript, Supabase, and FastAPI, delivering 20+ production modules for career planning, college discovery, and AI-powered counselling to students across India. Engineered QuestAI, a streaming AI counsellor with SSE-based authenticated responses, tool-status event handling, animated streaming output, and contextual navigation chips for real-time personalized career guidance. Implemented a full monetization pipeline with token-based billing, plan-aware feature gating, Razorpay checkout integration, and an in-app paywall supporting cross-platform web and native payment redirects. Built AI-powered Career Finder with dynamic quiz generation, personality and skills analysis, career match scoring, and downloadable PDF career reports; developed college discovery engine with AI-assisted comparison and shortlisting across 50,000+ institutions."
+      },
+      {
+        "title": "Full Stack Development Intern",
+        "company": "Keshav Encon Pvt. Ltd.",
+        "end_date": "2025-11",
+        "start_date": "2025-08",
+        "description": "Developed and optimized REST APIs using Node.js, Express.js, PostgreSQL, and Sequelize ORM, supporting scalable job portal workflows and database operations. Built responsive and reusable UI components using Next.js, improving frontend performance and user experience across core modules. Contributed in Agile sprints cycles, delivering feature enhancements, bug fixes, testing, and deployment workflows in a collaborative development environment."
+      }
+    ],
+    "projects": [
+      {
+        "name": "parseSkill()",
+        "description": "An evidence-based developer intelligence platform that analyzes coding profiles and repositories to infer verified technical skills and automatically generate dynamic developer portfolios. Developed a knowledge-graph analytics engine to model relationships between users, projects, technologies, and skills, enabling project intelligence, explainable scoring, and skill evolution tracking. Integrated an XGBoost role prediction model, graph-based recommendation engine, and LLM + RAG assistant to deliver personalized career insights, missing skill analysis and resume optimization."
+      },
+      {
+        "name": "Artive",
+        "description": "A collaborative creative platform where users share unfinished ideas as \"seeds\" and others extend them into branching \"forks\", forming explorable creative lineage trees with unlimited fork depth. Built a semantic search pipeline using all-MiniLM-L6-v2 embeddings and MongoDB Atlas vector search to surface contextually relevant seeds, forks, and similar content across the platform. Engineered a cached lineages collection with BFS-based tree traversal for O(n) ancestry resolution, eliminating repeated tree-building computation and enabling low-latency hierarchical rendering in the UI."
+      }
+    ],
+    "skills_claimed": [
+      "C",
+      "C++",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "React Native",
+      "FastAPI",
+      "Pydantic",
+      "Scikit-learn",
+      "PyTorch",
+      "Sentence Transformers",
+      "Vector Embeddings",
+      "NumPy",
+      "Pandas",
+      "Matplotlib",
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "Supabase",
+      "Mongoose",
+      "Prisma",
+      "Sequelize",
+      "CI/CD (GitHub Actions)",
+      "Postman",
+      "Vercel",
+      "Render",
+      "Cloudinary"
+    ],
+    "corroborated_skills": [
+      "C++",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "React",
+      "Express.js",
+      "React Native",
+      "FastAPI",
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL"
+    ],
+    "parsed_at": "2026-08-06T04:25:19.739000+00:00"
+  },
+  "resume_audit": {
+    "parsed_at": "2026-08-06T04:25:19.739000+00:00",
+    "skills": [
+      {
+        "name": "C",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "C++",
+        "implemented": true,
+        "confidence": 0.48,
+        "evidence_repos": []
+      },
+      {
+        "name": "Java",
+        "implemented": true,
+        "confidence": 0.5,
+        "evidence_repos": []
+      },
+      {
+        "name": "JavaScript",
+        "implemented": true,
+        "confidence": 0.42,
+        "evidence_repos": [
+          {
+            "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+            "repo_full_name": "sanvi-s/artive",
+            "weight": 1.0
+          },
+          {
+            "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+            "repo_full_name": "sanvi-s/parseSkill",
+            "weight": 1.0
+          }
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "implemented": true,
+        "confidence": 0.59,
+        "evidence_repos": [
+          {
+            "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+            "repo_full_name": "collegequest/questai-platform",
+            "weight": 1.0
+          },
+          {
+            "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+            "repo_full_name": "sanvi-s/parseSkill",
+            "weight": 1.0
+          },
+          {
+            "project_id": "e91cf3b3-6a37-4040-9033-979abaae1d56",
+            "repo_full_name": "sanvi-s/byte-club",
+            "weight": 1.0
+          },
+          {
+            "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+            "repo_full_name": "sanvi-s/artive",
+            "weight": 1.0
+          }
+        ]
+      },
+      {
+        "name": "Python",
+        "implemented": true,
+        "confidence": 0.95,
+        "evidence_repos": [
+          {
+            "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+            "repo_full_name": "collegequest/questai-platform",
+            "weight": 1.0
+          },
+          {
+            "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+            "repo_full_name": "sanvi-s/parseSkill",
+            "weight": 0.9
+          },
+          {
+            "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+            "repo_full_name": "sanvi-s/artive",
+            "weight": 0.7
+          }
+        ]
+      },
+      {
+        "name": "React",
+        "implemented": true,
+        "confidence": 0.641,
+        "evidence_repos": [
+          {
+            "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+            "repo_full_name": "sanvi-s/parseSkill",
+            "weight": 1.0
+          },
+          {
+            "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+            "repo_full_name": "sanvi-s/artive",
+            "weight": 1.0
+          },
+          {
+            "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+            "repo_full_name": "collegequest/questai-platform",
+            "weight": 1.0
+          },
+          {
+            "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+            "repo_full_name": "sanvi-s/job-portal-api",
+            "weight": 0.7
+          }
+        ]
+      },
+      {
+        "name": "Next.js",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Node.js",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Express.js",
+        "implemented": true,
+        "confidence": 0.472,
+        "evidence_repos": [
+          {
+            "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+            "repo_full_name": "sanvi-s/job-portal-api",
+            "weight": 1.0
+          },
+          {
+            "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+            "repo_full_name": "sanvi-s/artive",
+            "weight": 1.0
+          },
+          {
+            "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+            "repo_full_name": "sanvi-s/parseSkill",
+            "weight": 1.0
+          }
+        ]
+      },
+      {
+        "name": "React Native",
+        "implemented": true,
+        "confidence": 0.481,
+        "evidence_repos": [
+          {
+            "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+            "repo_full_name": "collegequest/questai-platform",
+            "weight": 1.0
+          }
+        ]
+      },
+      {
+        "name": "FastAPI",
+        "implemented": true,
+        "confidence": 0.451,
+        "evidence_repos": [
+          {
+            "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+            "repo_full_name": "collegequest/questai-platform",
+            "weight": 1.0
+          },
+          {
+            "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+            "repo_full_name": "sanvi-s/parseSkill",
+            "weight": 0.9
+          },
+          {
+            "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+            "repo_full_name": "sanvi-s/artive",
+            "weight": 0.7
+          }
+        ]
+      },
+      {
+        "name": "Pydantic",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Scikit-learn",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "PyTorch",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Sentence Transformers",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Vector Embeddings",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "NumPy",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Pandas",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Matplotlib",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "MongoDB",
+        "implemented": true,
+        "confidence": 0.368,
+        "evidence_repos": [
+          {
+            "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+            "repo_full_name": "sanvi-s/artive",
+            "weight": 1.0
+          }
+        ]
+      },
+      {
+        "name": "PostgreSQL",
+        "implemented": true,
+        "confidence": 0.413,
+        "evidence_repos": [
+          {
+            "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+            "repo_full_name": "sanvi-s/parseSkill",
+            "weight": 1.0
+          },
+          {
+            "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+            "repo_full_name": "sanvi-s/job-portal-api",
+            "weight": 0.9
+          }
+        ]
+      },
+      {
+        "name": "MySQL",
+        "implemented": true,
+        "confidence": 0.261,
+        "evidence_repos": [
+          {
+            "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+            "repo_full_name": "sanvi-s/job-portal-api",
+            "weight": 0.4
+          }
+        ]
+      },
+      {
+        "name": "Supabase",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Mongoose",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Prisma",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Sequelize",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "CI/CD (GitHub Actions)",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Postman",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Vercel",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Render",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      },
+      {
+        "name": "Cloudinary",
+        "implemented": false,
+        "confidence": null,
+        "evidence_repos": []
+      }
+    ],
+    "credibility_score": 0.375,
+    "education": [
+      {
+        "year": "2023 - 2027",
+        "field": "Computer Science and Engineering",
+        "degree": "Bachelor of Engineering",
+        "institution": "Maharaja Sayajirao University of Baroda"
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Software Development Intern",
+        "company": "CollegeQuest Pvt. Ltd.",
+        "end_date": "Present",
+        "start_date": "2026-01",
+        "description": "Architected and shipped a cross-platform AI education platform using React Native, Expo, TypeScript, Supabase, and FastAPI, delivering 20+ production modules for career planning, college discovery, and AI-powered counselling to students across India. Engineered QuestAI, a streaming AI counsellor with SSE-based authenticated responses, tool-status event handling, animated streaming output, and contextual navigation chips for real-time personalized career guidance. Implemented a full monetization pipeline with token-based billing, plan-aware feature gating, Razorpay checkout integration, and an in-app paywall supporting cross-platform web and native payment redirects. Built AI-powered Career Finder with dynamic quiz generation, personality and skills analysis, career match scoring, and downloadable PDF career reports; developed college discovery engine with AI-assisted comparison and shortlisting across 50,000+ institutions."
+      },
+      {
+        "title": "Full Stack Development Intern",
+        "company": "Keshav Encon Pvt. Ltd.",
+        "end_date": "2025-11",
+        "start_date": "2025-08",
+        "description": "Developed and optimized REST APIs using Node.js, Express.js, PostgreSQL, and Sequelize ORM, supporting scalable job portal workflows and database operations. Built responsive and reusable UI components using Next.js, improving frontend performance and user experience across core modules. Contributed in Agile sprints cycles, delivering feature enhancements, bug fixes, testing, and deployment workflows in a collaborative development environment."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+      "name": "Python",
+      "category": "language",
+      "confidence": 0.95,
+      "first_evidence_date": "2026-01-05T00:00:00+00:00",
+      "evidence_count": 6
+    },
+    {
+      "id": "fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+      "name": "React",
+      "category": "frontend",
+      "confidence": 0.641,
+      "first_evidence_date": "2026-01-15T00:00:00+00:00",
+      "evidence_count": 3
+    },
+    {
+      "id": "0acf77f0-3178-4732-95dc-54d898d22cb7",
+      "name": "TypeScript",
+      "category": "language",
+      "confidence": 0.59,
+      "first_evidence_date": "2025-11-05T00:00:00+00:00",
+      "evidence_count": 2
+    },
+    {
+      "id": "f3723e6b-352b-4e37-91ae-09b170fe5eae",
+      "name": "Node.js Backend Development",
+      "category": "backend",
+      "confidence": 0.575,
+      "first_evidence_date": "2025-08-05T00:00:00+00:00",
+      "evidence_count": 2
+    },
+    {
+      "id": "0e0a42f0-55f5-4f8c-a497-03a830c67499",
+      "name": "Deep Learning",
+      "category": "ml",
+      "confidence": 0.55,
+      "first_evidence_date": "2025-11-10T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "65ed5ddc-21ab-4255-9e6b-43a08164ef4e",
+      "name": "Relational Databases",
+      "category": "database",
+      "confidence": 0.5,
+      "first_evidence_date": "2026-08-06T00:00:00+00:00",
+      "evidence_count": 2
+    },
+    {
+      "id": "9042c0e7-2741-447b-92ef-f9f6393b6c15",
+      "name": "Java",
+      "category": "language",
+      "confidence": 0.5,
+      "first_evidence_date": "2024-06-01T00:00:00+00:00",
+      "evidence_count": 0
+    },
+    {
+      "id": "b9b7a8d3-7b5f-424a-acc7-94b4d5db77a7",
+      "name": "React Native",
+      "category": "frontend",
+      "confidence": 0.481,
+      "first_evidence_date": "2026-01-05T00:00:00+00:00",
+      "evidence_count": 2
+    },
+    {
+      "id": "f36ef09b-ce92-459c-960a-b33b1cc8c0aa",
+      "name": "C++",
+      "category": "language",
+      "confidence": 0.48,
+      "first_evidence_date": "2024-01-01T00:00:00+00:00",
+      "evidence_count": 0
+    },
+    {
+      "id": "4237d9fd-e791-4e82-816b-2f561ae143f2",
+      "name": "Express.js",
+      "category": "backend",
+      "confidence": 0.472,
+      "first_evidence_date": "2025-08-05T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "8c5729c1-f463-4cad-ae51-5e42c2009b95",
+      "name": "Machine Learning",
+      "category": "ml",
+      "confidence": 0.461,
+      "first_evidence_date": "2026-01-10T00:00:00+00:00",
+      "evidence_count": 2
+    },
+    {
+      "id": "e5262a63-3850-4489-abb8-542cae4ad2a2",
+      "name": "FastAPI",
+      "category": "backend",
+      "confidence": 0.451,
+      "first_evidence_date": "2026-01-05T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+      "name": "REST API Design",
+      "category": "backend",
+      "confidence": 0.451,
+      "first_evidence_date": "2025-08-05T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "90e3e3de-1827-4cad-aae4-fb80271b5e19",
+      "name": "JavaScript",
+      "category": "language",
+      "confidence": 0.42,
+      "first_evidence_date": "2025-08-05T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "150c7412-1ae4-4c1f-83ab-9ddcee9258a1",
+      "name": "PostgreSQL",
+      "category": "database",
+      "confidence": 0.413,
+      "first_evidence_date": "2025-08-05T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "9b381465-2e66-45e1-92d0-3436f8da11dc",
+      "name": "CI/CD Pipelines",
+      "category": "devops",
+      "confidence": 0.399,
+      "first_evidence_date": "2026-02-01T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "b2536ad5-70c6-49e2-a1ed-5727017e6785",
+      "name": "MongoDB",
+      "category": "database",
+      "confidence": 0.368,
+      "first_evidence_date": "2025-11-05T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "42b47643-cd71-4c62-a909-0498e74907fb",
+      "name": "LLM Application Development",
+      "category": "ml",
+      "confidence": 0.363,
+      "first_evidence_date": "2026-01-15T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "af37f6ef-6fb2-4e25-bb4a-21517b3a36ba",
+      "name": "Natural Language Processing",
+      "category": "ml",
+      "confidence": 0.363,
+      "first_evidence_date": "2025-11-10T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "c1fb6a28-6879-44ff-bf15-7b4799527454",
+      "name": "Authentication & Authorization",
+      "category": "backend",
+      "confidence": 0.358,
+      "first_evidence_date": "2026-01-05T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "cc91de8d-cf53-4ac6-be1e-6a88ef26fe8a",
+      "name": "Numerical Computing",
+      "category": "ml",
+      "confidence": 0.347,
+      "first_evidence_date": "2026-01-10T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "9f31d260-a338-48e7-a0a6-6c2da918f1a1",
+      "name": "Data Analysis",
+      "category": "ml",
+      "confidence": 0.347,
+      "first_evidence_date": "2026-01-10T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "28ec4fa4-9c66-448e-99fa-b19bd39bb775",
+      "name": "Data Visualization",
+      "category": "frontend",
+      "confidence": 0.342,
+      "first_evidence_date": "2026-02-01T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+      "name": "ORM/Query Building",
+      "category": "database",
+      "confidence": 0.292,
+      "first_evidence_date": "2025-08-05T00:00:00+00:00",
+      "evidence_count": 1
+    },
+    {
+      "id": "ea9ffa64-4023-41e6-ae73-81bf91795a1c",
+      "name": "MySQL",
+      "category": "database",
+      "confidence": 0.261,
+      "first_evidence_date": "2025-08-05T00:00:00+00:00",
+      "evidence_count": 1
+    }
+  ],
+  "skill_evidence": {
+    "e39dfa59-20d4-48e6-b378-6bd2aa8fe429": {
+      "skill_id": "e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+      "skill_name": "Python",
+      "confidence": 0.95,
+      "breadth": 1.0,
+      "depth": 1.0,
+      "recency": 1.0,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 1.0,
+          "technologies": [
+            "fastapi"
+          ]
+        },
+        {
+          "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "repo_full_name": "sanvi-s/parseSkill",
+          "weight": 0.9,
+          "technologies": [
+            "fastapi"
+          ]
+        },
+        {
+          "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "repo_full_name": "sanvi-s/parseSkill",
+          "weight": 0.8,
+          "technologies": [
+            "xgboost"
+          ]
+        },
+        {
+          "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "repo_full_name": "sanvi-s/artive",
+          "weight": 0.7,
+          "technologies": [
+            "fastapi"
+          ]
+        },
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 0.7,
+          "technologies": [
+            "scikit-learn"
+          ]
+        },
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 0.6,
+          "technologies": [
+            "numpy",
+            "pandas"
+          ]
+        },
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 0.5,
+          "technologies": [
+            "matplotlib"
+          ]
+        }
+      ]
+    },
+    "fe17e9e8-a9a2-400c-8617-c1a4aac43766": {
+      "skill_id": "fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+      "skill_name": "React",
+      "confidence": 0.641,
+      "breadth": 0.5,
+      "depth": 0.638,
+      "recency": 1.0,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "repo_full_name": "sanvi-s/artive",
+          "weight": 1.0,
+          "technologies": [
+            "react"
+          ]
+        },
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 1.0,
+          "technologies": [
+            "react-native"
+          ]
+        },
+        {
+          "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "repo_full_name": "sanvi-s/parseSkill",
+          "weight": 1.0,
+          "technologies": [
+            "react"
+          ]
+        },
+        {
+          "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+          "repo_full_name": "sanvi-s/job-portal-api",
+          "weight": 0.7,
+          "technologies": [
+            "next"
+          ]
+        }
+      ]
+    },
+    "0acf77f0-3178-4732-95dc-54d898d22cb7": {
+      "skill_id": "0acf77f0-3178-4732-95dc-54d898d22cb7",
+      "skill_name": "TypeScript",
+      "confidence": 0.59,
+      "breadth": 0.333,
+      "depth": 0.69,
+      "recency": 1.0,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "repo_full_name": "sanvi-s/artive",
+          "weight": 1.0,
+          "technologies": [
+            "typescript"
+          ]
+        },
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 1.0,
+          "technologies": [
+            "typescript"
+          ]
+        },
+        {
+          "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "repo_full_name": "sanvi-s/parseSkill",
+          "weight": 1.0,
+          "technologies": [
+            "typescript"
+          ]
+        },
+        {
+          "project_id": "e91cf3b3-6a37-4040-9033-979abaae1d56",
+          "repo_full_name": "sanvi-s/byte-club",
+          "weight": 1.0,
+          "technologies": [
+            "@types/node-fetch"
+          ]
+        }
+      ]
+    },
+    "f3723e6b-352b-4e37-91ae-09b170fe5eae": {
+      "skill_id": "f3723e6b-352b-4e37-91ae-09b170fe5eae",
+      "skill_name": "Node.js Backend Development",
+      "confidence": 0.575,
+      "breadth": 0.333,
+      "depth": 0.638,
+      "recency": 1.0,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+          "repo_full_name": "sanvi-s/job-portal-api",
+          "weight": 1.0,
+          "technologies": [
+            "express"
+          ]
+        },
+        {
+          "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "repo_full_name": "sanvi-s/artive",
+          "weight": 1.0,
+          "technologies": [
+            "express"
+          ]
+        },
+        {
+          "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "repo_full_name": "sanvi-s/parseSkill",
+          "weight": 1.0,
+          "technologies": [
+            "express"
+          ]
+        },
+        {
+          "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+          "repo_full_name": "sanvi-s/job-portal-api",
+          "weight": 0.7,
+          "technologies": [
+            "next"
+          ]
+        }
+      ]
+    },
+    "0e0a42f0-55f5-4f8c-a497-03a830c67499": {
+      "skill_id": "0e0a42f0-55f5-4f8c-a497-03a830c67499",
+      "skill_name": "Deep Learning",
+      "confidence": 0.55,
+      "breadth": 0.5,
+      "depth": 0.45,
+      "recency": 0.7,
+      "diversity": 0.3,
+      "evidence_repos": []
+    },
+    "65ed5ddc-21ab-4255-9e6b-43a08164ef4e": {
+      "skill_id": "65ed5ddc-21ab-4255-9e6b-43a08164ef4e",
+      "skill_name": "Relational Databases",
+      "confidence": 0.5,
+      "breadth": 0.333,
+      "depth": 0.397,
+      "recency": 0.991,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "repo_full_name": "sanvi-s/parseSkill",
+          "weight": 1.0,
+          "technologies": [
+            "pg"
+          ]
+        },
+        {
+          "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+          "repo_full_name": "sanvi-s/job-portal-api",
+          "weight": 0.9,
+          "technologies": [
+            "pg"
+          ]
+        },
+        {
+          "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+          "repo_full_name": "sanvi-s/job-portal-api",
+          "weight": 0.4,
+          "technologies": [
+            "mysql2"
+          ]
+        }
+      ]
+    },
+    "9042c0e7-2741-447b-92ef-f9f6393b6c15": {
+      "skill_id": "9042c0e7-2741-447b-92ef-f9f6393b6c15",
+      "skill_name": "Java",
+      "confidence": 0.5,
+      "breadth": 0.45,
+      "depth": 0.4,
+      "recency": 0.55,
+      "diversity": 0.25,
+      "evidence_repos": []
+    },
+    "b9b7a8d3-7b5f-424a-acc7-94b4d5db77a7": {
+      "skill_id": "b9b7a8d3-7b5f-424a-acc7-94b4d5db77a7",
+      "skill_name": "React Native",
+      "confidence": 0.481,
+      "breadth": 0.333,
+      "depth": 0.328,
+      "recency": 0.998,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 1.0,
+          "technologies": [
+            "react-native"
+          ]
+        },
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 0.9,
+          "technologies": [
+            "expo"
+          ]
+        }
+      ]
+    },
+    "f36ef09b-ce92-459c-960a-b33b1cc8c0aa": {
+      "skill_id": "f36ef09b-ce92-459c-960a-b33b1cc8c0aa",
+      "skill_name": "C++",
+      "confidence": 0.48,
+      "breadth": 0.43,
+      "depth": 0.38,
+      "recency": 0.5,
+      "diversity": 0.25,
+      "evidence_repos": []
+    },
+    "4237d9fd-e791-4e82-816b-2f561ae143f2": {
+      "skill_id": "4237d9fd-e791-4e82-816b-2f561ae143f2",
+      "skill_name": "Express.js",
+      "confidence": 0.472,
+      "breadth": 0.167,
+      "depth": 0.517,
+      "recency": 1.0,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+          "repo_full_name": "sanvi-s/job-portal-api",
+          "weight": 1.0,
+          "technologies": [
+            "express"
+          ]
+        },
+        {
+          "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "repo_full_name": "sanvi-s/artive",
+          "weight": 1.0,
+          "technologies": [
+            "express"
+          ]
+        },
+        {
+          "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "repo_full_name": "sanvi-s/parseSkill",
+          "weight": 1.0,
+          "technologies": [
+            "express"
+          ]
+        }
+      ]
+    },
+    "8c5729c1-f463-4cad-ae51-5e42c2009b95": {
+      "skill_id": "8c5729c1-f463-4cad-ae51-5e42c2009b95",
+      "skill_name": "Machine Learning",
+      "confidence": 0.461,
+      "breadth": 0.333,
+      "depth": 0.259,
+      "recency": 0.998,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "repo_full_name": "sanvi-s/parseSkill",
+          "weight": 0.8,
+          "technologies": [
+            "xgboost"
+          ]
+        },
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 0.7,
+          "technologies": [
+            "scikit-learn"
+          ]
+        }
+      ]
+    },
+    "e5262a63-3850-4489-abb8-542cae4ad2a2": {
+      "skill_id": "e5262a63-3850-4489-abb8-542cae4ad2a2",
+      "skill_name": "FastAPI",
+      "confidence": 0.451,
+      "breadth": 0.167,
+      "depth": 0.448,
+      "recency": 1.0,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 1.0,
+          "technologies": [
+            "fastapi"
+          ]
+        },
+        {
+          "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "repo_full_name": "sanvi-s/parseSkill",
+          "weight": 0.9,
+          "technologies": [
+            "fastapi"
+          ]
+        },
+        {
+          "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "repo_full_name": "sanvi-s/artive",
+          "weight": 0.7,
+          "technologies": [
+            "fastapi"
+          ]
+        }
+      ]
+    },
+    "0f642b55-0b3d-47e6-af56-bf24305fb0d3": {
+      "skill_id": "0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+      "skill_name": "REST API Design",
+      "confidence": 0.451,
+      "breadth": 0.167,
+      "depth": 0.448,
+      "recency": 1.0,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 1.0,
+          "technologies": [
+            "fastapi"
+          ]
+        },
+        {
+          "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "repo_full_name": "sanvi-s/parseSkill",
+          "weight": 0.9,
+          "technologies": [
+            "fastapi"
+          ]
+        },
+        {
+          "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "repo_full_name": "sanvi-s/artive",
+          "weight": 0.7,
+          "technologies": [
+            "fastapi"
+          ]
+        }
+      ]
+    },
+    "90e3e3de-1827-4cad-aae4-fb80271b5e19": {
+      "skill_id": "90e3e3de-1827-4cad-aae4-fb80271b5e19",
+      "skill_name": "JavaScript",
+      "confidence": 0.42,
+      "breadth": 0.167,
+      "depth": 0.345,
+      "recency": 1.0,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "repo_full_name": "sanvi-s/artive",
+          "weight": 1.0,
+          "technologies": [
+            "react"
+          ]
+        },
+        {
+          "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "repo_full_name": "sanvi-s/parseSkill",
+          "weight": 1.0,
+          "technologies": [
+            "react"
+          ]
+        }
+      ]
+    },
+    "150c7412-1ae4-4c1f-83ab-9ddcee9258a1": {
+      "skill_id": "150c7412-1ae4-4c1f-83ab-9ddcee9258a1",
+      "skill_name": "PostgreSQL",
+      "confidence": 0.413,
+      "breadth": 0.167,
+      "depth": 0.328,
+      "recency": 0.991,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "repo_full_name": "sanvi-s/parseSkill",
+          "weight": 1.0,
+          "technologies": [
+            "pg"
+          ]
+        },
+        {
+          "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+          "repo_full_name": "sanvi-s/job-portal-api",
+          "weight": 0.9,
+          "technologies": [
+            "pg"
+          ]
+        }
+      ]
+    },
+    "9b381465-2e66-45e1-92d0-3436f8da11dc": {
+      "skill_id": "9b381465-2e66-45e1-92d0-3436f8da11dc",
+      "skill_name": "CI/CD Pipelines",
+      "confidence": 0.399,
+      "breadth": 0.167,
+      "depth": 0.276,
+      "recency": 0.998,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "7b87b51a-3fb5-485e-9215-482f3a463689",
+          "repo_full_name": "sanvi-s/skills-introduction-to-github",
+          "weight": 1.0,
+          "technologies": [
+            "GitHub Actions"
+          ]
+        },
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 0.6,
+          "technologies": [
+            "GitHub Actions"
+          ]
+        }
+      ]
+    },
+    "b2536ad5-70c6-49e2-a1ed-5727017e6785": {
+      "skill_id": "b2536ad5-70c6-49e2-a1ed-5727017e6785",
+      "skill_name": "MongoDB",
+      "confidence": 0.368,
+      "breadth": 0.167,
+      "depth": 0.172,
+      "recency": 1.0,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "repo_full_name": "sanvi-s/artive",
+          "weight": 1.0,
+          "technologies": [
+            "mongodb"
+          ]
+        }
+      ]
+    },
+    "42b47643-cd71-4c62-a909-0498e74907fb": {
+      "skill_id": "42b47643-cd71-4c62-a909-0498e74907fb",
+      "skill_name": "LLM Application Development",
+      "confidence": 0.363,
+      "breadth": 0.167,
+      "depth": 0.155,
+      "recency": 1.0,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "repo_full_name": "sanvi-s/artive",
+          "weight": 0.9,
+          "technologies": [
+            "sentence-transformers"
+          ]
+        }
+      ]
+    },
+    "af37f6ef-6fb2-4e25-bb4a-21517b3a36ba": {
+      "skill_id": "af37f6ef-6fb2-4e25-bb4a-21517b3a36ba",
+      "skill_name": "Natural Language Processing",
+      "confidence": 0.363,
+      "breadth": 0.167,
+      "depth": 0.155,
+      "recency": 1.0,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "repo_full_name": "sanvi-s/artive",
+          "weight": 0.9,
+          "technologies": [
+            "sentence-transformers"
+          ]
+        }
+      ]
+    },
+    "c1fb6a28-6879-44ff-bf15-7b4799527454": {
+      "skill_id": "c1fb6a28-6879-44ff-bf15-7b4799527454",
+      "skill_name": "Authentication & Authorization",
+      "confidence": 0.358,
+      "breadth": 0.167,
+      "depth": 0.138,
+      "recency": 0.998,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 0.8,
+          "technologies": [
+            "jsonwebtoken"
+          ]
+        }
+      ]
+    },
+    "cc91de8d-cf53-4ac6-be1e-6a88ef26fe8a": {
+      "skill_id": "cc91de8d-cf53-4ac6-be1e-6a88ef26fe8a",
+      "skill_name": "Numerical Computing",
+      "confidence": 0.347,
+      "breadth": 0.167,
+      "depth": 0.103,
+      "recency": 0.998,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 0.6,
+          "technologies": [
+            "numpy"
+          ]
+        }
+      ]
+    },
+    "9f31d260-a338-48e7-a0a6-6c2da918f1a1": {
+      "skill_id": "9f31d260-a338-48e7-a0a6-6c2da918f1a1",
+      "skill_name": "Data Analysis",
+      "confidence": 0.347,
+      "breadth": 0.167,
+      "depth": 0.103,
+      "recency": 0.998,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 0.6,
+          "technologies": [
+            "pandas"
+          ]
+        }
+      ]
+    },
+    "28ec4fa4-9c66-448e-99fa-b19bd39bb775": {
+      "skill_id": "28ec4fa4-9c66-448e-99fa-b19bd39bb775",
+      "skill_name": "Data Visualization",
+      "confidence": 0.342,
+      "breadth": 0.167,
+      "depth": 0.086,
+      "recency": 0.998,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "repo_full_name": "collegequest/questai-platform",
+          "weight": 0.5,
+          "technologies": [
+            "matplotlib"
+          ]
+        }
+      ]
+    },
+    "03eac8a2-9baa-4572-b1cc-082d3c6a985b": {
+      "skill_id": "03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+      "skill_name": "ORM/Query Building",
+      "confidence": 0.292,
+      "breadth": 0.167,
+      "depth": 0.172,
+      "recency": 0.617,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+          "repo_full_name": "sanvi-s/job-portal-api",
+          "weight": 1.0,
+          "technologies": [
+            "sequelize"
+          ]
+        }
+      ]
+    },
+    "ea9ffa64-4023-41e6-ae73-81bf91795a1c": {
+      "skill_id": "ea9ffa64-4023-41e6-ae73-81bf91795a1c",
+      "skill_name": "MySQL",
+      "confidence": 0.261,
+      "breadth": 0.167,
+      "depth": 0.069,
+      "recency": 0.617,
+      "diversity": 0.5,
+      "evidence_repos": [
+        {
+          "project_id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+          "repo_full_name": "sanvi-s/job-portal-api",
+          "weight": 0.4,
+          "technologies": [
+            "mysql2"
+          ]
+        }
+      ]
+    }
+  },
+  "projects": [
+    {
+      "id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+      "repo_full_name": "collegequest/questai-platform",
+      "description": "Cross-platform AI education platform delivering 20+ production modules for career planning, college discovery, and AI-powered counselling to students across India.",
+      "primary_language": "TypeScript",
+      "stars": 9,
+      "forks": 1,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 0.8,
+      "complexity_score": 91.0,
+      "last_commit_at": "2026-08-05T00:00:00+00:00",
+      "top_technologies": [
+        "react-native",
+        "typescript",
+        "fastapi",
+        "expo"
+      ]
+    },
+    {
+      "id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+      "repo_full_name": "sanvi-s/parseSkill",
+      "description": "Evidence-based developer intelligence platform that analyzes coding profiles and repositories to infer verified technical skills and automatically generate dynamic developer portfolios.",
+      "primary_language": "TypeScript",
+      "stars": 41,
+      "forks": 6,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 1.0,
+      "complexity_score": 87.5,
+      "last_commit_at": "2026-08-01T00:00:00+00:00",
+      "top_technologies": [
+        "react",
+        "typescript",
+        "express",
+        "pg"
+      ]
+    },
+    {
+      "id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+      "repo_full_name": "sanvi-s/job-portal-api",
+      "description": "REST APIs and job portal workflows built during a full-stack internship, with reusable Next.js UI components for recruiter/candidate dashboards.",
+      "primary_language": "JavaScript",
+      "stars": 5,
+      "forks": 0,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 0.6,
+      "complexity_score": 58.0,
+      "last_commit_at": "2025-11-25T00:00:00+00:00",
+      "top_technologies": [
+        "express",
+        "sequelize",
+        "pg",
+        "next"
+      ]
+    },
+    {
+      "id": "e91cf3b3-6a37-4040-9033-979abaae1d56",
+      "repo_full_name": "sanvi-s/byte-club",
+      "description": "\"where bugs fear to crawl\"",
+      "primary_language": "TypeScript",
+      "stars": 0,
+      "forks": 1,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 1.0,
+      "complexity_score": 37.01,
+      "last_commit_at": "2025-10-28T17:30:35+00:00",
+      "top_technologies": [
+        "@types/node-fetch"
+      ]
+    },
+    {
+      "id": "7b87b51a-3fb5-485e-9215-482f3a463689",
+      "repo_full_name": "sanvi-s/skills-introduction-to-github",
+      "description": "My clone repository",
+      "primary_language": null,
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 1.0,
+      "complexity_score": 33.23,
+      "last_commit_at": "2024-12-29T16:21:29+00:00",
+      "top_technologies": [
+        "GitHub Actions"
+      ]
+    },
+    {
+      "id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+      "repo_full_name": "sanvi-s/artive",
+      "description": null,
+      "primary_language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 1.0,
+      "complexity_score": 25.0,
+      "last_commit_at": "2026-08-05T16:09:19+00:00",
+      "top_technologies": [
+        "react",
+        "typescript",
+        "express",
+        "mongodb"
+      ]
+    },
+    {
+      "id": "7dab2fb3-72ef-49c1-8d28-ee66bafdba9b",
+      "repo_full_name": "sanvi-s/satvi-cravings",
+      "description": null,
+      "primary_language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 1.0,
+      "complexity_score": 24.01,
+      "last_commit_at": "2025-11-28T14:51:47+00:00",
+      "top_technologies": []
+    },
+    {
+      "id": "602ec300-2a47-479c-8d6c-1b27e47226c8",
+      "repo_full_name": "sanvi-s/parseSkill-backend",
+      "description": null,
+      "primary_language": null,
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 0.4,
+      "complexity_score": 1.75,
+      "last_commit_at": null,
+      "top_technologies": []
+    }
+  ],
+  "project_details": {
+    "5a291c8f-85b3-45b6-aea5-be2963b46cfa": {
+      "id": "5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+      "repo_full_name": "collegequest/questai-platform",
+      "description": "Cross-platform AI education platform delivering 20+ production modules for career planning, college discovery, and AI-powered counselling to students across India.",
+      "primary_language": "TypeScript",
+      "stars": 9,
+      "forks": 1,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 0.8,
+      "complexity_score": 91.0,
+      "last_commit_at": "2026-08-05T00:00:00+00:00",
+      "top_technologies": [
+        "react-native",
+        "typescript",
+        "fastapi",
+        "expo"
+      ],
+      "complexity_breakdown": {
+        "lines": 25.0,
+        "tests": 10.0,
+        "recency": 18.0,
+        "architecture": 21.0,
+        "tech_breadth": 22.0
+      },
+      "technologies": [
+        {
+          "name": "react-native",
+          "weight": 1.0,
+          "category": "frontend"
+        },
+        {
+          "name": "expo",
+          "weight": 0.9,
+          "category": "frontend"
+        },
+        {
+          "name": "typescript",
+          "weight": 1.0,
+          "category": "language"
+        },
+        {
+          "name": "fastapi",
+          "weight": 1.0,
+          "category": "backend"
+        },
+        {
+          "name": "supabase",
+          "weight": 0.9,
+          "category": "database"
+        },
+        {
+          "name": "jsonwebtoken",
+          "weight": 0.8,
+          "category": "backend"
+        },
+        {
+          "name": "numpy",
+          "weight": 0.6,
+          "category": "ml"
+        },
+        {
+          "name": "pandas",
+          "weight": 0.6,
+          "category": "ml"
+        },
+        {
+          "name": "scikit-learn",
+          "weight": 0.7,
+          "category": "ml"
+        },
+        {
+          "name": "matplotlib",
+          "weight": 0.5,
+          "category": "ml"
+        },
+        {
+          "name": "GitHub Actions",
+          "weight": 0.6,
+          "category": "devops"
+        }
+      ],
+      "architecture_patterns": [
+        "sse-streaming",
+        "payments",
+        "monorepo"
+      ],
+      "concepts_demonstrated": [],
+      "skill_contributions": [
+        {
+          "skill_name": "CI/CD Pipelines",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "React Native",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "FastAPI",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "Data Analysis",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "Numerical Computing",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "TypeScript",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "Machine Learning",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "Authentication & Authorization",
+          "weight": 0.8
+        },
+        {
+          "skill_name": "React Native",
+          "weight": 0.8
+        },
+        {
+          "skill_name": "Data Visualization",
+          "weight": 0.7
+        },
+        {
+          "skill_name": "Python",
+          "weight": 0.5
+        },
+        {
+          "skill_name": "REST API Design",
+          "weight": 0.5
+        },
+        {
+          "skill_name": "Python",
+          "weight": 0.4
+        },
+        {
+          "skill_name": "Python",
+          "weight": 0.4
+        },
+        {
+          "skill_name": "React",
+          "weight": 0.4
+        },
+        {
+          "skill_name": "Python",
+          "weight": 0.3
+        },
+        {
+          "skill_name": "Python",
+          "weight": 0.3
+        }
+      ],
+      "readme_excerpt": "Engineered QuestAI, a streaming AI counsellor with SSE-based authenticated responses, tool-status event handling, and contextual navigation chips. Implemented a full monetization pipeline with token-based billing, plan-aware feature gating, Razorpay checkout integration, and native payment redirects. Built AI-powered Career Finder with dynamic quiz generation, personality and skills analysis, career match scoring, and downloadable PDF career reports."
+    },
+    "e127d108-fbf9-4c3b-b469-485f93ac5b99": {
+      "id": "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+      "repo_full_name": "sanvi-s/parseSkill",
+      "description": "Evidence-based developer intelligence platform that analyzes coding profiles and repositories to infer verified technical skills and automatically generate dynamic developer portfolios.",
+      "primary_language": "TypeScript",
+      "stars": 41,
+      "forks": 6,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 1.0,
+      "complexity_score": 87.5,
+      "last_commit_at": "2026-08-01T00:00:00+00:00",
+      "top_technologies": [
+        "react",
+        "typescript",
+        "express",
+        "pg"
+      ],
+      "complexity_breakdown": {
+        "lines": 22.0,
+        "tests": 12.0,
+        "recency": 15.0,
+        "architecture": 20.0,
+        "tech_breadth": 18.5
+      },
+      "technologies": [
+        {
+          "name": "react",
+          "weight": 1.0,
+          "category": "frontend"
+        },
+        {
+          "name": "typescript",
+          "weight": 1.0,
+          "category": "language"
+        },
+        {
+          "name": "express",
+          "weight": 1.0,
+          "category": "backend"
+        },
+        {
+          "name": "pg",
+          "weight": 1.0,
+          "category": "database"
+        },
+        {
+          "name": "fastapi",
+          "weight": 0.9,
+          "category": "backend"
+        },
+        {
+          "name": "xgboost",
+          "weight": 0.8,
+          "category": "ml"
+        },
+        {
+          "name": "neo4j",
+          "weight": 0.7,
+          "category": "database"
+        }
+      ],
+      "architecture_patterns": [
+        "knowledge-graph",
+        "rest-api",
+        "background-jobs"
+      ],
+      "concepts_demonstrated": [],
+      "skill_contributions": [
+        {
+          "skill_name": "React",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "Express.js",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "TypeScript",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "FastAPI",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "Machine Learning",
+          "weight": 0.9
+        },
+        {
+          "skill_name": "PostgreSQL",
+          "weight": 0.8
+        },
+        {
+          "skill_name": "JavaScript",
+          "weight": 0.6
+        },
+        {
+          "skill_name": "Node.js Backend Development",
+          "weight": 0.6
+        },
+        {
+          "skill_name": "Python",
+          "weight": 0.5
+        },
+        {
+          "skill_name": "REST API Design",
+          "weight": 0.5
+        },
+        {
+          "skill_name": "Relational Databases",
+          "weight": 0.5
+        },
+        {
+          "skill_name": "Python",
+          "weight": 0.3
+        }
+      ],
+      "readme_excerpt": "Built a knowledge-graph analytics engine to model relationships between users, projects, technologies, and skills, enabling project intelligence, explainable scoring, and skill evolution tracking. Integrated an XGBoost role-prediction model, graph-based recommendation engine, and LLM + RAG assistant."
+    },
+    "41926683-dd85-47dd-a60b-fd83f96472e5": {
+      "id": "41926683-dd85-47dd-a60b-fd83f96472e5",
+      "repo_full_name": "sanvi-s/job-portal-api",
+      "description": "REST APIs and job portal workflows built during a full-stack internship, with reusable Next.js UI components for recruiter/candidate dashboards.",
+      "primary_language": "JavaScript",
+      "stars": 5,
+      "forks": 0,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 0.6,
+      "complexity_score": 58.0,
+      "last_commit_at": "2025-11-25T00:00:00+00:00",
+      "top_technologies": [
+        "express",
+        "sequelize",
+        "pg",
+        "next"
+      ],
+      "complexity_breakdown": {
+        "lines": 10.0,
+        "tests": 5.0,
+        "recency": 4.0,
+        "architecture": 10.0,
+        "tech_breadth": 9.0
+      },
+      "technologies": [
+        {
+          "name": "express",
+          "weight": 1.0,
+          "category": "backend"
+        },
+        {
+          "name": "pg",
+          "weight": 0.9,
+          "category": "database"
+        },
+        {
+          "name": "sequelize",
+          "weight": 1.0,
+          "category": "database"
+        },
+        {
+          "name": "mysql2",
+          "weight": 0.4,
+          "category": "database"
+        },
+        {
+          "name": "next",
+          "weight": 0.7,
+          "category": "frontend"
+        }
+      ],
+      "architecture_patterns": [
+        "rest-api",
+        "mvc"
+      ],
+      "concepts_demonstrated": [],
+      "skill_contributions": [
+        {
+          "skill_name": "MySQL",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "Express.js",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "ORM/Query Building",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "React",
+          "weight": 0.8
+        },
+        {
+          "skill_name": "PostgreSQL",
+          "weight": 0.8
+        },
+        {
+          "skill_name": "Node.js Backend Development",
+          "weight": 0.6
+        },
+        {
+          "skill_name": "Relational Databases",
+          "weight": 0.5
+        },
+        {
+          "skill_name": "Relational Databases",
+          "weight": 0.5
+        },
+        {
+          "skill_name": "Node.js Backend Development",
+          "weight": 0.4
+        }
+      ],
+      "readme_excerpt": "Developed and optimized REST APIs using Node.js, Express.js, PostgreSQL, and Sequelize ORM, supporting scalable job portal workflows and database operations. Built responsive, reusable UI components using Next.js."
+    },
+    "e91cf3b3-6a37-4040-9033-979abaae1d56": {
+      "id": "e91cf3b3-6a37-4040-9033-979abaae1d56",
+      "repo_full_name": "sanvi-s/byte-club",
+      "description": "\"where bugs fear to crawl\"",
+      "primary_language": "TypeScript",
+      "stars": 0,
+      "forks": 1,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 1.0,
+      "complexity_score": 37.01,
+      "last_commit_at": "2025-10-28T17:30:35+00:00",
+      "top_technologies": [
+        "@types/node-fetch"
+      ],
+      "complexity_breakdown": {
+        "total": 37.01040254252335,
+        "has_ci_cd": 0.0,
+        "has_tests": 0.0,
+        "lines_authored": 24.510402542523348,
+        "technology_breadth": 2.5,
+        "architecture_patterns": 0.0,
+        "documentation_quality": 0.0,
+        "has_deployment_config": 10.0
+      },
+      "technologies": [
+        {
+          "name": "@types/node-fetch",
+          "weight": 1.0,
+          "category": "language"
+        }
+      ],
+      "architecture_patterns": [],
+      "concepts_demonstrated": [],
+      "skill_contributions": [
+        {
+          "skill_name": "TypeScript",
+          "weight": 0.2
+        }
+      ],
+      "readme_excerpt": null
+    },
+    "7b87b51a-3fb5-485e-9215-482f3a463689": {
+      "id": "7b87b51a-3fb5-485e-9215-482f3a463689",
+      "repo_full_name": "sanvi-s/skills-introduction-to-github",
+      "description": "My clone repository",
+      "primary_language": null,
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 1.0,
+      "complexity_score": 33.23,
+      "last_commit_at": "2024-12-29T16:21:29+00:00",
+      "top_technologies": [
+        "GitHub Actions"
+      ],
+      "complexity_breakdown": {
+        "total": 33.22523098815081,
+        "has_ci_cd": 10.0,
+        "has_tests": 0.0,
+        "lines_authored": 16.350230988150816,
+        "technology_breadth": 2.5,
+        "architecture_patterns": 0.0,
+        "documentation_quality": 4.375,
+        "has_deployment_config": 0.0
+      },
+      "technologies": [
+        {
+          "name": "GitHub Actions",
+          "weight": 1.0,
+          "category": "devops"
+        }
+      ],
+      "architecture_patterns": [],
+      "concepts_demonstrated": [],
+      "skill_contributions": [
+        {
+          "skill_name": "CI/CD Pipelines",
+          "weight": 1.0
+        }
+      ],
+      "readme_excerpt": "<header>\n\n<!--\n  <<< Author notes: Course header >>>\n  Include a 1280\u00d7640 image, course title in sentence case, and a concise description in emphasis.\n  In your repository settings: enable template repository, add your 1280\u00d7640 social image, auto delete head branches.\n  Add your open source license, GitHub uses MIT license.\n-->\n\n# Introduction to GitHub\n\n_Get started using GitHub in less than an hour._\n\n</header>\n\n<!--\n  <<< Author notes: Step 1 >>>\n  Choose 3-5 steps for your course.\n  The first step is always the hardest, so pick something easy!\n  Link to docs.github.com for further explanations.\n  Encourage users to open new tabs for steps!\n-->\n\n## Step 1: Create a branch\n\n_Welcome to \"Introduction to GitHub\"! :wave:_\n\n**What is GitHub?**: GitHub is a collaboration platform that uses _[Git](https://docs.github.com/get-started/quickstart/github-glossary#git)_ for versioning. GitHub is a popular place to share and contribute to [open-source](https://docs.github.com/get-started/quickst"
+    },
+    "42b4b823-4979-446d-b4ce-f37a2414c4c9": {
+      "id": "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+      "repo_full_name": "sanvi-s/artive",
+      "description": null,
+      "primary_language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 1.0,
+      "complexity_score": 25.0,
+      "last_commit_at": "2026-08-05T16:09:19+00:00",
+      "top_technologies": [
+        "react",
+        "typescript",
+        "express",
+        "mongodb"
+      ],
+      "complexity_breakdown": {
+        "total": 25.0,
+        "has_ci_cd": 0.0,
+        "has_tests": 0.0,
+        "lines_authored": 25.0,
+        "technology_breadth": 0.0,
+        "architecture_patterns": 0.0,
+        "documentation_quality": 0.0,
+        "has_deployment_config": 0.0
+      },
+      "technologies": [
+        {
+          "name": "react",
+          "weight": 1.0,
+          "category": "frontend"
+        },
+        {
+          "name": "typescript",
+          "weight": 1.0,
+          "category": "language"
+        },
+        {
+          "name": "express",
+          "weight": 1.0,
+          "category": "backend"
+        },
+        {
+          "name": "mongodb",
+          "weight": 1.0,
+          "category": "database"
+        },
+        {
+          "name": "fastapi",
+          "weight": 0.7,
+          "category": "backend"
+        },
+        {
+          "name": "sentence-transformers",
+          "weight": 0.9,
+          "category": "ml"
+        }
+      ],
+      "architecture_patterns": [],
+      "concepts_demonstrated": [],
+      "skill_contributions": [
+        {
+          "skill_name": "TypeScript",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "MongoDB",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "React",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "FastAPI",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "Express.js",
+          "weight": 1.0
+        },
+        {
+          "skill_name": "Natural Language Processing",
+          "weight": 0.7
+        },
+        {
+          "skill_name": "LLM Application Development",
+          "weight": 0.6
+        },
+        {
+          "skill_name": "JavaScript",
+          "weight": 0.6
+        },
+        {
+          "skill_name": "Node.js Backend Development",
+          "weight": 0.6
+        },
+        {
+          "skill_name": "REST API Design",
+          "weight": 0.5
+        },
+        {
+          "skill_name": "Python",
+          "weight": 0.5
+        }
+      ],
+      "readme_excerpt": null
+    },
+    "7dab2fb3-72ef-49c1-8d28-ee66bafdba9b": {
+      "id": "7dab2fb3-72ef-49c1-8d28-ee66bafdba9b",
+      "repo_full_name": "sanvi-s/satvi-cravings",
+      "description": null,
+      "primary_language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 1.0,
+      "complexity_score": 24.01,
+      "last_commit_at": "2025-11-28T14:51:47+00:00",
+      "top_technologies": [],
+      "complexity_breakdown": {
+        "total": 24.00893942583691,
+        "has_ci_cd": 0.0,
+        "has_tests": 0.0,
+        "lines_authored": 24.00893942583691,
+        "technology_breadth": 0.0,
+        "architecture_patterns": 0.0,
+        "documentation_quality": 0.0,
+        "has_deployment_config": 0.0
+      },
+      "technologies": [],
+      "architecture_patterns": [],
+      "concepts_demonstrated": [],
+      "skill_contributions": [],
+      "readme_excerpt": null
+    },
+    "602ec300-2a47-479c-8d6c-1b27e47226c8": {
+      "id": "602ec300-2a47-479c-8d6c-1b27e47226c8",
+      "repo_full_name": "sanvi-s/parseSkill-backend",
+      "description": null,
+      "primary_language": null,
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "is_template_derived": false,
+      "contribution_weight": 0.4,
+      "complexity_score": 1.75,
+      "last_commit_at": null,
+      "top_technologies": [],
+      "complexity_breakdown": {
+        "total": 1.7497552677350547,
+        "has_ci_cd": 0.0,
+        "has_tests": 0.0,
+        "lines_authored": 1.7497552677350547,
+        "technology_breadth": 0.0,
+        "architecture_patterns": 0.0,
+        "documentation_quality": 0.0,
+        "has_deployment_config": 0.0
+      },
+      "technologies": [],
+      "architecture_patterns": [],
+      "concepts_demonstrated": [],
+      "skill_contributions": [],
+      "readme_excerpt": null
+    }
+  },
+  "timeline": {
+    "cells": [
+      {
+        "technology_id": "3e63ec0b-bdfb-40c5-8e31-444f2abe3408",
+        "technology_name": "GitHub Actions",
+        "category": "devops",
+        "quarter": "2024-Q4",
+        "commit_count": 8.0
+      },
+      {
+        "technology_id": "61c55612-939a-47d7-b3e4-e2bfb86a4154",
+        "technology_name": "pg",
+        "category": "database",
+        "quarter": "2025-Q3",
+        "commit_count": 22.0
+      },
+      {
+        "technology_id": "0b58ea87-e644-4ae3-b1ba-a332a29cdf6b",
+        "technology_name": "express",
+        "category": "backend",
+        "quarter": "2025-Q3",
+        "commit_count": 38.0
+      },
+      {
+        "technology_id": "6a7fcd28-9d15-4873-af5d-2a34e2faa67e",
+        "technology_name": "sequelize",
+        "category": "database",
+        "quarter": "2025-Q3",
+        "commit_count": 18.0
+      },
+      {
+        "technology_id": "f88a3e32-0950-46f8-a562-ffea49b38457",
+        "technology_name": "next",
+        "category": "frontend",
+        "quarter": "2025-Q4",
+        "commit_count": 12.0
+      },
+      {
+        "technology_id": "787bdebd-ffa1-457a-8ff6-4d39f59b3ce4",
+        "technology_name": "@types/node-fetch",
+        "category": "language",
+        "quarter": "2025-Q4",
+        "commit_count": 279.0
+      },
+      {
+        "technology_id": "c79d1ade-9a3b-4c70-bf55-ec6177068a7f",
+        "technology_name": "react",
+        "category": "frontend",
+        "quarter": "2025-Q4",
+        "commit_count": 20.0
+      },
+      {
+        "technology_id": "e5c25a3a-3db1-46f8-93f3-ba150ff9aeeb",
+        "technology_name": "typescript",
+        "category": "language",
+        "quarter": "2025-Q4",
+        "commit_count": 24.0
+      },
+      {
+        "technology_id": "0b58ea87-e644-4ae3-b1ba-a332a29cdf6b",
+        "technology_name": "express",
+        "category": "backend",
+        "quarter": "2025-Q4",
+        "commit_count": 26.0
+      },
+      {
+        "technology_id": "61c55612-939a-47d7-b3e4-e2bfb86a4154",
+        "technology_name": "pg",
+        "category": "database",
+        "quarter": "2025-Q4",
+        "commit_count": 14.0
+      },
+      {
+        "technology_id": "3e7cc229-db0a-41f2-a4eb-1d75685aee69",
+        "technology_name": "mongodb",
+        "category": "database",
+        "quarter": "2025-Q4",
+        "commit_count": 15.0
+      },
+      {
+        "technology_id": "f77c41e3-bc8d-4dbd-9ecd-deea230c9d60",
+        "technology_name": "mysql2",
+        "category": "database",
+        "quarter": "2025-Q4",
+        "commit_count": 6.0
+      },
+      {
+        "technology_id": "368a292f-1928-41dc-a8a6-c3509a4f802c",
+        "technology_name": "sentence-transformers",
+        "category": "ml",
+        "quarter": "2025-Q4",
+        "commit_count": 9.0
+      },
+      {
+        "technology_id": "ffd5ff7e-4611-4536-9bfb-5037bd239b37",
+        "technology_name": "fastapi",
+        "category": "backend",
+        "quarter": "2026-Q1",
+        "commit_count": 35.0
+      },
+      {
+        "technology_id": "e5c25a3a-3db1-46f8-93f3-ba150ff9aeeb",
+        "technology_name": "typescript",
+        "category": "language",
+        "quarter": "2026-Q1",
+        "commit_count": 52.0
+      },
+      {
+        "technology_id": "41bca7ae-8182-43e1-bc83-c38d6ce37816",
+        "technology_name": "supabase",
+        "category": "database",
+        "quarter": "2026-Q1",
+        "commit_count": 20.0
+      },
+      {
+        "technology_id": "5c08ff0b-b033-434b-a093-6503736684e6",
+        "technology_name": "jsonwebtoken",
+        "category": "backend",
+        "quarter": "2026-Q1",
+        "commit_count": 10.0
+      },
+      {
+        "technology_id": "80955cdb-df41-41cf-bde3-44355ac7fbe9",
+        "technology_name": "xgboost",
+        "category": "ml",
+        "quarter": "2026-Q1",
+        "commit_count": 8.0
+      },
+      {
+        "technology_id": "041f3e2a-defa-4ed7-8306-3c61ef04028a",
+        "technology_name": "react-native",
+        "category": "frontend",
+        "quarter": "2026-Q1",
+        "commit_count": 40.0
+      },
+      {
+        "technology_id": "c79d1ade-9a3b-4c70-bf55-ec6177068a7f",
+        "technology_name": "react",
+        "category": "frontend",
+        "quarter": "2026-Q1",
+        "commit_count": 45.0
+      },
+      {
+        "technology_id": "71d3af87-6f81-4d3c-98da-bc5bef23bfa3",
+        "technology_name": "expo",
+        "category": "frontend",
+        "quarter": "2026-Q1",
+        "commit_count": 28.0
+      },
+      {
+        "technology_id": "3e7cc229-db0a-41f2-a4eb-1d75685aee69",
+        "technology_name": "mongodb",
+        "category": "database",
+        "quarter": "2026-Q1",
+        "commit_count": 12.0
+      },
+      {
+        "technology_id": "47b53473-8447-4297-9b97-53895728908e",
+        "technology_name": "matplotlib",
+        "category": "ml",
+        "quarter": "2026-Q2",
+        "commit_count": 9.0
+      },
+      {
+        "technology_id": "ffd5ff7e-4611-4536-9bfb-5037bd239b37",
+        "technology_name": "fastapi",
+        "category": "backend",
+        "quarter": "2026-Q2",
+        "commit_count": 40.0
+      },
+      {
+        "technology_id": "041f3e2a-defa-4ed7-8306-3c61ef04028a",
+        "technology_name": "react-native",
+        "category": "frontend",
+        "quarter": "2026-Q2",
+        "commit_count": 33.0
+      },
+      {
+        "technology_id": "3e63ec0b-bdfb-40c5-8e31-444f2abe3408",
+        "technology_name": "GitHub Actions",
+        "category": "devops",
+        "quarter": "2026-Q2",
+        "commit_count": 7.0
+      },
+      {
+        "technology_id": "7512bc70-e5db-4889-835b-3cbf8e6deea0",
+        "technology_name": "numpy",
+        "category": "ml",
+        "quarter": "2026-Q2",
+        "commit_count": 18.0
+      },
+      {
+        "technology_id": "ced0c97c-b8ac-439a-a773-94493bd7b527",
+        "technology_name": "pandas",
+        "category": "ml",
+        "quarter": "2026-Q2",
+        "commit_count": 16.0
+      },
+      {
+        "technology_id": "60a973b2-fb5b-45bf-bf51-dbb2e23139ec",
+        "technology_name": "scikit-learn",
+        "category": "ml",
+        "quarter": "2026-Q2",
+        "commit_count": 14.0
+      },
+      {
+        "technology_id": "c79d1ade-9a3b-4c70-bf55-ec6177068a7f",
+        "technology_name": "react",
+        "category": "frontend",
+        "quarter": "2026-Q3",
+        "commit_count": 30.0
+      },
+      {
+        "technology_id": "368a292f-1928-41dc-a8a6-c3509a4f802c",
+        "technology_name": "sentence-transformers",
+        "category": "ml",
+        "quarter": "2026-Q3",
+        "commit_count": 6.0
+      },
+      {
+        "technology_id": "041f3e2a-defa-4ed7-8306-3c61ef04028a",
+        "technology_name": "react-native",
+        "category": "frontend",
+        "quarter": "2026-Q3",
+        "commit_count": 25.0
+      },
+      {
+        "technology_id": "ffd5ff7e-4611-4536-9bfb-5037bd239b37",
+        "technology_name": "fastapi",
+        "category": "backend",
+        "quarter": "2026-Q3",
+        "commit_count": 28.0
+      },
+      {
+        "technology_id": "80955cdb-df41-41cf-bde3-44355ac7fbe9",
+        "technology_name": "xgboost",
+        "category": "ml",
+        "quarter": "2026-Q3",
+        "commit_count": 11.0
+      }
+    ],
+    "milestones": [
+      {
+        "type": "first_commit",
+        "technology_id": "3e63ec0b-bdfb-40c5-8e31-444f2abe3408",
+        "technology_name": "GitHub Actions",
+        "date": "2024-12-29T16:21:29+00:00",
+        "label": "Started working with GitHub Actions"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "0b58ea87-e644-4ae3-b1ba-a332a29cdf6b",
+        "technology_name": "express",
+        "date": "2025-08-05T00:00:00+00:00",
+        "label": "Started working with express"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "61c55612-939a-47d7-b3e4-e2bfb86a4154",
+        "technology_name": "pg",
+        "date": "2025-08-08T00:00:00+00:00",
+        "label": "Started working with pg"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "6a7fcd28-9d15-4873-af5d-2a34e2faa67e",
+        "technology_name": "sequelize",
+        "date": "2025-08-10T00:00:00+00:00",
+        "label": "Started working with sequelize"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "f88a3e32-0950-46f8-a562-ffea49b38457",
+        "technology_name": "next",
+        "date": "2025-09-20T00:00:00+00:00",
+        "label": "Started working with next"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "f77c41e3-bc8d-4dbd-9ecd-deea230c9d60",
+        "technology_name": "mysql2",
+        "date": "2025-10-01T00:00:00+00:00",
+        "label": "Started working with mysql2"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "787bdebd-ffa1-457a-8ff6-4d39f59b3ce4",
+        "technology_name": "@types/node-fetch",
+        "date": "2025-10-08T20:41:20+00:00",
+        "label": "Started working with @types/node-fetch"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "c79d1ade-9a3b-4c70-bf55-ec6177068a7f",
+        "technology_name": "react",
+        "date": "2025-11-05T00:00:00+00:00",
+        "label": "Started working with react"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "e5c25a3a-3db1-46f8-93f3-ba150ff9aeeb",
+        "technology_name": "typescript",
+        "date": "2025-11-05T00:00:00+00:00",
+        "label": "Started working with typescript"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "3e7cc229-db0a-41f2-a4eb-1d75685aee69",
+        "technology_name": "mongodb",
+        "date": "2025-11-10T00:00:00+00:00",
+        "label": "Started working with mongodb"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "368a292f-1928-41dc-a8a6-c3509a4f802c",
+        "technology_name": "sentence-transformers",
+        "date": "2025-11-12T00:00:00+00:00",
+        "label": "Started working with sentence-transformers"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "ffd5ff7e-4611-4536-9bfb-5037bd239b37",
+        "technology_name": "fastapi",
+        "date": "2026-01-05T00:00:00+00:00",
+        "label": "Started working with fastapi"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "041f3e2a-defa-4ed7-8306-3c61ef04028a",
+        "technology_name": "react-native",
+        "date": "2026-01-05T00:00:00+00:00",
+        "label": "Started working with react-native"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "71d3af87-6f81-4d3c-98da-bc5bef23bfa3",
+        "technology_name": "expo",
+        "date": "2026-01-05T00:00:00+00:00",
+        "label": "Started working with expo"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "41bca7ae-8182-43e1-bc83-c38d6ce37816",
+        "technology_name": "supabase",
+        "date": "2026-01-08T00:00:00+00:00",
+        "label": "Started working with supabase"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "80955cdb-df41-41cf-bde3-44355ac7fbe9",
+        "technology_name": "xgboost",
+        "date": "2026-01-10T00:00:00+00:00",
+        "label": "Started working with xgboost"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "7512bc70-e5db-4889-835b-3cbf8e6deea0",
+        "technology_name": "numpy",
+        "date": "2026-01-10T00:00:00+00:00",
+        "label": "Started working with numpy"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "ced0c97c-b8ac-439a-a773-94493bd7b527",
+        "technology_name": "pandas",
+        "date": "2026-01-10T00:00:00+00:00",
+        "label": "Started working with pandas"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "60a973b2-fb5b-45bf-bf51-dbb2e23139ec",
+        "technology_name": "scikit-learn",
+        "date": "2026-01-10T00:00:00+00:00",
+        "label": "Started working with scikit-learn"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "5c08ff0b-b033-434b-a093-6503736684e6",
+        "technology_name": "jsonwebtoken",
+        "date": "2026-01-12T00:00:00+00:00",
+        "label": "Started working with jsonwebtoken"
+      },
+      {
+        "type": "first_commit",
+        "technology_id": "47b53473-8447-4297-9b97-53895728908e",
+        "technology_name": "matplotlib",
+        "date": "2026-02-01T00:00:00+00:00",
+        "label": "Started working with matplotlib"
+      }
+    ],
+    "learning_velocity": [
+      {
+        "quarter": "2024-Q4",
+        "new_technologies": 1
+      },
+      {
+        "quarter": "2025-Q3",
+        "new_technologies": 4
+      },
+      {
+        "quarter": "2025-Q4",
+        "new_technologies": 6
+      },
+      {
+        "quarter": "2026-Q1",
+        "new_technologies": 11
+      }
+    ]
+  },
+  "recommendations": {
+    "roles": [
+      {
+        "role_id": "e53fa5e7-44a7-475f-b3f7-af7f463c3079",
+        "role_name": "Backend Developer",
+        "confidence": 0.4659621702513778,
+        "description": null
+      },
+      {
+        "role_id": "d11f2308-dea9-4382-9318-d2167379324e",
+        "role_name": "Data Scientist / ML Engineer",
+        "confidence": 0.4282816643131553,
+        "description": null
+      },
+      {
+        "role_id": "08e98be3-0f3e-4ba2-874e-ac0de339f8b6",
+        "role_name": "Full-Stack Developer",
+        "confidence": 0.40948588819981413,
+        "description": null
+      },
+      {
+        "role_id": "8cf82459-762b-4556-a894-903435772473",
+        "role_name": "Frontend Developer",
+        "confidence": 0.24231038619754564,
+        "description": null
+      },
+      {
+        "role_id": "15fe60c9-98eb-496b-b9f5-15584fb725bc",
+        "role_name": "Frontend Engineer",
+        "confidence": 0.2154771548571686,
+        "description": null
+      }
+    ],
+    "gap_by_role": {
+      "e53fa5e7-44a7-475f-b3f7-af7f463c3079": [
+        {
+          "skill_id": "b4ce730e-7eb9-4ee9-b00e-c91457a2ad43",
+          "skill_name": "Django",
+          "importance": 1.0,
+          "priority_score": 0.8,
+          "already_have": false
+        },
+        {
+          "skill_id": "f3723e6b-352b-4e37-91ae-09b170fe5eae",
+          "skill_name": "Node.js Backend Development",
+          "importance": 1.0,
+          "priority_score": 0.8,
+          "already_have": true
+        },
+        {
+          "skill_id": "100a72f1-a5b5-4482-b018-f3716c9d1004",
+          "skill_name": "Spring Boot",
+          "importance": 1.0,
+          "priority_score": 0.8,
+          "already_have": false
+        },
+        {
+          "skill_id": "0607691a-5826-4c87-98c2-b394b6c07132",
+          "skill_name": "Ruby on Rails",
+          "importance": 1.0,
+          "priority_score": 0.8,
+          "already_have": false
+        },
+        {
+          "skill_id": "0f2fce63-077d-4d83-adf6-65ba861df3a5",
+          "skill_name": "Laravel",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": false
+        },
+        {
+          "skill_id": "e5262a63-3850-4489-abb8-542cae4ad2a2",
+          "skill_name": "FastAPI",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": true
+        },
+        {
+          "skill_id": "4237d9fd-e791-4e82-816b-2f561ae143f2",
+          "skill_name": "Express.js",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": true
+        },
+        {
+          "skill_id": "37802cfe-49e9-4bd4-adfd-e73d68ba9029",
+          "skill_name": "Flask",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": false
+        },
+        {
+          "skill_id": "0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+          "skill_name": "REST API Design",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": true
+        },
+        {
+          "skill_id": "c1fb6a28-6879-44ff-bf15-7b4799527454",
+          "skill_name": "Authentication & Authorization",
+          "importance": 0.8,
+          "priority_score": 0.64,
+          "already_have": true
+        },
+        {
+          "skill_id": "15def00c-23ca-4ee0-b9e6-fca7711d27c1",
+          "skill_name": ".NET / ASP.NET",
+          "importance": 0.8,
+          "priority_score": 0.64,
+          "already_have": false
+        },
+        {
+          "skill_id": "c10f09aa-d36f-4732-a518-b5695eafa129",
+          "skill_name": "NestJS",
+          "importance": 0.8,
+          "priority_score": 0.64,
+          "already_have": false
+        },
+        {
+          "skill_id": "23649641-cbda-4696-aa4b-18eca8173236",
+          "skill_name": "Microservices Architecture",
+          "importance": 0.8,
+          "priority_score": 0.64,
+          "already_have": false
+        },
+        {
+          "skill_id": "93dbca06-ac56-415c-b15f-98b3355ab096",
+          "skill_name": "Message Queues & Event Streaming",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": false
+        },
+        {
+          "skill_id": "150c7412-1ae4-4c1f-83ab-9ddcee9258a1",
+          "skill_name": "PostgreSQL",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": true
+        },
+        {
+          "skill_id": "65ed5ddc-21ab-4255-9e6b-43a08164ef4e",
+          "skill_name": "Relational Databases",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": true
+        },
+        {
+          "skill_id": "60a0ae88-b0c5-436e-a026-537c808b590e",
+          "skill_name": "GraphQL",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": false
+        },
+        {
+          "skill_id": "9042c0e7-2741-447b-92ef-f9f6393b6c15",
+          "skill_name": "Java",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": true
+        },
+        {
+          "skill_id": "e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "skill_name": "Python",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": true
+        },
+        {
+          "skill_id": "c58c673c-6d8f-4115-890a-851979f06c8c",
+          "skill_name": "Database Schema Design",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "b2536ad5-70c6-49e2-a1ed-5727017e6785",
+          "skill_name": "MongoDB",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": true
+        },
+        {
+          "skill_id": "251693d9-3643-41c6-ad44-638e5aef152e",
+          "skill_name": "C#",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "9790454c-4cf7-40bc-85ef-95bf3990c9ac",
+          "skill_name": "SQL",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+          "skill_name": "ORM/Query Building",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": true
+        },
+        {
+          "skill_id": "0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "skill_name": "TypeScript",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": true
+        },
+        {
+          "skill_id": "813b768b-b2bf-4993-a095-7746d59bf876",
+          "skill_name": "API Gateway Design",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "d68fc68f-9ecb-4de6-9dda-2c689a2a956a",
+          "skill_name": "Go",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "9ab3ce94-ac23-4e19-9b2a-50360aa52bc2",
+          "skill_name": "PHP",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "5e0bc4f5-4456-4c9c-ad8f-b9ff328515c6",
+          "skill_name": "Ruby",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "30576b6d-2f27-4422-b018-1b71b4556375",
+          "skill_name": "WebSockets & Real-Time Communication",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "ea9ffa64-4023-41e6-ae73-81bf91795a1c",
+          "skill_name": "MySQL",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": true
+        },
+        {
+          "skill_id": "1eb12d35-6580-47fc-b862-979b81db93a2",
+          "skill_name": "gRPC",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "b1f35fb6-049e-4ce6-b1d1-4c9b25e42dd6",
+          "skill_name": "Caching Strategies",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "9aaf14d2-d149-4bd2-81f1-12964b5167f7",
+          "skill_name": "Serverless Functions",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "2b2fe4ee-196b-4590-b84c-2ff2d9f58b11",
+          "skill_name": "Application Security",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "ea85c3ba-4faf-4afc-8f29-47e1af6560c3",
+          "skill_name": "Rust",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "c91c6fac-a9d2-4c04-a143-6931a5e18a02",
+          "skill_name": "Redis",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "fac09029-7c97-424e-b477-8ec23f34313d",
+          "skill_name": "Search & Indexing (Elasticsearch)",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "90e3e3de-1827-4cad-aae4-fb80271b5e19",
+          "skill_name": "JavaScript",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": true
+        },
+        {
+          "skill_id": "2507a4af-b36e-413b-93a7-bd582c3e9db0",
+          "skill_name": "Elixir",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "9ba248bb-6540-467e-9e50-0e958982dd47",
+          "skill_name": "Scala",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "8933b26b-6d52-4a68-b5f5-421493f23841",
+          "skill_name": "Linting & Code Quality",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": false
+        },
+        {
+          "skill_id": "fa1effde-f919-4164-8ce7-3b6d84b15bdb",
+          "skill_name": "Docker & Containerization",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": false
+        },
+        {
+          "skill_id": "f36ef09b-ce92-459c-960a-b33b1cc8c0aa",
+          "skill_name": "C++",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": true
+        },
+        {
+          "skill_id": "c618b139-748f-4610-a24a-feb55ac86e67",
+          "skill_name": "Automated Testing",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": false
+        },
+        {
+          "skill_id": "d3f75c8a-5a16-4070-9a15-2e0244946f04",
+          "skill_name": "Blockchain Development",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": false
+        },
+        {
+          "skill_id": "42b47643-cd71-4c62-a909-0498e74907fb",
+          "skill_name": "LLM Application Development",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": true
+        },
+        {
+          "skill_id": "ac7373a8-e87e-4602-b3e7-1f992a9bb179",
+          "skill_name": "Kotlin",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": false
+        },
+        {
+          "skill_id": "272c8957-787f-47fb-a3f1-a9ade9b948d7",
+          "skill_name": "Data Warehousing",
+          "importance": 0.3,
+          "priority_score": 0.24,
+          "already_have": false
+        },
+        {
+          "skill_id": "4da37ef7-514b-448e-a19d-d80b38d4b3d3",
+          "skill_name": "API Testing",
+          "importance": 0.3,
+          "priority_score": 0.24,
+          "already_have": false
+        },
+        {
+          "skill_id": "6ece4f47-4d1b-48de-bc98-cb276a919d4d",
+          "skill_name": "Data Pipelines / ETL",
+          "importance": 0.3,
+          "priority_score": 0.24,
+          "already_have": false
+        },
+        {
+          "skill_id": "e87a2841-f60d-4fda-bfcc-75f030e71485",
+          "skill_name": "Unit Testing",
+          "importance": 0.3,
+          "priority_score": 0.24,
+          "already_have": false
+        },
+        {
+          "skill_id": "779beb06-b610-48c5-978e-edba170b0690",
+          "skill_name": "Embedded Systems",
+          "importance": 0.3,
+          "priority_score": 0.24,
+          "already_have": false
+        },
+        {
+          "skill_id": "2b689b02-f03e-4239-9f6c-cac09f15b1c2",
+          "skill_name": "Vector Databases",
+          "importance": 0.3,
+          "priority_score": 0.24,
+          "already_have": false
+        },
+        {
+          "skill_id": "e1ac7e2d-2d9d-4def-845a-4949cc0a617b",
+          "skill_name": "SQLite",
+          "importance": 0.3,
+          "priority_score": 0.24,
+          "already_have": false
+        }
+      ],
+      "d11f2308-dea9-4382-9318-d2167379324e": [
+        {
+          "skill_id": "0e0a42f0-55f5-4f8c-a497-03a830c67499",
+          "skill_name": "Deep Learning",
+          "importance": 1.0,
+          "priority_score": 0.8,
+          "already_have": true
+        },
+        {
+          "skill_id": "8c5729c1-f463-4cad-ae51-5e42c2009b95",
+          "skill_name": "Machine Learning",
+          "importance": 1.0,
+          "priority_score": 0.8,
+          "already_have": true
+        },
+        {
+          "skill_id": "e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "skill_name": "Python",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": true
+        },
+        {
+          "skill_id": "9f31d260-a338-48e7-a0a6-6c2da918f1a1",
+          "skill_name": "Data Analysis",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": true
+        },
+        {
+          "skill_id": "a2c3a492-c4e8-45c4-b25c-fb6b897853c0",
+          "skill_name": "Computer Vision",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": false
+        },
+        {
+          "skill_id": "af37f6ef-6fb2-4e25-bb4a-21517b3a36ba",
+          "skill_name": "Natural Language Processing",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": true
+        },
+        {
+          "skill_id": "cc91de8d-cf53-4ac6-be1e-6a88ef26fe8a",
+          "skill_name": "Numerical Computing",
+          "importance": 0.8,
+          "priority_score": 0.64,
+          "already_have": true
+        },
+        {
+          "skill_id": "750fdf0e-f2be-4e1c-91df-cd9e987fc8a3",
+          "skill_name": "MLOps",
+          "importance": 0.8,
+          "priority_score": 0.64,
+          "already_have": false
+        },
+        {
+          "skill_id": "6ece4f47-4d1b-48de-bc98-cb276a919d4d",
+          "skill_name": "Data Pipelines / ETL",
+          "importance": 0.8,
+          "priority_score": 0.64,
+          "already_have": false
+        },
+        {
+          "skill_id": "dc694ae4-a6a6-4dbc-a5e1-7acd57256e20",
+          "skill_name": "Statistical Modeling",
+          "importance": 0.8,
+          "priority_score": 0.64,
+          "already_have": false
+        },
+        {
+          "skill_id": "42b47643-cd71-4c62-a909-0498e74907fb",
+          "skill_name": "LLM Application Development",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": true
+        },
+        {
+          "skill_id": "272c8957-787f-47fb-a3f1-a9ade9b948d7",
+          "skill_name": "Data Warehousing",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": false
+        },
+        {
+          "skill_id": "2b689b02-f03e-4239-9f6c-cac09f15b1c2",
+          "skill_name": "Vector Databases",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "9790454c-4cf7-40bc-85ef-95bf3990c9ac",
+          "skill_name": "SQL",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "28ec4fa4-9c66-448e-99fa-b19bd39bb775",
+          "skill_name": "Data Visualization",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": true
+        },
+        {
+          "skill_id": "9ba248bb-6540-467e-9e50-0e958982dd47",
+          "skill_name": "Scala",
+          "importance": 0.3,
+          "priority_score": 0.24,
+          "already_have": false
+        },
+        {
+          "skill_id": "fac09029-7c97-424e-b477-8ec23f34313d",
+          "skill_name": "Search & Indexing (Elasticsearch)",
+          "importance": 0.3,
+          "priority_score": 0.24,
+          "already_have": false
+        }
+      ],
+      "08e98be3-0f3e-4ba2-874e-ac0de339f8b6": [
+        {
+          "skill_id": "0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "skill_name": "TypeScript",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": true
+        },
+        {
+          "skill_id": "90e3e3de-1827-4cad-aae4-fb80271b5e19",
+          "skill_name": "JavaScript",
+          "importance": 0.8,
+          "priority_score": 0.64,
+          "already_have": true
+        },
+        {
+          "skill_id": "f3723e6b-352b-4e37-91ae-09b170fe5eae",
+          "skill_name": "Node.js Backend Development",
+          "importance": 0.8,
+          "priority_score": 0.64,
+          "already_have": true
+        },
+        {
+          "skill_id": "0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+          "skill_name": "REST API Design",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": true
+        },
+        {
+          "skill_id": "0607691a-5826-4c87-98c2-b394b6c07132",
+          "skill_name": "Ruby on Rails",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": false
+        },
+        {
+          "skill_id": "b4ce730e-7eb9-4ee9-b00e-c91457a2ad43",
+          "skill_name": "Django",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": false
+        },
+        {
+          "skill_id": "fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "skill_name": "React",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": true
+        },
+        {
+          "skill_id": "60a0ae88-b0c5-436e-a026-537c808b590e",
+          "skill_name": "GraphQL",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "68f7c7bd-a6b9-40d0-9af8-0efa54ca7a3c",
+          "skill_name": "Vue.js",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "1d0e9303-c9c3-4cf6-9107-a9bb1020ff02",
+          "skill_name": "Angular",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "4237d9fd-e791-4e82-816b-2f561ae143f2",
+          "skill_name": "Express.js",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": true
+        },
+        {
+          "skill_id": "c10f09aa-d36f-4732-a518-b5695eafa129",
+          "skill_name": "NestJS",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "0fbe5367-7ac3-4566-be78-1acad6875d06",
+          "skill_name": "State Management & Data Fetching",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "30576b6d-2f27-4422-b018-1b71b4556375",
+          "skill_name": "WebSockets & Real-Time Communication",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+          "skill_name": "ORM/Query Building",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": true
+        },
+        {
+          "skill_id": "3319cb6d-6659-453b-80f1-eebe7f1db2f5",
+          "skill_name": "Frontend Build Tooling",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": false
+        }
+      ],
+      "8cf82459-762b-4556-a894-903435772473": [
+        {
+          "skill_id": "fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "skill_name": "React",
+          "importance": 1.0,
+          "priority_score": 0.8,
+          "already_have": true
+        },
+        {
+          "skill_id": "1d0e9303-c9c3-4cf6-9107-a9bb1020ff02",
+          "skill_name": "Angular",
+          "importance": 1.0,
+          "priority_score": 0.8,
+          "already_have": false
+        },
+        {
+          "skill_id": "68f7c7bd-a6b9-40d0-9af8-0efa54ca7a3c",
+          "skill_name": "Vue.js",
+          "importance": 1.0,
+          "priority_score": 0.8,
+          "already_have": false
+        },
+        {
+          "skill_id": "0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "skill_name": "TypeScript",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": true
+        },
+        {
+          "skill_id": "90e3e3de-1827-4cad-aae4-fb80271b5e19",
+          "skill_name": "JavaScript",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": true
+        },
+        {
+          "skill_id": "7a96bdb0-d30b-4d80-b5e3-92cc6c549cd0",
+          "skill_name": "Svelte",
+          "importance": 0.9,
+          "priority_score": 0.72,
+          "already_have": false
+        },
+        {
+          "skill_id": "0fbe5367-7ac3-4566-be78-1acad6875d06",
+          "skill_name": "State Management & Data Fetching",
+          "importance": 0.8,
+          "priority_score": 0.64,
+          "already_have": false
+        },
+        {
+          "skill_id": "17da7003-913b-4d03-9957-48c87b152e09",
+          "skill_name": "CSS Frameworks",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": false
+        },
+        {
+          "skill_id": "9b007226-0c2d-4c56-98e8-be4cc03684e7",
+          "skill_name": "State Management (Redux/Flux)",
+          "importance": 0.7,
+          "priority_score": 0.56,
+          "already_have": false
+        },
+        {
+          "skill_id": "3319cb6d-6659-453b-80f1-eebe7f1db2f5",
+          "skill_name": "Frontend Build Tooling",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "6c79418c-7e84-434c-a947-5e4b36ae77cf",
+          "skill_name": "Form Handling & Validation",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "5309f481-ff65-42b8-97ee-31ab888bf274",
+          "skill_name": "CSS",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "8a3590a1-4d52-4131-aa21-5c33cdbc5f0f",
+          "skill_name": "Client-Side Routing",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "5a1bdb32-3c4a-4076-98a8-f885dae57eb0",
+          "skill_name": "HTML",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": false
+        },
+        {
+          "skill_id": "28ec4fa4-9c66-448e-99fa-b19bd39bb775",
+          "skill_name": "Data Visualization",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": true
+        },
+        {
+          "skill_id": "6f123c92-c2a1-4f26-a391-752ec839095f",
+          "skill_name": "Progressive Web App Development",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "6456618b-9142-43ed-b145-e64bae45289b",
+          "skill_name": "UI Component Libraries",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "67a81aee-c015-463e-93fd-b4b8e8f313ef",
+          "skill_name": "Static Site Generation",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "9216f684-00a1-441c-a467-d5ecce38082f",
+          "skill_name": "CSS-in-JS",
+          "importance": 0.5,
+          "priority_score": 0.4,
+          "already_have": false
+        },
+        {
+          "skill_id": "b9b7a8d3-7b5f-424a-acc7-94b4d5db77a7",
+          "skill_name": "React Native",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": true
+        },
+        {
+          "skill_id": "a9aecc58-aad9-448d-a30e-f0e127f33925",
+          "skill_name": "Web Components",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": false
+        },
+        {
+          "skill_id": "910fb65e-b4a9-40a5-a8fb-6e529893c09b",
+          "skill_name": "Animation & Motion Design",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": false
+        },
+        {
+          "skill_id": "8933b26b-6d52-4a68-b5f5-421493f23841",
+          "skill_name": "Linting & Code Quality",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": false
+        },
+        {
+          "skill_id": "c618b139-748f-4610-a24a-feb55ac86e67",
+          "skill_name": "Automated Testing",
+          "importance": 0.3,
+          "priority_score": 0.24,
+          "already_have": false
+        },
+        {
+          "skill_id": "23fbbf5d-8716-4dea-b0ff-45d67af84aa4",
+          "skill_name": "End-to-End Testing",
+          "importance": 0.3,
+          "priority_score": 0.24,
+          "already_have": false
+        },
+        {
+          "skill_id": "e87a2841-f60d-4fda-bfcc-75f030e71485",
+          "skill_name": "Unit Testing",
+          "importance": 0.3,
+          "priority_score": 0.24,
+          "already_have": false
+        },
+        {
+          "skill_id": "bb22bc55-2ce5-45d7-9ec5-a7234a8f8877",
+          "skill_name": "Game Development",
+          "importance": 0.2,
+          "priority_score": 0.16,
+          "already_have": false
+        }
+      ],
+      "15fe60c9-98eb-496b-b9f5-15584fb725bc": [
+        {
+          "skill_id": "0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "skill_name": "TypeScript",
+          "importance": 0.6,
+          "priority_score": 0.48,
+          "already_have": true
+        },
+        {
+          "skill_id": "9a2ba84d-c24a-42fc-b5c5-8482367e4180",
+          "skill_name": "ICT project management methodologies",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": false
+        },
+        {
+          "skill_id": "5309f481-ff65-42b8-97ee-31ab888bf274",
+          "skill_name": "CSS",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": false
+        },
+        {
+          "skill_id": "90e3e3de-1827-4cad-aae4-fb80271b5e19",
+          "skill_name": "JavaScript",
+          "importance": 0.4,
+          "priority_score": 0.32,
+          "already_have": true
+        },
+        {
+          "skill_id": "c3a9fcf6-c533-445d-a69e-0753d959aaf2",
+          "skill_name": "have computer literacy",
+          "importance": 0.2,
+          "priority_score": 0.16,
+          "already_have": false
+        },
+        {
+          "skill_id": "b785e440-9c33-4144-a6d7-a8303f9a13c9",
+          "skill_name": "LINQ",
+          "importance": 0.2,
+          "priority_score": 0.16,
+          "already_have": false
+        },
+        {
+          "skill_id": "6db11eb6-3dec-42f8-91a6-88eb472ce41b",
+          "skill_name": "tools for software configuration management",
+          "importance": 0.2,
+          "priority_score": 0.16,
+          "already_have": false
+        },
+        {
+          "skill_id": "7ee221b7-3bf1-4e33-b72f-89c470d1f695",
+          "skill_name": "database management systems",
+          "importance": 0.2,
+          "priority_score": 0.16,
+          "already_have": false
+        },
+        {
+          "skill_id": "a0421505-46e9-4bfc-a0e1-c8090b575c19",
+          "skill_name": "do cloud refactoring",
+          "importance": 0.2,
+          "priority_score": 0.16,
+          "already_have": false
+        }
+      ]
+    },
+    "projects": [
+      {
+        "title": "Fully keyboard-navigable data table",
+        "description": "Build a sortable/filterable data table that's 100% operable via keyboard and passes an axe-core accessibility audit.",
+        "skills_exercised": [
+          "HTML",
+          "CSS",
+          "Accessibility"
+        ],
+        "complexity": "intermediate",
+        "estimated_hours": 14,
+        "why_this_project": "Accessibility is rarely demonstrated in portfolios despite being a frequent interview/requirement topic."
+      },
+      {
+        "title": "Query performance playground",
+        "description": "Load a large public dataset, write slow queries, then use EXPLAIN ANALYZE and indexes to speed them up 10x+; document each fix.",
+        "skills_exercised": [
+          "SQL",
+          "PostgreSQL"
+        ],
+        "complexity": "intermediate",
+        "estimated_hours": 15,
+        "why_this_project": "Query optimization is a rare, high-signal skill most portfolios never demonstrate."
+      },
+      {
+        "title": "Local Kubernetes cluster with autoscaling demo",
+        "description": "Deploy a small app to kind/minikube with HPA, readiness/liveness probes, and a load test that triggers scale-out.",
+        "skills_exercised": [
+          "Kubernetes",
+          "Docker"
+        ],
+        "complexity": "advanced",
+        "estimated_hours": 25,
+        "why_this_project": "Watching HPA actually scale under load is far more convincing than a static manifest."
+      },
+      {
+        "title": "End-to-end tabular ML pipeline with drift monitoring",
+        "description": "Train a model, serve it via FastAPI, and add a feature-drift monitor that alerts when input distribution shifts.",
+        "skills_exercised": [
+          "Machine Learning",
+          "Python"
+        ],
+        "complexity": "advanced",
+        "estimated_hours": 28,
+        "why_this_project": "MLOps concerns (drift, monitoring) are what's missing from 90% of 'trained a model' portfolio projects."
+      },
+      {
+        "title": "From-scratch gradient boosting on a Kaggle dataset",
+        "description": "Implement a simplified gradient boosting classifier from scratch, benchmark against XGBoost on the same dataset.",
+        "skills_exercised": [
+          "Machine Learning"
+        ],
+        "complexity": "intermediate",
+        "estimated_hours": 18,
+        "why_this_project": "Implementing the algorithm (not just calling .fit()) proves conceptual understanding."
+      },
+      {
+        "title": "Idempotent ETL pipeline with schema evolution",
+        "description": "Build a pipeline that ingests changing-schema CSVs into a warehouse table, handling new/removed columns without breaking.",
+        "skills_exercised": [
+          "Data Engineering",
+          "SQL"
+        ],
+        "complexity": "advanced",
+        "estimated_hours": 24,
+        "why_this_project": "Schema evolution and idempotency are the two things that separate toy ETL scripts from production pipelines."
+      },
+      {
+        "title": "Concurrent job scheduler",
+        "description": "Build a job scheduler in Go using goroutines/channels with worker pools, backpressure, and graceful shutdown.",
+        "skills_exercised": [
+          "Go"
+        ],
+        "complexity": "intermediate",
+        "estimated_hours": 18,
+        "why_this_project": "Go's concurrency primitives are its whole value proposition \u2014 this project can't be faked with a tutorial CRUD app."
+      },
+      {
+        "title": "Zero-copy CSV parser",
+        "description": "Write a CSV parser in Rust that avoids allocations on the hot path, benchmarked against a naive implementation.",
+        "skills_exercised": [
+          "Rust"
+        ],
+        "complexity": "advanced",
+        "estimated_hours": 22,
+        "why_this_project": "Ownership/borrowing discipline under a performance constraint is exactly what Rust roles screen for."
+      },
+      {
+        "title": "Background job queue with progress streaming",
+        "description": "Django/FastAPI app that enqueues long-running jobs and streams progress to the browser via SSE/websockets.",
+        "skills_exercised": [
+          "Django",
+          "FastAPI",
+          "Python"
+        ],
+        "complexity": "intermediate",
+        "estimated_hours": 18,
+        "why_this_project": "Real-time progress feedback is a common product requirement rarely covered in framework tutorials."
+      },
+      {
+        "title": "GraphQL API with DataLoader batching",
+        "description": "Build a GraphQL API and fix the N+1 query problem using DataLoader; benchmark before/after.",
+        "skills_exercised": [
+          "GraphQL"
+        ],
+        "complexity": "intermediate",
+        "estimated_hours": 16,
+        "why_this_project": "N+1 is the single most common GraphQL production bug \u2014 fixing it demonstrates real understanding."
+      }
+    ]
+  },
+  "roadmap_by_role": {
+    "e53fa5e7-44a7-475f-b3f7-af7f463c3079": [
+      {
+        "skill_id": "100a72f1-a5b5-4482-b018-f3716c9d1004",
+        "skill_name": "Spring Boot",
+        "order_index": 0,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "0607691a-5826-4c87-98c2-b394b6c07132",
+        "skill_name": "Ruby on Rails",
+        "order_index": 1,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "b4ce730e-7eb9-4ee9-b00e-c91457a2ad43",
+        "skill_name": "Django",
+        "order_index": 2,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "37802cfe-49e9-4bd4-adfd-e73d68ba9029",
+        "skill_name": "Flask",
+        "order_index": 3,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "0f2fce63-077d-4d83-adf6-65ba861df3a5",
+        "skill_name": "Laravel",
+        "order_index": 4,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "15def00c-23ca-4ee0-b9e6-fca7711d27c1",
+        "skill_name": ".NET / ASP.NET",
+        "order_index": 5,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "23649641-cbda-4696-aa4b-18eca8173236",
+        "skill_name": "Microservices Architecture",
+        "order_index": 6,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "c10f09aa-d36f-4732-a518-b5695eafa129",
+        "skill_name": "NestJS",
+        "order_index": 7,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "60a0ae88-b0c5-436e-a026-537c808b590e",
+        "skill_name": "GraphQL",
+        "order_index": 8,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "93dbca06-ac56-415c-b15f-98b3355ab096",
+        "skill_name": "Message Queues & Event Streaming",
+        "order_index": 9,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "251693d9-3643-41c6-ad44-638e5aef152e",
+        "skill_name": "C#",
+        "order_index": 10,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "30576b6d-2f27-4422-b018-1b71b4556375",
+        "skill_name": "WebSockets & Real-Time Communication",
+        "order_index": 11,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "5e0bc4f5-4456-4c9c-ad8f-b9ff328515c6",
+        "skill_name": "Ruby",
+        "order_index": 12,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "d68fc68f-9ecb-4de6-9dda-2c689a2a956a",
+        "skill_name": "Go",
+        "order_index": 13,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "9ab3ce94-ac23-4e19-9b2a-50360aa52bc2",
+        "skill_name": "PHP",
+        "order_index": 14,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "c58c673c-6d8f-4115-890a-851979f06c8c",
+        "skill_name": "Database Schema Design",
+        "order_index": 15,
+        "estimated_hours": 25,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "813b768b-b2bf-4993-a095-7746d59bf876",
+        "skill_name": "API Gateway Design",
+        "order_index": 16,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "9790454c-4cf7-40bc-85ef-95bf3990c9ac",
+        "skill_name": "SQL",
+        "order_index": 17,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "c91c6fac-a9d2-4c04-a143-6931a5e18a02",
+        "skill_name": "Redis",
+        "order_index": 18,
+        "estimated_hours": 25,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "2b2fe4ee-196b-4590-b84c-2ff2d9f58b11",
+        "skill_name": "Application Security",
+        "order_index": 19,
+        "estimated_hours": 30,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "9aaf14d2-d149-4bd2-81f1-12964b5167f7",
+        "skill_name": "Serverless Functions",
+        "order_index": 20,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "b1f35fb6-049e-4ce6-b1d1-4c9b25e42dd6",
+        "skill_name": "Caching Strategies",
+        "order_index": 21,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "9ba248bb-6540-467e-9e50-0e958982dd47",
+        "skill_name": "Scala",
+        "order_index": 22,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "2507a4af-b36e-413b-93a7-bd582c3e9db0",
+        "skill_name": "Elixir",
+        "order_index": 23,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "1eb12d35-6580-47fc-b862-979b81db93a2",
+        "skill_name": "gRPC",
+        "order_index": 24,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "fac09029-7c97-424e-b477-8ec23f34313d",
+        "skill_name": "Search & Indexing (Elasticsearch)",
+        "order_index": 25,
+        "estimated_hours": 25,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "ea85c3ba-4faf-4afc-8f29-47e1af6560c3",
+        "skill_name": "Rust",
+        "order_index": 26,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "8933b26b-6d52-4a68-b5f5-421493f23841",
+        "skill_name": "Linting & Code Quality",
+        "order_index": 27,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "d3f75c8a-5a16-4070-9a15-2e0244946f04",
+        "skill_name": "Blockchain Development",
+        "order_index": 28,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "c618b139-748f-4610-a24a-feb55ac86e67",
+        "skill_name": "Automated Testing",
+        "order_index": 29,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "ac7373a8-e87e-4602-b3e7-1f992a9bb179",
+        "skill_name": "Kotlin",
+        "order_index": 30,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "e1ac7e2d-2d9d-4def-845a-4949cc0a617b",
+        "skill_name": "SQLite",
+        "order_index": 31,
+        "estimated_hours": 25,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "272c8957-787f-47fb-a3f1-a9ade9b948d7",
+        "skill_name": "Data Warehousing",
+        "order_index": 32,
+        "estimated_hours": 25,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "2b689b02-f03e-4239-9f6c-cac09f15b1c2",
+        "skill_name": "Vector Databases",
+        "order_index": 33,
+        "estimated_hours": 25,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "6ece4f47-4d1b-48de-bc98-cb276a919d4d",
+        "skill_name": "Data Pipelines / ETL",
+        "order_index": 34,
+        "estimated_hours": 45,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "e87a2841-f60d-4fda-bfcc-75f030e71485",
+        "skill_name": "Unit Testing",
+        "order_index": 35,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "4da37ef7-514b-448e-a19d-d80b38d4b3d3",
+        "skill_name": "API Testing",
+        "order_index": 36,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "779beb06-b610-48c5-978e-edba170b0690",
+        "skill_name": "Embedded Systems",
+        "order_index": 37,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "fa1effde-f919-4164-8ce7-3b6d84b15bdb",
+        "skill_name": "Docker & Containerization",
+        "order_index": 38,
+        "estimated_hours": 34,
+        "status": "not_started",
+        "project_idea": null
+      }
+    ],
+    "d11f2308-dea9-4382-9318-d2167379324e": [
+      {
+        "skill_id": "a2c3a492-c4e8-45c4-b25c-fb6b897853c0",
+        "skill_name": "Computer Vision",
+        "order_index": 0,
+        "estimated_hours": 45,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "dc694ae4-a6a6-4dbc-a5e1-7acd57256e20",
+        "skill_name": "Statistical Modeling",
+        "order_index": 1,
+        "estimated_hours": 45,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "750fdf0e-f2be-4e1c-91df-cd9e987fc8a3",
+        "skill_name": "MLOps",
+        "order_index": 2,
+        "estimated_hours": 45,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "6ece4f47-4d1b-48de-bc98-cb276a919d4d",
+        "skill_name": "Data Pipelines / ETL",
+        "order_index": 3,
+        "estimated_hours": 45,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "272c8957-787f-47fb-a3f1-a9ade9b948d7",
+        "skill_name": "Data Warehousing",
+        "order_index": 4,
+        "estimated_hours": 25,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "2b689b02-f03e-4239-9f6c-cac09f15b1c2",
+        "skill_name": "Vector Databases",
+        "order_index": 5,
+        "estimated_hours": 25,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "9790454c-4cf7-40bc-85ef-95bf3990c9ac",
+        "skill_name": "SQL",
+        "order_index": 6,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "fac09029-7c97-424e-b477-8ec23f34313d",
+        "skill_name": "Search & Indexing (Elasticsearch)",
+        "order_index": 7,
+        "estimated_hours": 25,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "9ba248bb-6540-467e-9e50-0e958982dd47",
+        "skill_name": "Scala",
+        "order_index": 8,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      }
+    ],
+    "08e98be3-0f3e-4ba2-874e-ac0de339f8b6": [
+      {
+        "skill_id": "0607691a-5826-4c87-98c2-b394b6c07132",
+        "skill_name": "Ruby on Rails",
+        "order_index": 0,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "b4ce730e-7eb9-4ee9-b00e-c91457a2ad43",
+        "skill_name": "Django",
+        "order_index": 1,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "1d0e9303-c9c3-4cf6-9107-a9bb1020ff02",
+        "skill_name": "Angular",
+        "order_index": 2,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "60a0ae88-b0c5-436e-a026-537c808b590e",
+        "skill_name": "GraphQL",
+        "order_index": 3,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "68f7c7bd-a6b9-40d0-9af8-0efa54ca7a3c",
+        "skill_name": "Vue.js",
+        "order_index": 4,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "0fbe5367-7ac3-4566-be78-1acad6875d06",
+        "skill_name": "State Management & Data Fetching",
+        "order_index": 5,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "c10f09aa-d36f-4732-a518-b5695eafa129",
+        "skill_name": "NestJS",
+        "order_index": 6,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "30576b6d-2f27-4422-b018-1b71b4556375",
+        "skill_name": "WebSockets & Real-Time Communication",
+        "order_index": 7,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "3319cb6d-6659-453b-80f1-eebe7f1db2f5",
+        "skill_name": "Frontend Build Tooling",
+        "order_index": 8,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      }
+    ],
+    "8cf82459-762b-4556-a894-903435772473": [
+      {
+        "skill_id": "1d0e9303-c9c3-4cf6-9107-a9bb1020ff02",
+        "skill_name": "Angular",
+        "order_index": 0,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "68f7c7bd-a6b9-40d0-9af8-0efa54ca7a3c",
+        "skill_name": "Vue.js",
+        "order_index": 1,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "7a96bdb0-d30b-4d80-b5e3-92cc6c549cd0",
+        "skill_name": "Svelte",
+        "order_index": 2,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "0fbe5367-7ac3-4566-be78-1acad6875d06",
+        "skill_name": "State Management & Data Fetching",
+        "order_index": 3,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "17da7003-913b-4d03-9957-48c87b152e09",
+        "skill_name": "CSS Frameworks",
+        "order_index": 4,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "9b007226-0c2d-4c56-98e8-be4cc03684e7",
+        "skill_name": "State Management (Redux/Flux)",
+        "order_index": 5,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "6c79418c-7e84-434c-a947-5e4b36ae77cf",
+        "skill_name": "Form Handling & Validation",
+        "order_index": 6,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "8a3590a1-4d52-4131-aa21-5c33cdbc5f0f",
+        "skill_name": "Client-Side Routing",
+        "order_index": 7,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "5309f481-ff65-42b8-97ee-31ab888bf274",
+        "skill_name": "CSS",
+        "order_index": 8,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "5a1bdb32-3c4a-4076-98a8-f885dae57eb0",
+        "skill_name": "HTML",
+        "order_index": 9,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "3319cb6d-6659-453b-80f1-eebe7f1db2f5",
+        "skill_name": "Frontend Build Tooling",
+        "order_index": 10,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "6456618b-9142-43ed-b145-e64bae45289b",
+        "skill_name": "UI Component Libraries",
+        "order_index": 11,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "67a81aee-c015-463e-93fd-b4b8e8f313ef",
+        "skill_name": "Static Site Generation",
+        "order_index": 12,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "9216f684-00a1-441c-a467-d5ecce38082f",
+        "skill_name": "CSS-in-JS",
+        "order_index": 13,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "6f123c92-c2a1-4f26-a391-752ec839095f",
+        "skill_name": "Progressive Web App Development",
+        "order_index": 14,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "910fb65e-b4a9-40a5-a8fb-6e529893c09b",
+        "skill_name": "Animation & Motion Design",
+        "order_index": 15,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "8933b26b-6d52-4a68-b5f5-421493f23841",
+        "skill_name": "Linting & Code Quality",
+        "order_index": 16,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "a9aecc58-aad9-448d-a30e-f0e127f33925",
+        "skill_name": "Web Components",
+        "order_index": 17,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "23fbbf5d-8716-4dea-b0ff-45d67af84aa4",
+        "skill_name": "End-to-End Testing",
+        "order_index": 18,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "e87a2841-f60d-4fda-bfcc-75f030e71485",
+        "skill_name": "Unit Testing",
+        "order_index": 19,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "c618b139-748f-4610-a24a-feb55ac86e67",
+        "skill_name": "Automated Testing",
+        "order_index": 20,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "bb22bc55-2ce5-45d7-9ec5-a7234a8f8877",
+        "skill_name": "Game Development",
+        "order_index": 21,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      }
+    ],
+    "15fe60c9-98eb-496b-b9f5-15584fb725bc": [
+      {
+        "skill_id": "5309f481-ff65-42b8-97ee-31ab888bf274",
+        "skill_name": "CSS",
+        "order_index": 0,
+        "estimated_hours": 60,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "9a2ba84d-c24a-42fc-b5c5-8482367e4180",
+        "skill_name": "ICT project management methodologies",
+        "order_index": 1,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "b785e440-9c33-4144-a6d7-a8303f9a13c9",
+        "skill_name": "LINQ",
+        "order_index": 3,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "7ee221b7-3bf1-4e33-b72f-89c470d1f695",
+        "skill_name": "database management systems",
+        "order_index": 4,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "c3a9fcf6-c533-445d-a69e-0753d959aaf2",
+        "skill_name": "have computer literacy",
+        "order_index": 5,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "a0421505-46e9-4bfc-a0e1-c8090b575c19",
+        "skill_name": "do cloud refactoring",
+        "order_index": 6,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      },
+      {
+        "skill_id": "6db11eb6-3dec-42f8-91a6-88eb472ce41b",
+        "skill_name": "tools for software configuration management",
+        "order_index": 7,
+        "estimated_hours": 20,
+        "status": "not_started",
+        "project_idea": null
+      }
+    ]
+  },
+  "portfolio": {
+    "is_public": true,
+    "slug": "sanvi-s",
+    "theme": "terminal",
+    "sections": null,
+    "featured_project_ids": [
+      "42b4b823-4979-446d-b4ce-f37a2414c4c9",
+      "e127d108-fbf9-4c3b-b469-485f93ac5b99",
+      "5a291c8f-85b3-45b6-aea5-be2963b46cfa"
+    ]
+  },
+  "public_portfolio": {
+    "handle": "sanvi-s",
+    "display_name": "Sanvi Shanishchara",
+    "tagline": "Full-stack + AI engineer \u2014 React Native, FastAPI, LLMs",
+    "avatar_url": "https://avatars.githubusercontent.com/u/193156283?v=4",
+    "theme": "terminal",
+    "sections": null,
+    "top_projects": [
+      {
+        "repo_full_name": "sanvi-s/artive",
+        "description": null,
+        "complexity_score": 25.0
+      },
+      {
+        "repo_full_name": "sanvi-s/parseSkill",
+        "description": "Evidence-based developer intelligence platform that analyzes coding profiles and repositories to infer verified technical skills and automatically generate dynamic developer portfolios.",
+        "complexity_score": 87.5
+      },
+      {
+        "repo_full_name": "collegequest/questai-platform",
+        "description": "Cross-platform AI education platform delivering 20+ production modules for career planning, college discovery, and AI-powered counselling to students across India.",
+        "complexity_score": 91.0
+      }
+    ],
+    "top_role": {
+      "role_id": "e53fa5e7-44a7-475f-b3f7-af7f463c3079",
+      "role_name": "Backend Developer",
+      "confidence": 0.4659621702513778
+    }
+  },
+  "graph_skills": {
+    "nodes": [
+      {
+        "data": {
+          "id": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "label": "Python",
+          "type": "skill",
+          "confidence": 0.95,
+          "category": "language"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:9042c0e7-2741-447b-92ef-f9f6393b6c15",
+          "label": "Java",
+          "type": "skill",
+          "confidence": 0.5,
+          "category": "language"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:b9b7a8d3-7b5f-424a-acc7-94b4d5db77a7",
+          "label": "React Native",
+          "type": "skill",
+          "confidence": 0.481,
+          "category": "frontend"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:b2536ad5-70c6-49e2-a1ed-5727017e6785",
+          "label": "MongoDB",
+          "type": "skill",
+          "confidence": 0.368,
+          "category": "database"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:65ed5ddc-21ab-4255-9e6b-43a08164ef4e",
+          "label": "Relational Databases",
+          "type": "skill",
+          "confidence": 0.5,
+          "category": "database"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "label": "React",
+          "type": "skill",
+          "confidence": 0.641,
+          "category": "frontend"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:4237d9fd-e791-4e82-816b-2f561ae143f2",
+          "label": "Express.js",
+          "type": "skill",
+          "confidence": 0.472,
+          "category": "backend"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:e5262a63-3850-4489-abb8-542cae4ad2a2",
+          "label": "FastAPI",
+          "type": "skill",
+          "confidence": 0.451,
+          "category": "backend"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:c1fb6a28-6879-44ff-bf15-7b4799527454",
+          "label": "Authentication & Authorization",
+          "type": "skill",
+          "confidence": 0.358,
+          "category": "backend"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+          "label": "ORM/Query Building",
+          "type": "skill",
+          "confidence": 0.292,
+          "category": "database"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:0e0a42f0-55f5-4f8c-a497-03a830c67499",
+          "label": "Deep Learning",
+          "type": "skill",
+          "confidence": 0.55,
+          "category": "ml"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:9f31d260-a338-48e7-a0a6-6c2da918f1a1",
+          "label": "Data Analysis",
+          "type": "skill",
+          "confidence": 0.347,
+          "category": "ml"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:cc91de8d-cf53-4ac6-be1e-6a88ef26fe8a",
+          "label": "Numerical Computing",
+          "type": "skill",
+          "confidence": 0.347,
+          "category": "ml"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:90e3e3de-1827-4cad-aae4-fb80271b5e19",
+          "label": "JavaScript",
+          "type": "skill",
+          "confidence": 0.42,
+          "category": "language"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "label": "TypeScript",
+          "type": "skill",
+          "confidence": 0.59,
+          "category": "language"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:f36ef09b-ce92-459c-960a-b33b1cc8c0aa",
+          "label": "C++",
+          "type": "skill",
+          "confidence": 0.48,
+          "category": "language"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:28ec4fa4-9c66-448e-99fa-b19bd39bb775",
+          "label": "Data Visualization",
+          "type": "skill",
+          "confidence": 0.342,
+          "category": "frontend"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:f3723e6b-352b-4e37-91ae-09b170fe5eae",
+          "label": "Node.js Backend Development",
+          "type": "skill",
+          "confidence": 0.575,
+          "category": "backend"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+          "label": "REST API Design",
+          "type": "skill",
+          "confidence": 0.451,
+          "category": "backend"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:150c7412-1ae4-4c1f-83ab-9ddcee9258a1",
+          "label": "PostgreSQL",
+          "type": "skill",
+          "confidence": 0.413,
+          "category": "database"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:ea9ffa64-4023-41e6-ae73-81bf91795a1c",
+          "label": "MySQL",
+          "type": "skill",
+          "confidence": 0.261,
+          "category": "database"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:8c5729c1-f463-4cad-ae51-5e42c2009b95",
+          "label": "Machine Learning",
+          "type": "skill",
+          "confidence": 0.461,
+          "category": "ml"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:af37f6ef-6fb2-4e25-bb4a-21517b3a36ba",
+          "label": "Natural Language Processing",
+          "type": "skill",
+          "confidence": 0.363,
+          "category": "ml"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:42b47643-cd71-4c62-a909-0498e74907fb",
+          "label": "LLM Application Development",
+          "type": "skill",
+          "confidence": 0.363,
+          "category": "ml"
+        }
+      },
+      {
+        "data": {
+          "id": "skill:9b381465-2e66-45e1-92d0-3436f8da11dc",
+          "label": "CI/CD Pipelines",
+          "type": "skill",
+          "confidence": 0.399,
+          "category": "devops"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:041f3e2a-defa-4ed7-8306-3c61ef04028a",
+          "label": "react-native",
+          "type": "technology",
+          "category": "frontend"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:0b58ea87-e644-4ae3-b1ba-a332a29cdf6b",
+          "label": "express",
+          "type": "technology",
+          "category": "backend"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:368a292f-1928-41dc-a8a6-c3509a4f802c",
+          "label": "sentence-transformers",
+          "type": "technology",
+          "category": "ml"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:3e63ec0b-bdfb-40c5-8e31-444f2abe3408",
+          "label": "GitHub Actions",
+          "type": "technology",
+          "category": "devops"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:3e7cc229-db0a-41f2-a4eb-1d75685aee69",
+          "label": "mongodb",
+          "type": "technology",
+          "category": "database"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:41bca7ae-8182-43e1-bc83-c38d6ce37816",
+          "label": "supabase",
+          "type": "technology",
+          "category": "database"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:47b53473-8447-4297-9b97-53895728908e",
+          "label": "matplotlib",
+          "type": "technology",
+          "category": "ml"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:5c08ff0b-b033-434b-a093-6503736684e6",
+          "label": "jsonwebtoken",
+          "type": "technology",
+          "category": "backend"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:60a973b2-fb5b-45bf-bf51-dbb2e23139ec",
+          "label": "scikit-learn",
+          "type": "technology",
+          "category": "ml"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:61c55612-939a-47d7-b3e4-e2bfb86a4154",
+          "label": "pg",
+          "type": "technology",
+          "category": "database"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:6a7fcd28-9d15-4873-af5d-2a34e2faa67e",
+          "label": "sequelize",
+          "type": "technology",
+          "category": "database"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:71d3af87-6f81-4d3c-98da-bc5bef23bfa3",
+          "label": "expo",
+          "type": "technology",
+          "category": "frontend"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:73422a80-f194-4123-b13d-c56f4982751f",
+          "label": "neo4j",
+          "type": "technology",
+          "category": "database"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:7512bc70-e5db-4889-835b-3cbf8e6deea0",
+          "label": "numpy",
+          "type": "technology",
+          "category": "ml"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:787bdebd-ffa1-457a-8ff6-4d39f59b3ce4",
+          "label": "@types/node-fetch",
+          "type": "technology",
+          "category": "language"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:80955cdb-df41-41cf-bde3-44355ac7fbe9",
+          "label": "xgboost",
+          "type": "technology",
+          "category": "ml"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:c79d1ade-9a3b-4c70-bf55-ec6177068a7f",
+          "label": "react",
+          "type": "technology",
+          "category": "frontend"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:ced0c97c-b8ac-439a-a773-94493bd7b527",
+          "label": "pandas",
+          "type": "technology",
+          "category": "ml"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:e5c25a3a-3db1-46f8-93f3-ba150ff9aeeb",
+          "label": "typescript",
+          "type": "technology",
+          "category": "language"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:f77c41e3-bc8d-4dbd-9ecd-deea230c9d60",
+          "label": "mysql2",
+          "type": "technology",
+          "category": "database"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:f88a3e32-0950-46f8-a562-ffea49b38457",
+          "label": "next",
+          "type": "technology",
+          "category": "frontend"
+        }
+      },
+      {
+        "data": {
+          "id": "tech:ffd5ff7e-4611-4536-9bfb-5037bd239b37",
+          "label": "fastapi",
+          "type": "technology",
+          "category": "backend"
+        }
+      },
+      {
+        "data": {
+          "id": "project:5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "label": "collegequest/questai-platform",
+          "type": "project"
+        }
+      },
+      {
+        "data": {
+          "id": "project:42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "label": "sanvi-s/artive",
+          "type": "project"
+        }
+      },
+      {
+        "data": {
+          "id": "project:e91cf3b3-6a37-4040-9033-979abaae1d56",
+          "label": "sanvi-s/byte-club",
+          "type": "project"
+        }
+      },
+      {
+        "data": {
+          "id": "project:41926683-dd85-47dd-a60b-fd83f96472e5",
+          "label": "sanvi-s/job-portal-api",
+          "type": "project"
+        }
+      },
+      {
+        "data": {
+          "id": "project:e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "label": "sanvi-s/parseSkill",
+          "type": "project"
+        }
+      },
+      {
+        "data": {
+          "id": "project:602ec300-2a47-479c-8d6c-1b27e47226c8",
+          "label": "sanvi-s/parseSkill-backend",
+          "type": "project"
+        }
+      },
+      {
+        "data": {
+          "id": "project:7dab2fb3-72ef-49c1-8d28-ee66bafdba9b",
+          "label": "sanvi-s/satvi-cravings",
+          "type": "project"
+        }
+      },
+      {
+        "data": {
+          "id": "project:7b87b51a-3fb5-485e-9215-482f3a463689",
+          "label": "sanvi-s/skills-introduction-to-github",
+          "type": "project"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "data": {
+          "source": "tech:20f98f53-40f6-408f-88e8-8dbdd3df40c8",
+          "target": "skill:f3723e6b-352b-4e37-91ae-09b170fe5eae",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:3e7cc229-db0a-41f2-a4eb-1d75685aee69",
+          "target": "skill:b2536ad5-70c6-49e2-a1ed-5727017e6785",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:206ee215-9b24-42f4-8a30-638c0fcfd289",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:3062fdd4-f5f9-44d0-b309-c56868e702eb",
+          "target": "skill:9042c0e7-2741-447b-92ef-f9f6393b6c15",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:18bd0800-6894-4439-a4c3-8735e55c7d6e",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:e16d6870-122c-48ad-8a13-d960c6b91b94",
+          "target": "skill:0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+          "weight": 0.7
+        }
+      },
+      {
+        "data": {
+          "source": "tech:9f87e126-0ab0-4a9d-ae68-536ac381f8d5",
+          "target": "skill:42b47643-cd71-4c62-a909-0498e74907fb",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:ffd5ff7e-4611-4536-9bfb-5037bd239b37",
+          "target": "skill:0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:bc3765a8-ec62-409e-bb67-65982f57edff",
+          "target": "skill:9f31d260-a338-48e7-a0a6-6c2da918f1a1",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:3b2b2ebf-392b-41df-94e2-41130ff13f55",
+          "target": "skill:42b47643-cd71-4c62-a909-0498e74907fb",
+          "weight": 0.9
+        }
+      },
+      {
+        "data": {
+          "source": "tech:0ade622f-e6c8-48f5-b98a-9a539880dd3c",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:fbef2b69-27a4-4abf-ba5d-48022efd2313",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:60a973b2-fb5b-45bf-bf51-dbb2e23139ec",
+          "target": "skill:8c5729c1-f463-4cad-ae51-5e42c2009b95",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:47b53473-8447-4297-9b97-53895728908e",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:7512bc70-e5db-4889-835b-3cbf8e6deea0",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:13a5f4f7-9aaa-427d-9b73-edcbfa8121cc",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:c6ec869e-941a-4220-b6c6-5821fd3a7cb7",
+          "target": "skill:ea9ffa64-4023-41e6-ae73-81bf91795a1c",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:47b53473-8447-4297-9b97-53895728908e",
+          "target": "skill:28ec4fa4-9c66-448e-99fa-b19bd39bb775",
+          "weight": 0.7
+        }
+      },
+      {
+        "data": {
+          "source": "tech:ffd5ff7e-4611-4536-9bfb-5037bd239b37",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:30333bb7-5185-4a59-aa9e-94d6f3cc4931",
+          "target": "skill:0e0a42f0-55f5-4f8c-a497-03a830c67499",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "tech:16dea8cc-1a17-4db1-a2c0-1ab44ac449ab",
+          "target": "skill:90e3e3de-1827-4cad-aae4-fb80271b5e19",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:6a7fcd28-9d15-4873-af5d-2a34e2faa67e",
+          "target": "skill:03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:83d43814-b830-4724-ac64-b27b156817e1",
+          "target": "skill:0e0a42f0-55f5-4f8c-a497-03a830c67499",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:b3a0c46a-169f-436c-8a90-082262ba34b4",
+          "target": "skill:28ec4fa4-9c66-448e-99fa-b19bd39bb775",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:3148bd5a-1584-4905-a135-8062af24bac9",
+          "target": "skill:f3723e6b-352b-4e37-91ae-09b170fe5eae",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:95fd093a-0dc9-4252-9524-9a1b1a6ae7fe",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:3148bd5a-1584-4905-a135-8062af24bac9",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.7
+        }
+      },
+      {
+        "data": {
+          "source": "tech:368a292f-1928-41dc-a8a6-c3509a4f802c",
+          "target": "skill:42b47643-cd71-4c62-a909-0498e74907fb",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "tech:d2f48a89-bc8b-4b52-9e01-a91ad53f5716",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:61c55612-939a-47d7-b3e4-e2bfb86a4154",
+          "target": "skill:150c7412-1ae4-4c1f-83ab-9ddcee9258a1",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:7d0797b0-2f5d-4ee1-b517-1f42841c606a",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:a7d2c314-520b-4c57-9e30-751919b60e2f",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:e7c2f413-d848-4a48-9723-34939bffe0fd",
+          "target": "skill:9042c0e7-2741-447b-92ef-f9f6393b6c15",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:7e07f95d-f027-4e4e-9e9f-892c829ac981",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:338da503-5c91-474c-b4d2-4f19c2376212",
+          "target": "skill:0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:eecc7996-d416-4804-b42a-f02150237e06",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:7a865231-3470-4f92-86b9-fd04da1e03b7",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:30333bb7-5185-4a59-aa9e-94d6f3cc4931",
+          "target": "skill:42b47643-cd71-4c62-a909-0498e74907fb",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "tech:787bdebd-ffa1-457a-8ff6-4d39f59b3ce4",
+          "target": "skill:0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:68f160aa-813b-4150-8f7b-615a1aa11713",
+          "target": "skill:0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:a58ad144-10eb-4607-b91e-bb5633c6f077",
+          "target": "skill:90e3e3de-1827-4cad-aae4-fb80271b5e19",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:7576462c-b7c4-44e6-a4e0-5dfd370fafca",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:33574c9c-93d0-4193-9069-a1dd3d963796",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:e7c2f413-d848-4a48-9723-34939bffe0fd",
+          "target": "skill:03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:75581a84-8f7e-4f04-aa17-1ec1a4729a43",
+          "target": "skill:150c7412-1ae4-4c1f-83ab-9ddcee9258a1",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:4321c6a2-bc96-45fd-8d2d-a293d884a920",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:8cecc33b-75b2-485f-9683-6e1c4db4000c",
+          "target": "skill:0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:5bfed9bd-f347-4782-840b-d473385925db",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:9c6aff08-1501-49f5-8273-d836f7d326e9",
+          "target": "skill:03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f2ffd63c-556b-49f1-b5c0-385594c669cf",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:594967da-0325-40df-9d65-fc68a45c4a22",
+          "target": "skill:0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:c79d1ade-9a3b-4c70-bf55-ec6177068a7f",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:041f3e2a-defa-4ed7-8306-3c61ef04028a",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:a8dca9b4-8e15-46c4-b3db-0242b306a90f",
+          "target": "skill:90e3e3de-1827-4cad-aae4-fb80271b5e19",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:4823f301-2a79-477d-81db-81fdde7e7518",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:8e1538f8-b9be-400f-81ba-1631f3d91bd4",
+          "target": "skill:af37f6ef-6fb2-4e25-bb4a-21517b3a36ba",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:4bba84bf-0730-4e10-a035-3a2703687702",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:7044b293-e52e-4ed3-909e-db488c5b6a23",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:96597b94-7bf2-4657-b825-ca29634f29cb",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:2b209056-6605-415e-b14f-9a9da0834fe9",
+          "target": "skill:c1fb6a28-6879-44ff-bf15-7b4799527454",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:368a292f-1928-41dc-a8a6-c3509a4f802c",
+          "target": "skill:af37f6ef-6fb2-4e25-bb4a-21517b3a36ba",
+          "weight": 0.7
+        }
+      },
+      {
+        "data": {
+          "source": "tech:2fcc90ac-9525-47f0-ada9-1902701a85c7",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:c3fe554b-9fc8-472a-8c24-9aad8f31a1b4",
+          "target": "skill:90e3e3de-1827-4cad-aae4-fb80271b5e19",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:503bf459-d5e6-4485-94da-354f8e58a56e",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:4733cee8-d7a4-42a9-8077-7eeec648659b",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:b5572c4a-07a3-4daf-ba08-16798aa0c2cb",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:b8571f19-c5ba-4089-9958-706698049712",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:a055c230-4ec7-43a8-8322-6e867ba56f48",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:ada4064f-512a-4dc2-9f3d-1f24a8973657",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:e0f34f53-3045-4363-aaab-2fff57e2628b",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f5398199-5139-4644-b8c7-7fc8e6f32210",
+          "target": "skill:0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:80bdcd75-b3b6-403e-8d9f-b866a9c43b57",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:4741ec05-037d-4303-9164-7e3c69b012cb",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:5bad3d47-c4c0-420c-a2d7-29ed81c066d9",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:5c08ff0b-b033-434b-a093-6503736684e6",
+          "target": "skill:c1fb6a28-6879-44ff-bf15-7b4799527454",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:6f7ca5ba-73f4-43fc-b5d1-93e6e44a38c1",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:75a38fa2-a62d-432e-906b-181877b66292",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:fbad23df-917e-48da-87f7-342d6c923022",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:e44109d2-3a8e-4198-9bee-630c873750d7",
+          "target": "skill:0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "tech:5b2644d3-0ed5-4f25-b076-9b99c95e4d2d",
+          "target": "skill:28ec4fa4-9c66-448e-99fa-b19bd39bb775",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:8e1538f8-b9be-400f-81ba-1631f3d91bd4",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:0b58ea87-e644-4ae3-b1ba-a332a29cdf6b",
+          "target": "skill:4237d9fd-e791-4e82-816b-2f561ae143f2",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:0a216609-4e38-4fe3-8800-b93b272ff0b3",
+          "target": "skill:0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "tech:3e63ec0b-bdfb-40c5-8e31-444f2abe3408",
+          "target": "skill:9b381465-2e66-45e1-92d0-3436f8da11dc",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:d2f48a89-bc8b-4b52-9e01-a91ad53f5716",
+          "target": "skill:0e0a42f0-55f5-4f8c-a497-03a830c67499",
+          "weight": 0.9
+        }
+      },
+      {
+        "data": {
+          "source": "tech:5d3a7dfd-0b14-493d-873f-0864d677908a",
+          "target": "skill:03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:c357e3ce-e02b-447b-ade4-b39873b3e4f6",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:80955cdb-df41-41cf-bde3-44355ac7fbe9",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:4cc9d4b8-bc7d-4ffd-bb08-0444f74a97c9",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f5e88395-802e-448c-b21d-8aebdaaa3e0a",
+          "target": "skill:28ec4fa4-9c66-448e-99fa-b19bd39bb775",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:bc3765a8-ec62-409e-bb67-65982f57edff",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:8519befa-bedc-460d-b04b-8232463e88e6",
+          "target": "skill:0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "tech:d5767b23-a040-4112-83a2-d0d8028aefc3",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:ff646be5-6f7c-40d3-a64d-17dbf87839d2",
+          "target": "skill:65ed5ddc-21ab-4255-9e6b-43a08164ef4e",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f1ca2621-5459-4999-887e-81041dfc71da",
+          "target": "skill:f3723e6b-352b-4e37-91ae-09b170fe5eae",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f77c41e3-bc8d-4dbd-9ecd-deea230c9d60",
+          "target": "skill:ea9ffa64-4023-41e6-ae73-81bf91795a1c",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:95649a8d-bcb3-4300-ba09-1a590c14c694",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f5a2ca3e-bc48-442b-b71c-7bd181fdb91b",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:fe7c5c97-44f2-4018-892a-d43ff6bb496b",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:93a80bc5-c1ec-4960-9053-059c956067b7",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:71d3af87-6f81-4d3c-98da-bc5bef23bfa3",
+          "target": "skill:b9b7a8d3-7b5f-424a-acc7-94b4d5db77a7",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:8734d3a7-8d3d-41be-b094-3111d8b2fcec",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:67d1f1c3-2d90-4568-b89f-5d00c411a317",
+          "target": "skill:42b47643-cd71-4c62-a909-0498e74907fb",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "tech:e5c25a3a-3db1-46f8-93f3-ba150ff9aeeb",
+          "target": "skill:0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:041f3e2a-defa-4ed7-8306-3c61ef04028a",
+          "target": "skill:b9b7a8d3-7b5f-424a-acc7-94b4d5db77a7",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f6cf3226-7550-40f8-bd3d-742398ca1755",
+          "target": "skill:03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:6eb048fb-0a46-4e2a-aa60-0d94ea632e93",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:c9d69973-e5c6-46e9-9e1d-683350051ddf",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f88a3e32-0950-46f8-a562-ffea49b38457",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:d81e9266-474c-47d4-8612-49e5085119c1",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:ffd5ff7e-4611-4536-9bfb-5037bd239b37",
+          "target": "skill:e5262a63-3850-4489-abb8-542cae4ad2a2",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:a68c165f-d379-48dd-9577-6ccdecdd5c28",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:ced0c97c-b8ac-439a-a773-94493bd7b527",
+          "target": "skill:9f31d260-a338-48e7-a0a6-6c2da918f1a1",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:61e21fff-4ad4-4692-9296-4e92a4d4ac8c",
+          "target": "skill:f3723e6b-352b-4e37-91ae-09b170fe5eae",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:ce62cd36-6bd4-48c4-809e-edf08830bd91",
+          "target": "skill:90e3e3de-1827-4cad-aae4-fb80271b5e19",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:9c8554a1-801f-44f1-9c22-c85a85d85d14",
+          "target": "skill:9042c0e7-2741-447b-92ef-f9f6393b6c15",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f1ca2621-5459-4999-887e-81041dfc71da",
+          "target": "skill:0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:cff29eb8-fbf6-4031-9233-6ff2135fffd4",
+          "target": "skill:03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:b2e5e109-0cf3-4f62-8211-2fb9ffea7e5a",
+          "target": "skill:03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:c90dca2c-5596-4075-be3d-c3f3973b3f6c",
+          "target": "skill:42b47643-cd71-4c62-a909-0498e74907fb",
+          "weight": 0.9
+        }
+      },
+      {
+        "data": {
+          "source": "tech:0b81ec1e-127d-4f37-b8d3-1202d4e7c963",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f88a3e32-0950-46f8-a562-ffea49b38457",
+          "target": "skill:f3723e6b-352b-4e37-91ae-09b170fe5eae",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:83d43814-b830-4724-ac64-b27b156817e1",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:8e83b846-242c-4685-b090-d106ba9072d6",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:0b58ea87-e644-4ae3-b1ba-a332a29cdf6b",
+          "target": "skill:f3723e6b-352b-4e37-91ae-09b170fe5eae",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "tech:0ad92155-b859-4d6c-9359-d258152a3eca",
+          "target": "skill:42b47643-cd71-4c62-a909-0498e74907fb",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:937a0c6d-e521-491c-8120-b390b91e528f",
+          "target": "skill:03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:594967da-0325-40df-9d65-fc68a45c4a22",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:a510fe1f-f1ca-465f-a3b8-5c1c42adcc70",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:2977c6b0-7761-4195-ba52-91b712b7fa5e",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:ba512373-a30d-4a23-ba90-7e68fc565470",
+          "target": "skill:42b47643-cd71-4c62-a909-0498e74907fb",
+          "weight": 0.9
+        }
+      },
+      {
+        "data": {
+          "source": "tech:294016db-eb89-47db-8866-368d72a2d44b",
+          "target": "skill:c1fb6a28-6879-44ff-bf15-7b4799527454",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:937a0c6d-e521-491c-8120-b390b91e528f",
+          "target": "skill:b2536ad5-70c6-49e2-a1ed-5727017e6785",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f9387a25-d371-4eac-874e-45a7adbc7f51",
+          "target": "skill:0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:7e07f95d-f027-4e4e-9e9f-892c829ac981",
+          "target": "skill:0e0a42f0-55f5-4f8c-a497-03a830c67499",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:6c71b13e-b2cc-48f3-8e2d-0dd04f186735",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:4840034b-359f-4aad-9ead-ee504bbfbb55",
+          "target": "skill:af37f6ef-6fb2-4e25-bb4a-21517b3a36ba",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:5d3a7dfd-0b14-493d-873f-0864d677908a",
+          "target": "skill:0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:7f62c022-b1f9-4388-bb5f-3c4ee9a915a0",
+          "target": "skill:f3723e6b-352b-4e37-91ae-09b170fe5eae",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:60a973b2-fb5b-45bf-bf51-dbb2e23139ec",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:c79d1ade-9a3b-4c70-bf55-ec6177068a7f",
+          "target": "skill:90e3e3de-1827-4cad-aae4-fb80271b5e19",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "tech:4840034b-359f-4aad-9ead-ee504bbfbb55",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:7512bc70-e5db-4889-835b-3cbf8e6deea0",
+          "target": "skill:cc91de8d-cf53-4ac6-be1e-6a88ef26fe8a",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:5b2644d3-0ed5-4f25-b076-9b99c95e4d2d",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:4aa28e03-6384-48c4-988d-322edbc6b986",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:037d82c6-8af1-45fb-aea4-e9aee218f23b",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:d2a25153-964f-46f1-9b7d-6a7588fe5298",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:7dbf0310-014a-44e8-b1c1-00fada00ed6a",
+          "target": "skill:0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:51e63dee-f346-4f52-8e84-ed4ce528de0d",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "tech:51a25c0e-c566-4c27-abbf-cfc5d04e5579",
+          "target": "skill:0f642b55-0b3d-47e6-af56-bf24305fb0d3",
+          "weight": 0.7
+        }
+      },
+      {
+        "data": {
+          "source": "tech:54a7e2fa-0382-40db-8338-d5639701f06c",
+          "target": "skill:42b47643-cd71-4c62-a909-0498e74907fb",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "tech:75581a84-8f7e-4f04-aa17-1ec1a4729a43",
+          "target": "skill:65ed5ddc-21ab-4255-9e6b-43a08164ef4e",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:c8b4fc5e-9568-4f7c-84f9-a4e29f12bbee",
+          "target": "skill:c1fb6a28-6879-44ff-bf15-7b4799527454",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:1db0b99a-176e-4bef-aa1a-63cffdb32bf7",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:42ce2fe6-069c-4952-813c-421c0523f716",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:d4604cf9-7083-4f87-ad3b-48f6016da77d",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:8adab64f-49b9-4208-b50d-3e22be5a45b5",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:80955cdb-df41-41cf-bde3-44355ac7fbe9",
+          "target": "skill:8c5729c1-f463-4cad-ae51-5e42c2009b95",
+          "weight": 0.9
+        }
+      },
+      {
+        "data": {
+          "source": "tech:72570a10-508b-406d-9800-36698ae63e94",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:7044b293-e52e-4ed3-909e-db488c5b6a23",
+          "target": "skill:8c5729c1-f463-4cad-ae51-5e42c2009b95",
+          "weight": 0.9
+        }
+      },
+      {
+        "data": {
+          "source": "tech:eb1c025b-0499-4b25-aba1-5a9a53c736fe",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:86e43812-f158-4784-a24e-bcb42b734745",
+          "target": "skill:0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:870883da-7248-4963-814a-46be878276f4",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:67d1f1c3-2d90-4568-b89f-5d00c411a317",
+          "target": "skill:0e0a42f0-55f5-4f8c-a497-03a830c67499",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "tech:96597b94-7bf2-4657-b825-ca29634f29cb",
+          "target": "skill:28ec4fa4-9c66-448e-99fa-b19bd39bb775",
+          "weight": 0.7
+        }
+      },
+      {
+        "data": {
+          "source": "tech:61c55612-939a-47d7-b3e4-e2bfb86a4154",
+          "target": "skill:65ed5ddc-21ab-4255-9e6b-43a08164ef4e",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:ff646be5-6f7c-40d3-a64d-17dbf87839d2",
+          "target": "skill:03eac8a2-9baa-4572-b1cc-082d3c6a985b",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:0ad92155-b859-4d6c-9359-d258152a3eca",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:431be2cd-0610-43ec-988c-2bb7b995dc55",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:c6ec869e-941a-4220-b6c6-5821fd3a7cb7",
+          "target": "skill:65ed5ddc-21ab-4255-9e6b-43a08164ef4e",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:a17f0da5-722a-4b22-a5f9-d5704c141267",
+          "target": "skill:fe17e9e8-a9a2-400c-8617-c1a4aac43766",
+          "weight": 0.2
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f77c41e3-bc8d-4dbd-9ecd-deea230c9d60",
+          "target": "skill:65ed5ddc-21ab-4255-9e6b-43a08164ef4e",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "tech:6f7ca5ba-73f4-43fc-b5d1-93e6e44a38c1",
+          "target": "skill:42b47643-cd71-4c62-a909-0498e74907fb",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "tech:f6cf3226-7550-40f8-bd3d-742398ca1755",
+          "target": "skill:0acf77f0-3178-4732-95dc-54d898d22cb7",
+          "weight": 0.3
+        }
+      },
+      {
+        "data": {
+          "source": "tech:ced0c97c-b8ac-439a-a773-94493bd7b527",
+          "target": "skill:e39dfa59-20d4-48e6-b378-6bd2aa8fe429",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "project:5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "target": "tech:7512bc70-e5db-4889-835b-3cbf8e6deea0",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "project:41926683-dd85-47dd-a60b-fd83f96472e5",
+          "target": "tech:61c55612-939a-47d7-b3e4-e2bfb86a4154",
+          "weight": 0.9
+        }
+      },
+      {
+        "data": {
+          "source": "project:5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "target": "tech:60a973b2-fb5b-45bf-bf51-dbb2e23139ec",
+          "weight": 0.7
+        }
+      },
+      {
+        "data": {
+          "source": "project:e91cf3b3-6a37-4040-9033-979abaae1d56",
+          "target": "tech:787bdebd-ffa1-457a-8ff6-4d39f59b3ce4",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "target": "tech:80955cdb-df41-41cf-bde3-44355ac7fbe9",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "project:5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "target": "tech:ced0c97c-b8ac-439a-a773-94493bd7b527",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "project:42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "target": "tech:ffd5ff7e-4611-4536-9bfb-5037bd239b37",
+          "weight": 0.7
+        }
+      },
+      {
+        "data": {
+          "source": "project:42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "target": "tech:0b58ea87-e644-4ae3-b1ba-a332a29cdf6b",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "target": "tech:ffd5ff7e-4611-4536-9bfb-5037bd239b37",
+          "weight": 0.9
+        }
+      },
+      {
+        "data": {
+          "source": "project:5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "target": "tech:3e63ec0b-bdfb-40c5-8e31-444f2abe3408",
+          "weight": 0.6
+        }
+      },
+      {
+        "data": {
+          "source": "project:e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "target": "tech:61c55612-939a-47d7-b3e4-e2bfb86a4154",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "target": "tech:3e7cc229-db0a-41f2-a4eb-1d75685aee69",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "target": "tech:c79d1ade-9a3b-4c70-bf55-ec6177068a7f",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "target": "tech:041f3e2a-defa-4ed7-8306-3c61ef04028a",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "target": "tech:5c08ff0b-b033-434b-a093-6503736684e6",
+          "weight": 0.8
+        }
+      },
+      {
+        "data": {
+          "source": "project:e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "target": "tech:0b58ea87-e644-4ae3-b1ba-a332a29cdf6b",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "target": "tech:e5c25a3a-3db1-46f8-93f3-ba150ff9aeeb",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:41926683-dd85-47dd-a60b-fd83f96472e5",
+          "target": "tech:f77c41e3-bc8d-4dbd-9ecd-deea230c9d60",
+          "weight": 0.4
+        }
+      },
+      {
+        "data": {
+          "source": "project:41926683-dd85-47dd-a60b-fd83f96472e5",
+          "target": "tech:f88a3e32-0950-46f8-a562-ffea49b38457",
+          "weight": 0.7
+        }
+      },
+      {
+        "data": {
+          "source": "project:5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "target": "tech:71d3af87-6f81-4d3c-98da-bc5bef23bfa3",
+          "weight": 0.9
+        }
+      },
+      {
+        "data": {
+          "source": "project:5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "target": "tech:e5c25a3a-3db1-46f8-93f3-ba150ff9aeeb",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "target": "tech:ffd5ff7e-4611-4536-9bfb-5037bd239b37",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "target": "tech:73422a80-f194-4123-b13d-c56f4982751f",
+          "weight": 0.7
+        }
+      },
+      {
+        "data": {
+          "source": "project:41926683-dd85-47dd-a60b-fd83f96472e5",
+          "target": "tech:6a7fcd28-9d15-4873-af5d-2a34e2faa67e",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:e127d108-fbf9-4c3b-b469-485f93ac5b99",
+          "target": "tech:c79d1ade-9a3b-4c70-bf55-ec6177068a7f",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "target": "tech:368a292f-1928-41dc-a8a6-c3509a4f802c",
+          "weight": 0.9
+        }
+      },
+      {
+        "data": {
+          "source": "project:42b4b823-4979-446d-b4ce-f37a2414c4c9",
+          "target": "tech:e5c25a3a-3db1-46f8-93f3-ba150ff9aeeb",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "target": "tech:47b53473-8447-4297-9b97-53895728908e",
+          "weight": 0.5
+        }
+      },
+      {
+        "data": {
+          "source": "project:41926683-dd85-47dd-a60b-fd83f96472e5",
+          "target": "tech:0b58ea87-e644-4ae3-b1ba-a332a29cdf6b",
+          "weight": 1.0
+        }
+      },
+      {
+        "data": {
+          "source": "project:5a291c8f-85b3-45b6-aea5-be2963b46cfa",
+          "target": "tech:41bca7ae-8182-43e1-bc83-c38d6ce37816",
+          "weight": 0.9
+        }
+      },
+      {
+        "data": {
+          "source": "project:7b87b51a-3fb5-485e-9215-482f3a463689",
+          "target": "tech:3e63ec0b-bdfb-40c5-8e31-444f2abe3408",
+          "weight": 1.0
+        }
+      }
+    ]
+  },
+  "sync": {
+    "history": [
+      {
+        "id": "5728e11c-a58a-4c69-a908-f73a5b127694",
+        "started_at": "2026-08-06T09:56:04.150000+00:00",
+        "completed_at": "2026-08-06T09:57:03.310000+00:00",
+        "status": "failed",
+        "sources_synced": [],
+        "repos_processed": 0,
+        "new_technologies_count": 0,
+        "new_skills_count": 0,
+        "error_message": "No module named 'sentence_transformers'"
+      },
+      {
+        "id": "99d5544c-2ae2-4087-aaf1-06b536ecb037",
+        "started_at": "2026-08-06T09:54:27.023000+00:00",
+        "completed_at": "2026-08-06T09:55:33.640000+00:00",
+        "status": "failed",
+        "sources_synced": [],
+        "repos_processed": 0,
+        "new_technologies_count": 0,
+        "new_skills_count": 0,
+        "error_message": "No module named 'sentence_transformers'"
+      },
+      {
+        "id": "2a10228e-773a-4751-a9d1-b01909932a12",
+        "started_at": "2026-08-06T04:15:19.739000+00:00",
+        "completed_at": "2026-08-06T04:17:19.739000+00:00",
+        "status": "success",
+        "sources_synced": [
+          "github"
+        ],
+        "repos_processed": 4,
+        "new_technologies_count": 21,
+        "new_skills_count": 24,
+        "error_message": null
+      },
+      {
+        "id": "fffc0452-67ad-4360-8545-8fbf0866ffca",
+        "started_at": "2026-08-06T04:15:11.099000+00:00",
+        "completed_at": "2026-08-06T04:17:11.099000+00:00",
+        "status": "success",
+        "sources_synced": [
+          "github"
+        ],
+        "repos_processed": 4,
+        "new_technologies_count": 21,
+        "new_skills_count": 24,
+        "error_message": null
+      },
+      {
+        "id": "dfa570bc-178a-4263-af3e-b6f6587ad85a",
+        "started_at": "2026-08-05T21:43:32.431000+00:00",
+        "completed_at": "2026-08-05T21:44:05.630000+00:00",
+        "status": "failed",
+        "sources_synced": [],
+        "repos_processed": 0,
+        "new_technologies_count": 0,
+        "new_skills_count": 0,
+        "error_message": "No module named 'sentence_transformers'"
+      },
+      {
+        "id": "797dc9fb-8ffe-4327-84df-cfe572764d9b",
+        "started_at": "2026-08-05T21:42:26.492000+00:00",
+        "completed_at": "2026-08-05T21:43:00.850000+00:00",
+        "status": "failed",
+        "sources_synced": [],
+        "repos_processed": 0,
+        "new_technologies_count": 0,
+        "new_skills_count": 0,
+        "error_message": "No module named 'sentence_transformers'"
+      },
+      {
+        "id": "df8f85ac-1764-412a-8deb-5710a2681ba7",
+        "started_at": "2026-08-05T21:41:23.459000+00:00",
+        "completed_at": "2026-08-05T21:41:55.746000+00:00",
+        "status": "failed",
+        "sources_synced": [],
+        "repos_processed": 0,
+        "new_technologies_count": 0,
+        "new_skills_count": 0,
+        "error_message": "No module named 'sentence_transformers'"
+      },
+      {
+        "id": "37ed4716-6b99-4698-9274-cfc834df297f",
+        "started_at": "2026-08-05T21:35:48.425000+00:00",
+        "completed_at": "2026-08-05T21:36:24.476000+00:00",
+        "status": "success",
+        "sources_synced": [
+          "github"
+        ],
+        "repos_processed": 4,
+        "new_technologies_count": 0,
+        "new_skills_count": 0,
+        "error_message": null
+      },
+      {
+        "id": "75b18b57-c74a-4566-97e9-f235706c96f1",
+        "started_at": "2026-08-05T21:34:46.326000+00:00",
+        "completed_at": "2026-08-05T21:35:18.464000+00:00",
+        "status": "failed",
+        "sources_synced": [],
+        "repos_processed": 0,
+        "new_technologies_count": 0,
+        "new_skills_count": 0,
+        "error_message": "No module named 'sentence_transformers'"
+      },
+      {
+        "id": "f5b07de7-136b-4b03-9690-a166b1258e63",
+        "started_at": "2026-08-05T21:33:53.768000+00:00",
+        "completed_at": "2026-08-05T21:34:43.470000+00:00",
+        "status": "success",
+        "sources_synced": [
+          "github"
+        ],
+        "repos_processed": 4,
+        "new_technologies_count": 2,
+        "new_skills_count": 2,
+        "error_message": null
+      }
+    ]
+  },
+  "chat": {
+    "history": [
+      {
+        "id": "67f05c91-0b29-43f5-bf28-83410b38382a",
+        "role": "user",
+        "content": "tell me about myself",
+        "citations": null,
+        "created_at": "2026-08-05T21:37:48.139000+00:00"
+      },
+      {
+        "id": "9405cfb4-5374-408f-86c4-4b416a7e5f0f",
+        "role": "assistant",
+        "content": "Hi Sanvi. Based on your verified profile, your strongest technical skills are TypeScript and CI/CD Pipelines, both showing high confidence scores.\n\nYour profile highlights a few notable repositories:\n- byte-club, which is your highest complexity project so far, tagged with the description \"where bugs fear to crawl\"\n- skills-introduction-to-github\n- artive\n- satvi-cravings\n\nLooking at your overall metrics, you currently have a project quality score of 28.6 and a consistency score of 5.77. Scores for coding and learning velocity are not recorded yet in your profile. \n\nLet me know if you would like to dive deeper into any of your projects or explore ways to build on these skills.",
+        "citations": [
+          {
+            "chunk_type": "project",
+            "reference_id": "7b87b51a-3fb5-485e-9215-482f3a463689"
+          },
+          {
+            "chunk_type": "project",
+            "reference_id": "42b4b823-4979-446d-b4ce-f37a2414c4c9"
+          },
+          {
+            "chunk_type": "project",
+            "reference_id": "7dab2fb3-72ef-49c1-8d28-ee66bafdba9b"
+          },
+          {
+            "chunk_type": "skill",
+            "reference_id": "9b381465-2e66-45e1-92d0-3436f8da11dc"
+          },
+          {
+            "chunk_type": "project",
+            "reference_id": "e91cf3b3-6a37-4040-9033-979abaae1d56"
+          },
+          {
+            "chunk_type": "skill",
+            "reference_id": "0acf77f0-3178-4732-95dc-54d898d22cb7"
+          }
+        ],
+        "created_at": "2026-08-05T21:37:57.048000+00:00"
+      }
+    ],
+    "canned_replies": [
+      "Your strongest signal is backend/API engineering with consistent recent activity.",
+      "To increase ML role fit, ship one project with data pipeline, model training, and serving in production shape.",
+      "Your roadmap suggests prioritizing missing high-importance skills before broadening into adjacent tooling."
+    ]
+  },
+  "extras": {
+    "quiz_results": [],
+    "career_report": {
+      "top_role": {
+        "role_id": "e53fa5e7-44a7-475f-b3f7-af7f463c3079",
+        "role_name": "Backend Developer",
+        "confidence": 0.4659621702513778,
+        "description": null
+      },
+      "skills_detected": 25
+    },
+    "roadmap_progress": {
+      "done": 0,
+      "learning": 0,
+      "not_started": 86
+    },
+    "exam_calendar": [],
+    "dashboard_stats": {
+      "coding_score": 82.5,
+      "project_quality_score": 49.85,
+      "consistency_score": 7.69,
+      "learning_velocity": 0.0,
+      "projects": 8,
+      "skills": 25
+    },
+    "effort_score": {
+      "value": 7.69,
+      "formula": "currently mapped to consistency_score"
+    },
+    "streak": {
+      "current_days": 0,
+      "note": "Derived streak tracking not yet modeled in backend schema."
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { clearDemoMode } from "@/lib/demo-mode";
+import demoDataset from "@/demo-fixtures/demo-sanvi.json";
 import type {
   ChatMessageOut,
   CurrentUser,
@@ -109,12 +110,7 @@ function clone<T>(value: T): T {
 
 async function loadDataset(): Promise<DemoDataset> {
   if (!datasetPromise) {
-    datasetPromise = fetch("/data/demo-sanvi.json", { credentials: "same-origin" }).then(async (res) => {
-      if (!res.ok) {
-        throw new DemoApiError(res.status, `Could not load demo data (${res.status})`);
-      }
-      return (await res.json()) as DemoDataset;
-    });
+    datasetPromise = Promise.resolve(demoDataset as DemoDataset);
   }
   return datasetPromise;
 }
