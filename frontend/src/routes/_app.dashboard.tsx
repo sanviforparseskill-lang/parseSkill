@@ -153,9 +153,9 @@ function Dashboard() {
         )}
       </section>
 
-      <div className="mt-10 grid lg:grid-cols-[1.3fr_1fr] gap-6">
+      <div className="mt-10 grid lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-6">
         {/* Recent activity */}
-        <section>
+        <section className="min-w-0">
           <PageTitle eyebrow="recent activity" title="What's changed since last sync" />
           <div className="mt-4 border border-line rounded-md bg-surface divide-y divide-line">
             {recentProjects.length > 0 ? recentProjects.map((p) => (
@@ -175,7 +175,7 @@ function Dashboard() {
         </section>
 
         {/* Skill graph preview */}
-        <section>
+        <section className="min-w-0">
           <div className="flex items-baseline justify-between">
             <PageTitle eyebrow="skill graph" title="Top skills" />
             <Link to="/graph" className="font-mono text-[12px] text-signal hover:underline">explore full graph →</Link>
