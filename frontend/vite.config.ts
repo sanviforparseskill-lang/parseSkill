@@ -6,5 +6,12 @@ import { nitro } from "nitro/vite";
 
 export default defineConfig({
   resolve: { tsconfigPaths: true },
-  plugins: [tanstackStart(), nitro(), viteReact(), tailwindcss()],
+  plugins: [
+    tanstackStart(),
+    nitro({
+      publicAssets: [{ dir: "public", baseURL: "/" }],
+    }),
+    viteReact(),
+    tailwindcss(),
+  ],
 });
